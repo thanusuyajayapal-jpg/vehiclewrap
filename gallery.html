@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - VelocityCraft Studio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%23dc2626' d='M112 272c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48-21.5-48-48-48zm336 0c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48-21.5-48-48-48zm171.2-59.8L510.9 97c-9.1-13-24.2-20.9-40.1-21H237.5c-18.4 0-35.3 10.3-43.1 27.2L162.7 172 32 185.3c-18.3 1.8-32 17.2-32 35.7v131c0 17.7 14.3 32 32 32h19.2c10.8 32 40.7 56 76.8 56s66-24 76.8-56h230.4c10.8 32 40.7 56 76.8 56s66-24 76.8-56H608c17.7 0 32-14.3 32-32V256c0-19.1-8.5-37.2-23.2-48.4zM470.8 124l74.9 83H320V124h150.8zm-201.2 0v83H177.3l23-49.8c3.2-6.8 10-11.2 17.6-11.2h51.7z'/%3E%3C/svg%3E">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for Icons -->
@@ -161,72 +163,7 @@
             </div>
         </section>
 
-        <!-- ================= REDESIGNED SECTION 1: FILTER PORTFOLIO CATEGORIES ================= -->
-        <section class="py-16 bg-white border-b border-gray-200 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white pointer-events-none"></div>
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
-                <!-- Section Header -->
-                <div class="text-center max-w-2xl mx-auto mb-10">
-                    <span class="text-brand font-bold uppercase tracking-widest text-xs bg-brand-light px-3 py-1 rounded-full border border-red-200">
-                        <i class="fas fa-filter mr-1"></i> Interactive Showcase
-                    </span>
-                    <h2 class="text-3xl sm:text-4xl font-ext5xl font-bold text-gray-900 mt-3 mb-2">Filter Portfolio Categories</h2>
-                    <p class="text-gray-600 text-base">Select a category below to explore specific automotive styling conversions and customizations.</p>
-                </div>
-
-                <!-- Filter Cards / Buttons Grid Container -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
-                    
-                    <!-- All Projects Tab (Active) -->
-                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-brand text-white shadow-lg shadow-red-500/25 hover:scale-105 transition-all duration-300 border-2 border-brand text-center">
-                        <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-xl mb-3 group-hover:rotate-6 transition-transform">
-                            <i class="fas fa-th-large"></i>
-                        </div>
-                        <span class="font-bold text-base tracking-wide">All Projects</span>
-                        <span class="text-xs text-red-100 mt-1">View Everything</span>
-                    </button>
-
-                    <!-- Vinyl Wraps Tab -->
-                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-gray-50 hover:bg-brand-light text-gray-700 hover:text-brand-dark shadow-sm hover:shadow-md transition-all duration-300 border-2 border-gray-200 hover:border-brand text-center">
-                        <div class="w-12 h-12 rounded-xl bg-gray-200 group-hover:bg-brand group-hover:text-white flex items-center justify-center text-xl mb-3 transition-colors">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <span class="font-bold text-base tracking-wide">Vinyl Wraps</span>
-                        <span class="text-xs text-gray-500 mt-1">Color & Satin</span>
-                    </button>
-
-                    <!-- PPF Protection Tab -->
-                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-gray-50 hover:bg-brand-light text-gray-700 hover:text-brand-dark shadow-sm hover:shadow-md transition-all duration-300 border-2 border-gray-200 hover:border-brand text-center">
-                        <div class="w-12 h-12 rounded-xl bg-gray-200 group-hover:bg-brand group-hover:text-white flex items-center justify-center text-xl mb-3 transition-colors">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <span class="font-bold text-base tracking-wide">PPF Shield</span>
-                        <span class="text-xs text-gray-500 mt-1">Paint Armor</span>
-                    </button>
-
-                    <!-- Custom Wheels Tab -->
-                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-gray-50 hover:bg-brand-light text-gray-700 hover:text-brand-dark shadow-sm hover:shadow-md transition-all duration-300 border-2 border-gray-200 hover:border-brand text-center">
-                        <div class="w-12 h-12 rounded-xl bg-gray-200 group-hover:bg-brand group-hover:text-white flex items-center justify-center text-xl mb-3 transition-colors">
-                            <i class="fas fa-circle-notch"></i>
-                        </div>
-                        <span class="font-bold text-base tracking-wide">Custom Wheels</span>
-                        <span class="text-xs text-gray-500 mt-1">Rims & Calipers</span>
-                    </button>
-
-                    <!-- Interior Styling Tab -->
-                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-gray-50 hover:bg-brand-light text-gray-700 hover:text-brand-dark shadow-sm hover:shadow-md transition-all duration-300 border-2 border-gray-200 hover:border-brand text-center col-span-2 sm:col-span-1">
-                        <div class="w-12 h-12 rounded-xl bg-gray-200 group-hover:bg-brand group-hover:text-white flex items-center justify-center text-xl mb-3 transition-colors">
-                            <i class="fas fa-couch"></i>
-                        </div>
-                        <span class="font-bold text-base tracking-wide">Interior Styling</span>
-                        <span class="text-xs text-gray-500 mt-1">Leather & Trim</span>
-                    </button>
-
-                </div>
-            </div>
-        </section>
-
+     
         <!-- ================= SECTION 2: MAIN GRID SHOWCASE ================= -->
         <section class="py-16 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -274,6 +211,72 @@
                 </div>
             </div>
         </section>
+           <!-- ================= REDESIGNED SECTION 1: FILTER PORTFOLIO CATEGORIES ================= -->
+        <section class="py-16 bg-gray-900 border-b border-gray-800 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900 pointer-events-none"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-brand font-bold uppercase tracking-widest text-xs bg-red-900/30 px-3 py-1 rounded-full border border-red-800/50">
+                        <i class="fas fa-filter mr-1"></i> Interactive Showcase
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-ext5xl font-bold text-white mt-3 mb-2">Filter Portfolio Categories</h2>
+                    <p class="text-gray-400 text-base">Select a category below to explore specific automotive styling conversions and customizations.</p>
+                </div>
+
+                <!-- Filter Cards / Buttons Grid Container -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+                    
+                    <!-- All Projects Tab (Active) -->
+                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-brand text-white shadow-lg shadow-red-500/25 hover:scale-105 transition-all duration-300 border-2 border-brand text-center">
+                        <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-xl mb-3 group-hover:rotate-6 transition-transform">
+                            <i class="fas fa-th-large"></i>
+                        </div>
+                        <span class="font-bold text-base tracking-wide">All Projects</span>
+                        <span class="text-xs text-red-100 mt-1">View Everything</span>
+                    </button>
+
+                    <!-- Vinyl Wraps Tab -->
+                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white shadow-sm hover:shadow-md transition-all duration-300 border-2 border-gray-700 hover:border-brand text-center">
+                        <div class="w-12 h-12 rounded-xl bg-gray-700 text-gray-300 group-hover:bg-brand group-hover:text-white flex items-center justify-center text-xl mb-3 transition-colors">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <span class="font-bold text-base tracking-wide">Vinyl Wraps</span>
+                        <span class="text-xs text-gray-400 mt-1">Color & Satin</span>
+                    </button>
+
+                    <!-- PPF Protection Tab -->
+                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white shadow-sm hover:shadow-md transition-all duration-300 border-2 border-gray-700 hover:border-brand text-center">
+                        <div class="w-12 h-12 rounded-xl bg-gray-700 text-gray-300 group-hover:bg-brand group-hover:text-white flex items-center justify-center text-xl mb-3 transition-colors">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <span class="font-bold text-base tracking-wide">PPF Shield</span>
+                        <span class="text-xs text-gray-400 mt-1">Paint Armor</span>
+                    </button>
+
+                    <!-- Custom Wheels Tab -->
+                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white shadow-sm hover:shadow-md transition-all duration-300 border-2 border-gray-700 hover:border-brand text-center">
+                        <div class="w-12 h-12 rounded-xl bg-gray-700 text-gray-300 group-hover:bg-brand group-hover:text-white flex items-center justify-center text-xl mb-3 transition-colors">
+                            <i class="fas fa-circle-notch"></i>
+                        </div>
+                        <span class="font-bold text-base tracking-wide">Custom Wheels</span>
+                        <span class="text-xs text-gray-400 mt-1">Rims & Calipers</span>
+                    </button>
+
+                    <!-- Interior Styling Tab -->
+                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white shadow-sm hover:shadow-md transition-all duration-300 border-2 border-gray-700 hover:border-brand text-center col-span-2 sm:col-span-1">
+                        <div class="w-12 h-12 rounded-xl bg-gray-700 text-gray-300 group-hover:bg-brand group-hover:text-white flex items-center justify-center text-xl mb-3 transition-colors">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <span class="font-bold text-base tracking-wide">Interior Styling</span>
+                        <span class="text-xs text-gray-400 mt-1">Leather & Trim</span>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
 
         <!-- ================= SECTION 3: BEFORE & AFTER SLIDER SIMULATION ================= -->
         <section class="py-16 bg-white border-t border-gray-200">
