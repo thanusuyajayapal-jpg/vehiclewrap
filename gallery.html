@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - VelocityCraft Studio</title>
+    <title>Project Portfolio & Gallery - VelocityCraft Studio</title>
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'%3E%3Crect width='48' height='48' rx='12' fill='%23090d16'/%3E%3Cpath d='M5 29C6.5 29 9 28.5 12 26.5L18 19C19.8 16.8 22.5 15.5 25.5 15.5H29C32 15.5 34.8 17 36.2 19.5L39.5 25C40.8 27.2 40 29 37.5 29H5Z' fill='%23334155'/%3E%3Ccircle cx='11.5' cy='29' r='3.5' fill='%23dc2626'/%3E%3Ccircle cx='34.5' cy='29' r='3.5' fill='%23dc2626'/%3E%3Cpath d='M6 29C11 28.5 17 25 22 19.5C27 14 33 10.5 40 9C41.8 8.6 42.8 10.5 41.5 11.8C35.5 17.5 28.5 24 20.5 30C15 34 9 35.5 5 35.5C4 35.5 3.5 34.5 4 33.5L6 29Z' fill='%23dc2626'/%3E%3Cpath d='M16 25C22 19.5 28 15 35 11.5C38 10 40.5 9.2 41.5 9.5' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round'/%3E%3Ccircle cx='40.5' cy='9.5' r='1.5' fill='%23ffffff'/%3E%3C/svg%3E">
     <!-- Tailwind CSS -->
@@ -11,15 +11,15 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     
-    <!-- Custom configuration for automotive branding colors (Electric Red & Carbon Dark) -->
+    <!-- Custom configuration for automotive branding colors -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            light: '#fee2e2', // Light red/pink background
-                            DEFAULT: '#dc2626', // Vibrant racing red
+                            light: '#fee2e2',
+                            DEFAULT: '#dc2626',
                             dark: '#991b1b',
                         }
                     }
@@ -77,8 +77,6 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden xl:flex space-x-6 items-center font-medium text-lg text-gray-700">
-                    
-                    <!-- Home Dropdown -->
                     <div class="relative group">
                         <button class="hover:text-brand flex items-center gap-1 focus:outline-none transition-colors">
                             Home <i class="fas fa-caret-down text-sm"></i>
@@ -88,8 +86,6 @@
                             <a href="homepage2.html" class="block px-4 py-3 hover:bg-brand-light hover:text-brand-dark rounded-b-lg">Home2</a>
                         </div>
                     </div>
-
-                    <!-- Standard Links with exact file names & redirects -->
                     <a href="about.html" class="hover:text-brand transition-colors">About</a>
                     <a href="service.html" class="hover:text-brand transition-colors">Service</a>
                     <a href="gallery.html" class="text-brand font-bold transition-colors">Gallery</a>
@@ -100,27 +96,26 @@
 
                 <!-- Actions / Login -->
                 <div class="hidden xl:flex items-center gap-4">
-                    <!-- Toggles -->
-                    <button onclick="toggleDarkMode()" class="w-10 h-10 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" id="navThemeToggle" title="Toggle Dark Mode">
+                    <button onclick="toggleDarkMode()" class="w-10 h-10 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" id="navThemeToggle" title="Toggle Dark Mode" aria-label="Toggle dark mode">
                         <i class="fas fa-moon text-lg theme-toggle-icon"></i>
                     </button>
-                    <button onclick="toggleRTL()" class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none font-bold text-sm shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" id="navRtlToggle" title="Toggle RTL">
+                    <button onclick="toggleRTL()" class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none font-bold text-sm shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" id="navRtlToggle" title="Toggle RTL" aria-label="Toggle right-to-left layout">
                         RTL
                     </button>
-                    <a href="signin.html" class="border-2 border-brand text-brand hover:bg-brand hover:text-white px-6 py-2 rounded-full font-bold transition-all text-lg shadow-sm">
+                    <a href="index.html" class="border-2 border-brand text-brand hover:bg-brand hover:text-white px-5 py-2.5 rounded-xl font-bold transition-all text-base shadow-sm inline-flex items-center justify-center">
                         Book Now
                     </a>
                 </div>
 
                 <!-- Hamburger Button (Mobile) -->
-                <button id="mobile-menu-btn" class="xl:hidden flex items-center justify-center w-12 h-12 rounded-md border-2 border-gray-200 text-gray-600 hover:text-brand hover:border-brand transition-colors">
+                <button id="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" class="xl:hidden flex items-center justify-center w-12 h-12 rounded-md border-2 border-gray-200 text-gray-600 hover:text-brand hover:border-brand transition-colors">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- ================= MOBILE MENU (Hidden by default) ================= -->
+    <!-- ================= MOBILE MENU ================= -->
     <div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden transition-opacity"></div>
     <div id="mobile-menu" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-2xl z-[70] transform translate-x-full transition-transform duration-300 overflow-y-auto border-l-4 border-brand">
         <div class="p-6">
@@ -129,12 +124,12 @@
                     <div class="w-8 h-8 rounded-lg bg-zinc-900 p-1 flex items-center justify-center border border-zinc-800">
                         <svg class="w-full h-full" viewBox="0 0 48 48" fill="none">
                             <path d="M5 29C6.5 29 9 28.5 12 26.5L18 19C19.8 16.8 22.5 15.5 25.5 15.5H29C32 15.5 34.8 17 36.2 19.5L39.5 25C40.8 27.2 40 29 37.5 29H5Z" fill="#334155" />
-                            <path d="M6 29C11 28.5 17 25 22 19.5C27 14 33 10.5 40 9C41.8 8.6 42.8 10.5 41.5 11.8C35.5 17.5 28.5 24 20.5 30C15 34 9 35.5 5 35.5C4 35.5 3.5 34.5 4 33.5L6 29Z" fill="#dc2626" />
+                            <path d="M6 29C11 28.5 17 25 22 19.5C27 14 33 10.5 40 9C41.8 8.6 42.8 10.5 41.5 11.8C35.5 17.5 28.5 24 20.5 30C15 34 9 35.5 5 35.5L4 35.5 3.5 34.5 4 33.5L6 29Z" fill="#dc2626" />
                         </svg>
                     </div>
                     <span class="font-black text-lg tracking-tight text-gray-900 dark:text-white">VELOCITY<span class="text-brand">CRAFT</span></span>
                 </a>
-                <button id="close-menu-btn" class="text-gray-500 hover:text-red-500 text-3xl">
+                <button id="close-menu-btn" aria-label="Close navigation menu" class="text-gray-500 hover:text-red-500 text-3xl">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
@@ -150,17 +145,16 @@
                 <li><a href="contact.html" class="block p-3 border rounded-lg hover:bg-brand-light hover:border-brand">Contact</a></li>
                 
                 <li class="pt-4 mt-4 border-t">
-                    <a href="signin.html" class="block w-full text-center bg-brand text-white p-3 rounded-lg hover:bg-brand-dark shadow-md">
+                    <a href="index.html" class="block w-full text-center bg-brand text-white p-3 rounded-xl hover:bg-brand-dark shadow-md font-bold transition-colors">
                         Book Now
                     </a>
                 </li>
 
-                <!-- Mobile Toggles -->
                 <li class="pt-4 flex justify-center gap-6">
-                    <button onclick="toggleDarkMode()" id="mobileThemeToggle" class="w-12 h-12 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" title="Toggle Dark Mode">
+                    <button onclick="toggleDarkMode()" id="mobileThemeToggle" class="w-12 h-12 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" title="Toggle Dark Mode" aria-label="Toggle dark mode">
                         <i class="fas fa-moon text-xl theme-toggle-icon"></i>
                     </button>
-                    <button onclick="toggleRTL()" id="mobileRtlToggle" class="rtl-toggle-btn w-12 h-12 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none font-bold text-base shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" title="Toggle RTL">
+                    <button onclick="toggleRTL()" id="mobileRtlToggle" class="rtl-toggle-btn w-12 h-12 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none font-bold text-base shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" title="Toggle RTL" aria-label="Toggle right-to-left layout">
                         RTL
                     </button>
                 </li>
@@ -173,266 +167,397 @@
         
         <!-- ================= HERO BANNER ================= -->
         <section class="relative pt-24 pb-24 lg:pt-36 lg:pb-36 overflow-hidden z-10">
-            <!-- Background Image & Gradient Overlay -->
             <div class="absolute inset-0 z-0">
-                <img src="image/car wrap (14).jpg" 
-                     alt="Luxury sports cars showcase gallery" 
-                     class="w-full h-full object-cover object-center" />
+                <img src="image/car wrap (14).jpg" alt="Luxury sports cars showcase gallery" class="w-full h-full object-cover object-center" />
                 <div class="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/80 to-brand-dark/70"></div>
             </div>
 
-            <!-- Hero Content -->
             <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-brand-light text-sm font-bold tracking-widest uppercase mb-8 backdrop-blur-sm">
-                    <i class="fas fa-camera text-brand-light"></i> Vehicle Portfolio Showcase
+                    <i class="fas fa-camera text-brand-light"></i> Masterpiece Portfolio Showcase
                 </span>
                 
                 <h1 class="text-4xl sm:text-5xl lg:text-7xl font-semibold text-white leading-tight mb-8 max-w-4xl mx-auto drop-shadow-md">
-                    Explore Our Masterpiece <br class="hidden sm:block" /> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-light to-brand">Custom Conversions</span>
+                    Explore Our Completed <br class="hidden sm:block" /> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-light to-brand">Custom Conversions</span>
                 </h1>
                 
                 <p class="text-xl sm:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
-                    Browse through our extensive gallery of completed projects. Witness the striking transformations of full-body vinyl wraps, matte paint protections, and custom aesthetic details.
+                    Every build tells a story of precision engineering, premium materials, and obsessive attention to detail. Filter through our completed vehicle gallery below.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
-                    <a href="calculator.html" class="w-full sm:w-auto bg-brand hover:bg-brand-light hover:text-brand-dark text-white px-10 py-4 rounded-full font-bold text-lg shadow-[0_0_25px_rgba(220,38,38,0.5)] hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                    <a href="calculator.html" class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-white px-8 py-3.5 rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-red-600/30 hover:shadow-red-600/50 transition-all inline-flex items-center justify-center gap-2">
                         <i class="fas fa-calculator"></i> Estimate Price
                     </a>
-                    <a href="contact.html" class="w-full sm:w-auto bg-transparent border-2 border-white/40 hover:border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
+                    <a href="contact.html" class="w-full sm:w-auto bg-transparent border-2 border-white/60 hover:border-white hover:bg-white/10 text-white px-8 py-3.5 rounded-xl font-bold text-base sm:text-lg transition-all inline-flex items-center justify-center gap-2 backdrop-blur-sm">
                         <i class="fas fa-phone"></i> Book Consultation
                     </a>
                 </div>
             </div>
         </section>
 
-     
-        <!-- ================= SECTION 2: MAIN GRID SHOWCASE ================= -->
-        <section class="py-16 bg-gray-50">
+        <!-- ================= INTERACTIVE PORTFOLIO & CATEGORY FILTER ================= -->
+        <section class="py-20 bg-gray-900 text-white relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <span class="text-brand font-bold uppercase tracking-wider text-sm">Featured Works</span>
-                    <h2 class="text-3xl font-extxl font-bold text-gray-900 mt-2">Latest Custom Transformations</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Card 1 -->
-                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="image/car wrap (15).jpg" alt="Matte Black Wrap" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <span class="absolute top-4 right-4 bg-brand text-white text-xs px-3 py-1 rounded-full font-bold">Vinyl Wrap</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Stealth Matte Black GT</h3>
-                            <p class="text-gray-600 text-sm mb-4">Complete satin black wrap conversion with gloss black accents.</p>
-                            <a href="#" class="text-brand font-semibold hover:underline flex items-center gap-1 text-sm">View Project Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="image/car wrap (16).jpg" alt="PPF Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <span class="absolute top-4 right-4 bg-brand text-white text-xs px-3 py-1 rounded-full font-bold">PPF Protection</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Supercar Gloss Shield</h3>
-                            <p class="text-gray-600 text-sm mb-4">Self-healing full body paint protection film installation.</p>
-                            <a href="#" class="text-brand font-semibold hover:underline flex items-center gap-1 text-sm">View Project Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="image/car wrap (17).jpg" alt="Custom Wheels" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <span class="absolute top-4 right-4 bg-brand text-white text-xs px-3 py-1 rounded-full font-bold">Custom Wheels</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Forged Alloy Rims & Calipers</h3>
-                            <p class="text-gray-600 text-sm mb-4">Custom powder-coated wheels paired with racing red brake calipers.</p>
-                            <a href="#" class="text-brand font-semibold hover:underline flex items-center gap-1 text-sm">View Project Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-           <!-- ================= REDESIGNED SECTION 1: FILTER PORTFOLIO CATEGORIES ================= -->
-        <section class="py-16 bg-gray-900 border-b border-gray-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900 pointer-events-none"></div>
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <!-- Section Header -->
-                <div class="text-center max-w-2xl mx-auto mb-10">
-                    <span class="text-brand font-bold uppercase tracking-widest text-xs bg-red-900/30 px-3 py-1 rounded-full border border-red-800/50">
-                        <i class="fas fa-filter mr-1"></i> Interactive Showcase
-                    </span>
-                    <h2 class="text-3xl sm:text-4xl font-ext5xl font-bold text-white mt-3 mb-2">Filter Portfolio Categories</h2>
-                    <p class="text-gray-400 text-base">Select a category below to explore specific automotive styling conversions and customizations.</p>
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-14" id="portfolio-filters">
+                    <button data-filter="all" class="filter-btn px-6 py-2.5 rounded-xl font-bold text-sm bg-brand text-white shadow-lg shadow-red-500/30 transition-all">
+                        All Projects
+                    </button>
+                    <button data-filter="vinyl" class="filter-btn px-6 py-2.5 rounded-xl font-bold text-sm bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white border border-gray-700 transition-all">
+                        Vinyl Wraps
+                    </button>
+                    <button data-filter="ppf" class="filter-btn px-6 py-2.5 rounded-xl font-bold text-sm bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white border border-gray-700 transition-all">
+                        PPF Armor
+                    </button>
+                    <button data-filter="wheels" class="filter-btn px-6 py-2.5 rounded-xl font-bold text-sm bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white border border-gray-700 transition-all">
+                        Custom Wheels
+                    </button>
+                    <button data-filter="interior" class="filter-btn px-6 py-2.5 rounded-xl font-bold text-sm bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white border border-gray-700 transition-all">
+                        Interior Styling
+                    </button>
                 </div>
 
-                <!-- Filter Cards / Buttons Grid Container -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+                <!-- Portfolio Grid with Detailed Project Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
                     
-                    <!-- All Projects Tab (Active) -->
-                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-brand text-white shadow-lg shadow-red-500/25 hover:scale-105 transition-all duration-300 border-2 border-brand text-center">
-                        <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-xl mb-3 group-hover:rotate-6 transition-transform">
-                            <i class="fas fa-th-large"></i>
+                    <!-- Project 1 -->
+                    <div class="portfolio-item bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 shadow-xl group" data-category="vinyl">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="image/car wrap (15).jpg" alt="Stealth Matte Black GT" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-brand text-white text-xs px-3 py-1.5 rounded-full font-bold uppercase tracking-wider shadow-md">Vinyl Wrap</span>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80"></div>
                         </div>
-                        <span class="font-bold text-base tracking-wide">All Projects</span>
-                        <span class="text-xs text-red-100 mt-1">View Everything</span>
-                    </button>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white group-hover:text-brand transition-colors">Stealth Matte Black GT</h3>
+                                    <p class="text-xs text-gray-400 mt-0.5">Porsche 911 Turbo S</p>
+                                </div>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 px-2.5 py-1 rounded-md">5 Days</span>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-6 leading-relaxed">Full satin black wrap conversion with gloss black accents, custom caliper matching, and ceramic coating finish.</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-700">
+                                <span class="text-xs text-brand-light font-medium"><i class="fas fa-shield-alt mr-1"></i> 7-Year Warranty</span>
+                                <button onclick="openProjectModal('Stealth Matte Black GT', 'Porsche 911 Turbo S', 'image/car wrap (15).jpg', 'Full satin black color change wrap with custom gloss black chrome delete, ceramic coating protection, and caliper respray in racing red.', '5 Days', 'Avery Dennison Supreme Wrapping Film', 'Matte Black / Gloss Black Accents')" class="bg-gray-700 hover:bg-brand text-white text-xs font-bold px-4 py-2 rounded-xl transition-all shadow-sm hover:shadow-md flex items-center gap-1.5">
+                                    <span>View Details</span> <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Vinyl Wraps Tab -->
-                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white shadow-sm hover:shadow-md transition-all duration-300 border-2 border-gray-700 hover:border-brand text-center">
-                        <div class="w-12 h-12 rounded-xl bg-gray-700 text-gray-300 group-hover:bg-brand group-hover:text-white flex items-center justify-center text-xl mb-3 transition-colors">
-                            <i class="fas fa-palette"></i>
+                    <!-- Project 2 -->
+                    <div class="portfolio-item bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 shadow-xl group" data-category="ppf">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="image/car wrap (16).jpg" alt="Supercar Gloss Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-brand text-white text-xs px-3 py-1.5 rounded-full font-bold uppercase tracking-wider shadow-md">PPF Armor</span>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80"></div>
                         </div>
-                        <span class="font-bold text-base tracking-wide">Vinyl Wraps</span>
-                        <span class="text-xs text-gray-400 mt-1">Color & Satin</span>
-                    </button>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white group-hover:text-brand transition-colors">Supercar Gloss Shield</h3>
+                                    <p class="text-xs text-gray-400 mt-0.5">Tesla Model S Plaid</p>
+                                </div>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 px-2.5 py-1 rounded-md">4 Days</span>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-6 leading-relaxed">Self-healing full body paint protection film installation with custom edge wrapping and headlight armor.</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-700">
+                                <span class="text-xs text-brand-light font-medium"><i class="fas fa-shield-alt mr-1"></i> 10-Year Warranty</span>
+                                <button onclick="openProjectModal('Supercar Gloss Shield', 'Tesla Model S Plaid', 'image/car wrap (16).jpg', 'Complete full-body self-healing paint protection film (PPF) installation to safeguard against stone chips, swirl marks, and road debris.', '4 Days', 'XPEL Ultimate Plus PPF', 'Ultra-Gloss Transparent')" class="bg-gray-700 hover:bg-brand text-white text-xs font-bold px-4 py-2 rounded-xl transition-all shadow-sm hover:shadow-md flex items-center gap-1.5">
+                                    <span>View Details</span> <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- PPF Protection Tab -->
-                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white shadow-sm hover:shadow-md transition-all duration-300 border-2 border-gray-700 hover:border-brand text-center">
-                        <div class="w-12 h-12 rounded-xl bg-gray-700 text-gray-300 group-hover:bg-brand group-hover:text-white flex items-center justify-center text-xl mb-3 transition-colors">
-                            <i class="fas fa-shield-alt"></i>
+                    <!-- Project 3 -->
+                    <div class="portfolio-item bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 shadow-xl group" data-category="wheels">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="image/car wrap (17).jpg" alt="Forged Alloy Rims & Calipers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-brand text-white text-xs px-3 py-1.5 rounded-full font-bold uppercase tracking-wider shadow-md">Custom Wheels</span>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80"></div>
                         </div>
-                        <span class="font-bold text-base tracking-wide">PPF Shield</span>
-                        <span class="text-xs text-gray-400 mt-1">Paint Armor</span>
-                    </button>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white group-hover:text-brand transition-colors">Forged Alloy Rims & Calipers</h3>
+                                    <p class="text-xs text-gray-400 mt-0.5">BMW M4 Competition</p>
+                                </div>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 px-2.5 py-1 rounded-md">2 Days</span>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-6 leading-relaxed">Custom powder-coated 20-inch forged wheels paired with high-temperature racing red brake calipers.</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-700">
+                                <span class="text-xs text-brand-light font-medium"><i class="fas fa-shield-alt mr-1"></i> 3-Year Warranty</span>
+                                <button onclick="openProjectModal('Forged Alloy Rims & Calipers', 'BMW M4 Competition', 'image/car wrap (17).jpg', 'Custom wheel powder coating in satin gunmetal grey combined with professional multi-stage high-temp brake caliper painting in racing red with M-sport branding.', '2 Days', 'Prismatic Powders & VHT Caliper Lacquer', 'Gunmetal Grey / Racing Red')" class="bg-gray-700 hover:bg-brand text-white text-xs font-bold px-4 py-2 rounded-xl transition-all shadow-sm hover:shadow-md flex items-center gap-1.5">
+                                    <span>View Details</span> <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Custom Wheels Tab -->
-                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white shadow-sm hover:shadow-md transition-all duration-300 border-2 border-gray-700 hover:border-brand text-center">
-                        <div class="w-12 h-12 rounded-xl bg-gray-700 text-gray-300 group-hover:bg-brand group-hover:text-white flex items-center justify-center text-xl mb-3 transition-colors">
-                            <i class="fas fa-circle-notch"></i>
+                    <!-- Project 4 -->
+                    <div class="portfolio-item bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 shadow-xl group" data-category="vinyl">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="image/car wrap (19).jpg" alt="Satin Color Shift Luxury" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-brand text-white text-xs px-3 py-1.5 rounded-full font-bold uppercase tracking-wider shadow-md">Vinyl Wrap</span>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80"></div>
                         </div>
-                        <span class="font-bold text-base tracking-wide">Custom Wheels</span>
-                        <span class="text-xs text-gray-400 mt-1">Rims & Calipers</span>
-                    </button>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white group-hover:text-brand transition-colors">Satin Mystic Color Shift</h3>
+                                    <p class="text-xs text-gray-400 mt-0.5">Mercedes-AMG GT</p>
+                                </div>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 px-2.5 py-1 rounded-md">6 Days</span>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-6 leading-relaxed">Mesmerizing color shift wrap transitioning between deep purple and electric blue depending on sunlight angles.</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-700">
+                                <span class="text-xs text-brand-light font-medium"><i class="fas fa-shield-alt mr-1"></i> 7-Year Warranty</span>
+                                <button onclick="openProjectModal('Satin Mystic Color Shift', 'Mercedes-AMG GT', 'image/car wrap (19).jpg', 'Exclusive color-flowing satin wrap conversion that changes hue dynamically under sunlight. Includes full door-jamb tucking and chrome delete.', '6 Days', '3M 2080 Series Iridescent Film', 'Purple / Electric Blue Shift')" class="bg-gray-700 hover:bg-brand text-white text-xs font-bold px-4 py-2 rounded-xl transition-all shadow-sm hover:shadow-md flex items-center gap-1.5">
+                                    <span>View Details</span> <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Interior Styling Tab -->
-                    <button class="group relative flex flex-col items-center p-5 rounded-2xl bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white shadow-sm hover:shadow-md transition-all duration-300 border-2 border-gray-700 hover:border-brand text-center col-span-2 sm:col-span-1">
-                        <div class="w-12 h-12 rounded-xl bg-gray-700 text-gray-300 group-hover:bg-brand group-hover:text-white flex items-center justify-center text-xl mb-3 transition-colors">
-                            <i class="fas fa-couch"></i>
+                    <!-- Project 5 -->
+                    <div class="portfolio-item bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 shadow-xl group" data-category="interior">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="image/car wrap (18).jpg" alt="Carbon Fiber & Alcantara Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-brand text-white text-xs px-3 py-1.5 rounded-full font-bold uppercase tracking-wider shadow-md">Interior Styling</span>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80"></div>
                         </div>
-                        <span class="font-bold text-base tracking-wide">Interior Styling</span>
-                        <span class="text-xs text-gray-400 mt-1">Leather & Trim</span>
-                    </button>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white group-hover:text-brand transition-colors">Alcantara & Carbon Cockpit</h3>
+                                    <p class="text-xs text-gray-400 mt-0.5">Audi R8 V10</p>
+                                </div>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 px-2.5 py-1 rounded-md">5 Days</span>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-6 leading-relaxed">Custom steering wheel re-trim in Italian Alcantara with red stitching and real carbon fiber dashboard trim inserts.</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-700">
+                                <span class="text-xs text-brand-light font-medium"><i class="fas fa-shield-alt mr-1"></i> 5-Year Warranty</span>
+                                <button onclick="openProjectModal('Alcantara & Carbon Cockpit', 'Audi R8 V10', 'image/car wrap (18).jpg', 'Full interior conversion featuring genuine Italian Alcantara headliner and steering wheel re-trim, paired with gloss carbon fiber center console and dash accents.', '5 Days', 'Genuine Italian Alcantara & Dry Carbon', 'Black Alcantara / Red Stitching')" class="bg-gray-700 hover:bg-brand text-white text-xs font-bold px-4 py-2 rounded-xl transition-all shadow-sm hover:shadow-md flex items-center gap-1.5">
+                                    <span>View Details</span> <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="portfolio-item bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 shadow-xl group" data-category="ppf">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="image/car wrap (24).jpg" alt="Track Pack Matte PPF" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-brand text-white text-xs px-3 py-1.5 rounded-full font-bold uppercase tracking-wider shadow-md">PPF Armor</span>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white group-hover:text-brand transition-colors">Stealth Matte PPF Armor</h3>
+                                    <p class="text-xs text-gray-400 mt-0.5">Lamborghini Huracan</p>
+                                </div>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 px-2.5 py-1 rounded-md">5 Days</span>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-6 leading-relaxed">Transforming factory gloss paint into an aggressive satin matte finish while providing ultimate stone chip defense.</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-700">
+                                <span class="text-xs text-brand-light font-medium"><i class="fas fa-shield-alt mr-1"></i> 10-Year Warranty</span>
+                                <button onclick="openProjectModal('Stealth Matte PPF Armor', 'Lamborghini Huracan', 'image/car wrap (24).jpg', 'Applied specialized satin matte paint protection film over factory gloss paint, giving the supercar an aggressive matte finish with maximum rock chip and scratch protection.', '5 Days', 'XPEL Stealth Matte PPF', 'Satin Frosted Clear')" class="bg-gray-700 hover:bg-brand text-white text-xs font-bold px-4 py-2 rounded-xl transition-all shadow-sm hover:shadow-md flex items-center gap-1.5">
+                                    <span>View Details</span> <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
         </section>
 
+        <!-- ================= UNIQUE SECTION: CUSTOMIZATION WORKFLOW & PROCESS TIMELINE ================= -->
+        <section class="py-24 bg-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand font-bold uppercase tracking-widest text-xs bg-red-50 px-3 py-1.5 rounded-full border border-red-100">
+                        <i class="fas fa-cogs mr-1"></i> Behind The Scenes
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-ext5xl font-bold text-gray-900 mt-3 mb-4">The VelocityCraft Customization Journey</h2>
+                    <p class="text-gray-600 text-lg">Every portfolio masterpiece follows our rigorous 4-step master installation protocol to ensure perfection.</p>
+                </div>
 
-        <!-- ================= SECTION 3: BEFORE & AFTER SLIDER SIMULATION ================= -->
-        <section class="py-16 bg-white border-t border-gray-200">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Step 1 -->
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 relative group hover:border-brand transition-all shadow-sm flex flex-col">
+                        <div class="relative h-44 overflow-hidden">
+                            <img src="image/car wrap (20).jpg" alt="Consultation & Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent"></div>
+                            <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-brand text-white font-black text-base flex items-center justify-center shadow-lg shadow-red-500/30">
+                                01
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="w-12 h-12 rounded-xl bg-red-100 text-brand flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Consultation & Design</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">We discuss your aesthetic vision, select film swatches, digital renderings, and map out the custom finish.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 relative group hover:border-brand transition-all shadow-sm flex flex-col">
+                        <div class="relative h-44 overflow-hidden">
+                            <img src="image/car wrap (22).jpg" alt="Decontamination & Prep" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent"></div>
+                            <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-brand text-white font-black text-base flex items-center justify-center shadow-lg shadow-red-500/30">
+                                02
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="w-12 h-12 rounded-xl bg-red-100 text-brand flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-shower"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Decontamination</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Multi-stage wash, clay bar treatment, and isopropyl alcohol wipe down to ensure absolute zero dust adhesion.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 relative group hover:border-brand transition-all shadow-sm flex flex-col">
+                        <div class="relative h-44 overflow-hidden">
+                            <img src="image/car wrap (8).jpg" alt="Precision Application" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent"></div>
+                            <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-brand text-white font-black text-base flex items-center justify-center shadow-lg shadow-red-500/30">
+                                03
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="w-12 h-12 rounded-xl bg-red-100 text-brand flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Precision Application</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Certified wrap masters meticulously apply, heat-stretch, and tuck film edges inside all door jambs and panels.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 relative group hover:border-brand transition-all shadow-sm flex flex-col">
+                        <div class="relative h-44 overflow-hidden">
+                            <img src="image/car wrap (9).jpg" alt="Quality Audit & Cure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent"></div>
+                            <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-brand text-white font-black text-base flex items-center justify-center shadow-lg shadow-red-500/30">
+                                04
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="w-12 h-12 rounded-xl bg-red-100 text-brand flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Quality Audit & Cure</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Post-heating edge inspection, ceramic top-coat sealing, and rigorous quality audit before final vehicle handover.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BEFORE & AFTER CRAFTSMANSHIP COMPARISON ================= -->
+        <section class="py-20 bg-gray-50 border-t border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
                         <span class="text-brand font-bold uppercase tracking-wider text-sm">Transformation Impact</span>
-                        <h2 class="text-3xl font-bold text-gray-900 mt-2 mb-4">Before & After Craftsmanship</h2>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Observe the dramatic shift from factory paint to an aggressive custom wrap. Every edge is precision-tucked, ensuring zero visible paint underneath and a factory-finish appearance.
+                        <h2 class="text-3xl sm:text-4xl font-ext5xl font-bold text-gray-900 mt-2 mb-4">Before & After Craftsmanship</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                            Observe the dramatic shift from standard factory paint to an aggressive custom wrap. Every edge is precision-tucked behind door panels and trim, ensuring zero visible original paint and a seamless factory finish.
                         </p>
-                        <ul class="space-y-3 text-gray-700 font-medium mb-8">
+                        <ul class="space-y-4 text-gray-700 font-medium mb-8 text-lg">
                             <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand"></i> 100% Paint Protection Underneath</li>
                             <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand"></i> Seamless Door Jambs & Inner Edges</li>
                             <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand"></i> Premium Cast Vinyl with 7-Year Warranty</li>
                         </ul>
-                        <a href="calculator.html" class="inline-block bg-brand hover:bg-brand-dark text-white font-bold px-8 py-3 rounded-full shadow-md transition-all">Get Your Quote</a>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="relative rounded-xl overflow-hidden shadow-md">
-                            <img src="image/car wrap (18).jpg" alt="Before Customization" class="w-full h-64 object-cover">
-                            <span class="absolute bottom-3 left-3 bg-black/70 text-white text-xs px-2.5 py-1 rounded font-bold backdrop-blur-sm">Before (Factory)</span>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="calculator.html" class="inline-flex justify-center items-center bg-brand hover:bg-brand-dark text-white font-bold px-8 py-3.5 rounded-xl shadow-lg shadow-red-600/30 hover:shadow-red-600/50 transition-all text-base">Calculate Cost Now</a>
+                            <a href="contact.html" class="inline-flex justify-center items-center bg-white hover:bg-gray-100 text-gray-800 font-bold px-8 py-3.5 rounded-xl transition-all border border-gray-300 shadow-sm text-base">Book Studio Visit</a>
                         </div>
-                        <div class="relative rounded-xl overflow-hidden shadow-md">
-                            <img src="image/car wrap (19).jpg" alt="After Customization" class="w-full h-64 object-cover">
-                            <span class="absolute bottom-3 left-3 bg-brand text-white text-xs px-2.5 py-1 rounded font-bold">After (Wrapped)</span>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white group">
+                            <img src="image/car wrap (18).jpg" alt="Before Customization" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <span class="absolute bottom-4 left-4 bg-black/80 text-white text-xs px-3 py-1.5 rounded-lg font-bold backdrop-blur-sm">Before (Factory Paint)</span>
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white group">
+                            <img src="image/car wrap (19).jpg" alt="After Customization" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <span class="absolute bottom-4 left-4 bg-brand text-white text-xs px-3 py-1.5 rounded-lg font-bold shadow-md">After (Custom Wrapped)</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================= SECTION 4: CLIENT TESTIMONIALS / HIGHLIGHTS ================= -->
-<section class="py-16 bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="text-brand-light font-bold uppercase tracking-wider text-sm">Customer Pride</span>
-        <h2 class="text-3xl font-bold mb-12">What Car Owners Say About Our Gallery Works</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-            
-            <!-- Testimonial 1 -->
-            <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 relative flex flex-col justify-between">
-                <div>
-                    <div class="flex text-amber-400 mb-4 gap-1">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 text-sm mb-6">"The metallic gloss blue wrap on my Porsche looks like a factory paint job. The VelocityCraft team is unmatched!"</p>
-                </div>
-                <div class="flex items-center gap-4 mt-4">
-                    <img src="image/author (1).jpg" alt="Marcus Vance" class="w-12 h-12 rounded-full object-cover border border-gray-600">
-                    <div>
-                        <h4 class="font-bold text-white">Marcus Vance</h4>
-                        <span class="text-xs text-gray-400">Porsche 911 Owner</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 relative flex flex-col justify-between">
-                <div>
-                    <div class="flex text-amber-400 mb-4 gap-1">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 text-sm mb-6">"Brought my Tesla in for full PPF protection. Clean cuts, zero bubbles, and amazing customer service throughout."</p>
-                </div>
-                <div class="flex items-center gap-4 mt-4">
-                    <img src="image/author (2).jpg" alt="Sarah Jenkins" class="w-12 h-12 rounded-full object-cover border border-gray-600">
-                    <div>
-                        <h4 class="font-bold text-white">Sarah Jenkins</h4>
-                        <span class="text-xs text-gray-400">Tesla Model S Owner</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 relative flex flex-col justify-between">
-                <div>
-                    <div class="flex text-amber-400 mb-4 gap-1">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 text-sm mb-6">"Absolute artists! The satin color shift wrap changes shades depending on sunlight. Worth every penny."</p>
-                </div>
-                <div class="flex items-center gap-4 mt-4">
-                    <img src="image/author (4).jpg" alt="David K." class="w-12 h-12 rounded-full object-cover border border-gray-600">
-                    <div>
-                        <h4 class="font-bold text-white">David K.</h4>
-                        <span class="text-xs text-gray-400">BMW M4 Owner</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-        <!-- ================= SECTION 5: CALL TO ACTION BANNER ================= -->
-        <section class="py-16 bg-gradient-to-r from-brand-dark to-brand text-white">
+        <!-- ================= CALL TO ACTION BANNER ================= -->
+        <section class="py-20 bg-gradient-to-r from-brand-dark to-brand text-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl sm:text-4xl font-extxl font-bold mb-4">Ready to Give Your Car a Stunning Makeover?</h2>
-                <p class="text-lg text-brand-light mb-8 max-w-2xl mx-auto">Book your slot today or use our interactive price calculator to design your dream wrap package.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="calculator.html" class="bg-white text-brand hover:bg-gray-100 font-bold px-8 py-4 rounded-full shadow-lg transition-all">Calculate Cost Now</a>
-                    <a href="contact.html" class="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold px-8 py-4 rounded-full transition-all">Contact Our Studio</a>
+                <h2 class="text-3xl sm:text-5xl font-ext5xl font-bold mb-4">Ready to Give Your Car a Stunning Makeover?</h2>
+                <p class="text-lg sm:text-xl text-brand-light mb-10 max-w-2xl mx-auto">Book your slot today or use our interactive price calculator to design your dream wrap package.</p>
+                <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                    <a href="calculator.html" class="bg-white text-brand hover:bg-brand-light hover:text-brand-dark font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all inline-flex items-center justify-center gap-2 text-base sm:text-lg">Calculate Cost Now</a>
+                    <a href="contact.html" class="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold px-8 py-3.5 rounded-xl transition-all inline-flex items-center justify-center gap-2 text-base sm:text-lg backdrop-blur-sm">Contact Our Studio</a>
                 </div>
             </div>
         </section>
 
     </main>
 
+    <!-- ================= INTERACTIVE PROJECT DETAILS MODAL ================= -->
+    <div id="project-modal" class="fixed inset-0 bg-black/80 z-[100] hidden items-center justify-center p-4 backdrop-blur-sm transition-opacity">
+        <div class="bg-gray-900 border border-gray-800 text-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative transform scale-95 transition-transform duration-300" id="modal-container">
+            <button onclick="closeProjectModal()" aria-label="Close project showcase modal" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-800 hover:bg-brand text-gray-300 hover:text-white flex items-center justify-center transition-colors z-20">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+            <div class="relative h-72 sm:h-96 w-full">
+                <img id="modal-img" src="" alt="Project Preview" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-8">
+                <div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+                    <div>
+                        <span class="text-brand text-xs font-bold uppercase tracking-widest bg-red-900/30 px-3 py-1 rounded-full border border-red-800/50" id="modal-vehicle">Vehicle Model</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2" id="modal-title">Project Title</h3>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-gray-400 block">Completion Time</span>
+                        <span class="text-lg font-bold text-brand-light" id="modal-time">5 Days</span>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-base leading-relaxed mb-6" id="modal-desc">Project description goes here...</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 bg-gray-800 p-4 rounded-2xl border border-gray-700">
+                    <div>
+                        <span class="text-xs text-gray-400 block mb-1">Materials Used</span>
+                        <span class="text-sm font-semibold text-white" id="modal-material">Film Type</span>
+                    </div>
+                    <div>
+                        <span class="text-xs text-gray-400 block mb-1">Finish & Color</span>
+                        <span class="text-sm font-semibold text-white" id="modal-finish">Finish Details</span>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="contact.html" class="flex-1 bg-brand hover:bg-brand-dark text-white text-center font-bold py-4 rounded-xl shadow-lg transition-colors">Book Similar Build</a>
+                    <button onclick="closeProjectModal()" class="px-6 py-4 bg-gray-800 hover:bg-gray-700 text-gray-300 font-bold rounded-xl transition-colors">Close Showcase</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- ================= FOOTER ================= -->
     <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-brand">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 
-                <!-- Brand Info -->
                 <div>
                     <a href="index.html" class="inline-flex items-center gap-3 group focus:outline-none mb-4" aria-label="VelocityCraft Studio Home">
                         <div class="relative w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-zinc-900 via-zinc-950 to-black p-1.5 shadow-md shadow-black/40 border border-zinc-700/80 group-hover:border-red-500/80 group-hover:shadow-red-500/25 group-hover:scale-105 transition-all duration-300">
@@ -476,13 +601,12 @@
                         The ultimate destination for premium vehicle wraps, paint protection films, and professional custom styling modifications.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
-                <!-- Quick Links & Resources -->
                 <div>
                     <h4 class="text-lg font-medium mb-4 border-b-2 border-brand pb-2 inline-block">Explore</h4>
                     <ul class="space-y-3 text-gray-400">
@@ -493,7 +617,6 @@
                     </ul>
                 </div>
 
-                <!-- Contact Info -->
                 <div>
                     <h4 class="text-lg font-medium mb-4 border-b-2 border-brand pb-2 inline-block">Contact</h4>
                     <ul class="space-y-4 text-gray-400">
@@ -512,20 +635,18 @@
                     </ul>
                 </div>
 
-                <!-- Newsletter -->
                 <div>
                     <h4 class="text-lg font-medium mb-4 border-b-2 border-brand pb-2 inline-block">Newsletter</h4>
                     <p class="text-gray-400 text-sm mb-4">Subscribe for new wrap releases, car show updates, and modding discounts.</p>
                     <form class="flex flex-col gap-3">
-                        <input type="email" placeholder="Enter your email address" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-brand transition-colors" required>
-                        <button type="button" class="w-full bg-brand text-white font-bold py-3 rounded-lg hover:bg-brand-dark transition-colors flex justify-center items-center gap-2">
+                        <input type="email" placeholder="Enter your email address" aria-label="Newsletter email address" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-brand transition-colors" required>
+                        <button type="button" aria-label="Subscribe to newsletter" class="w-full bg-brand text-white font-bold py-3 rounded-xl hover:bg-brand-dark transition-colors flex justify-center items-center gap-2 shadow-sm">
                             <span>Subscribe</span> <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
                 </div>
             </div>
 
-            <!-- Bottom Copyright -->
             <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center">
                 <p>&copy; 2026 VelocityCraft Studio. All rights reserved.</p>
                 <div class="flex gap-4 mt-4 md:mt-0 text-gray-400">
@@ -537,7 +658,7 @@
         </div>
     </footer>
 
-    <!-- ================= JAVASCRIPT ================= -->
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -545,63 +666,338 @@
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileOverlay = document.getElementById('mobile-overlay');
 
-            // Open Mobile Menu
             const openMenu = () => {
                 mobileMenu.classList.remove('translate-x-full');
                 mobileOverlay.classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
+                document.body.style.overflow = 'hidden';
             };
 
-            // Close Mobile Menu
             const closeMenu = () => {
                 mobileMenu.classList.add('translate-x-full');
                 mobileOverlay.classList.add('hidden');
-                document.body.style.overflow = ''; // Restore scrolling
+                document.body.style.overflow = '';
             };
 
-            // Event Listeners
             mobileMenuBtn.addEventListener('click', openMenu);
             closeMenuBtn.addEventListener('click', closeMenu);
             mobileOverlay.addEventListener('click', closeMenu);
+
+            // Portfolio Filtering Script
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-brand', 'text-white', 'shadow-lg', 'shadow-red-500/30');
+                        b.classList.add('bg-gray-800', 'text-gray-300', 'border', 'border-gray-700');
+                    });
+                    btn.classList.remove('bg-gray-800', 'text-gray-300', 'border', 'border-gray-700');
+                    btn.classList.add('bg-brand', 'text-white', 'shadow-lg', 'shadow-red-500/30');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
         });
+
+        // Modal Functions
+        function openProjectModal(title, vehicle, img, desc, time, material, finish) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-vehicle').innerText = vehicle;
+            document.getElementById('modal-img').src = img;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('modal-time').innerText = time;
+            document.getElementById('modal-material').innerText = material;
+            document.getElementById('modal-finish').innerText = finish;
+
+            const modal = document.getElementById('project-modal');
+            const container = document.getElementById('modal-container');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => {
+                container.classList.remove('scale-95');
+                container.classList.add('scale-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('project-modal');
+            const container = document.getElementById('modal-container');
+            container.classList.remove('scale-100');
+            container.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 200);
+        }
     </script>
 
-    <!-- Global Toggles Script & Styles -->
+    <!-- Global Accessibility & Theme Styles -->
     <style>
+      :root {
+        color-scheme: light dark;
+      }
+
+      /* Base Typography & High-Contrast Overrides for Light Mode */
+      body {
+        color: #1f2937;
+      }
+      
+      /* Light mode: ensure muted texts meet WCAG AA (>= 4.5:1 on white / light grey) */
+      .text-gray-400 {
+        color: #4b5563 !important; /* 7.0:1 on white, replaces #9ca3af (2.85:1) */
+      }
+      .text-gray-500 {
+        color: #4b5563 !important; /* 7.0:1 on white */
+      }
+      .text-gray-600 {
+        color: #374151 !important; /* 9.5:1 on white */
+      }
+      .text-gray-700 {
+        color: #1f2937 !important; /* 13.8:1 on white */
+      }
+
+      /* Light mode badges: guarantee readable text on light red */
+      .bg-brand-light {
+        background-color: #fee2e2 !important;
+        color: #991b1b !important;
+      }
+      .bg-brand-light .text-brand,
+      .bg-brand-light .text-brand-dark,
+      .bg-brand-light span,
+      .bg-brand-light a {
+        color: #991b1b !important;
+      }
+
+      /* Accessible Form Inputs (Light Mode) */
+      input, textarea, select {
+        border-color: #94a3b8 !important; /* 3:1 boundary contrast against white */
+        color: #111827 !important;
+      }
+      input::placeholder, textarea::placeholder {
+        color: #64748b !important; /* 4.6:1 contrast against white */
+      }
+
+      /* Accessible Light-Mode Footer (Dark grey background #111827) */
+      footer, footer p, footer span, footer .text-gray-400 {
+        color: #d1d5db !important; /* 9.6:1 on #111827 */
+      }
+      footer .text-gray-500 {
+        color: #cbd5e1 !important; /* 10.5:1 on #111827 */
+      }
+      footer a.text-gray-400, footer a {
+        color: #d1d5db !important;
+      }
+      footer a:hover, footer a.text-gray-400:hover {
+        color: #ffffff !important;
+      }
+      footer .border-gray-800 {
+        border-color: #374151 !important;
+      }
+
+      /* Focus indicator for keyboard accessibility */
+      :focus-visible {
+        outline: 2px solid #dc2626 !important;
+        outline-offset: 3px !important;
+      }
+      html.dark :focus-visible {
+        outline: 2px solid #f87171 !important;
+        outline-offset: 3px !important;
+      }
+
+      /* Accessibility: Reduced Motion Support */
+      @media (prefers-reduced-motion: reduce) {
+        *, ::before, ::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* ================= DARK THEME PALETTE & CONTRAST ================= */
       html.dark { color-scheme: dark; }
-      html.dark body { background-color: #111827 !important; color: #e5e7eb !important; }
       
-      /* Backgrounds */
-      html.dark .bg-white, html.dark .bg-gray-50 { background-color: #1f2937 !important; }
-      html.dark .bg-gray-100, html.dark .bg-gray-200 { background-color: #374151 !important; }
-      html.dark .bg-brand-light { background-color: rgba(220, 38, 38, 0.15) !important; border-color: rgba(220, 38, 38, 0.3) !important; }
-      html.dark .hover\:bg-brand-light:hover { background-color: rgba(220, 38, 38, 0.25) !important; }
-
-      /* Texts */
-      html.dark .text-gray-900, html.dark .text-gray-800, html.dark .text-gray-700 { color: #f3f4f6 !important; }
-      html.dark .text-gray-600 { color: #d1d5db !important; }
-      html.dark .text-gray-500, html.dark .text-gray-400 { color: #9ca3af !important; }
-      html.dark .text-brand-dark { color: #f87171 !important; }
-
-      /* Borders */
-      html.dark .border-gray-100 { border-color: #374151 !important; }
-      html.dark .border-gray-200 { border-color: #4b5563 !important; }
-      html.dark .border-gray-300 { border-color: #6b7280 !important; }
-      html.dark .border-white { border-color: #1f2937 !important; }
-
-      /* Shadows */
-      html.dark .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5) !important; }
-      html.dark .shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.5) !important; }
-      html.dark .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.5) !important; }
-      html.dark .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.5) !important; }
-      html.dark .shadow-xl, html.dark .shadow-2xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important; }
-
-      /* Specific Components */
-      html.dark header, html.dark header.bg-white { background-color: #111827 !important; border-bottom: 1px solid #374151 !important; }
-      html.dark footer { background-color: #111827 !important; border-top: 1px solid #374151 !important; }
-      html.dark input, html.dark textarea, html.dark select { background-color: #374151 !important; color: #f3f4f6 !important; border-color: #4b5563 !important; }
+      /* 1. Primary Background: Pitch Black */
+      html.dark body,
+      html.dark main {
+        background-color: #000000 !important;
+        color: #f3f4f6 !important;
+      }
       
-      /* Toggle button light mode - explicit red styling */
+      /* Primary Sections (Light bg-white mapped to Black) */
+      html.dark .bg-white {
+        background-color: #000000 !important;
+      }
+
+      /* 2. Alternate Sections: Distinct Dark Grey for Strong Visual Separation */
+      html.dark .bg-gray-50 {
+        background-color: #0f0f12 !important;
+      }
+      html.dark .bg-gray-100 {
+        background-color: #16161a !important;
+      }
+      html.dark .bg-gray-200 {
+        background-color: #1f1f24 !important;
+      }
+
+      /* Elevated Cards & Containers inside Sections */
+      html.dark .bg-gray-50 .bg-white,
+      html.dark section.bg-gray-50 .bg-white,
+      html.dark .bg-gray-100 .bg-white {
+        background-color: #17171b !important;
+        border-color: #27272e !important;
+      }
+      html.dark .bg-white .bg-gray-50,
+      html.dark section.bg-white .bg-gray-50,
+      html.dark .bg-gray-50\/50 {
+        background-color: #121215 !important;
+        border-color: #222228 !important;
+      }
+      
+      /* Dropdown Menus in Dark Theme */
+      html.dark nav .bg-white,
+      html.dark .group:hover > div.bg-white {
+        background-color: #141417 !important;
+        border-color: #26262c !important;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 8px 10px -6px rgba(0, 0, 0, 0.8) !important;
+      }
+
+      /* 3. Highlighted Sections & Callouts: Subtle Crimson / Primary Brand Tint */
+      html.dark .bg-brand-light,
+      html.dark section.bg-brand-light,
+      html.dark .highlight-section,
+      html.dark .bg-red-50,
+      html.dark .bg-red-100 {
+        background: linear-gradient(180deg, #130607 0%, #19080a 50%, #130607 100%) !important;
+        border-color: rgba(220, 38, 38, 0.35) !important;
+        color: #fca5a5 !important;
+      }
+      html.dark .hover\:bg-brand-light:hover {
+        background-color: rgba(220, 38, 38, 0.22) !important;
+      }
+      html.dark section.bg-brand-light .text-gray-700,
+      html.dark section.bg-brand-light .text-gray-600,
+      html.dark .bg-brand-light span,
+      html.dark .bg-brand-light a {
+        color: #fca5a5 !important;
+      }
+      html.dark .bg-brand\/10,
+      html.dark .bg-brand\/20 {
+        background-color: rgba(220, 38, 38, 0.12) !important;
+        border-color: rgba(220, 38, 38, 0.3) !important;
+      }
+
+      /* 4. High-Contrast Typography & Readability (Dark Theme) */
+      html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6,
+      html.dark .text-gray-900,
+      html.dark .text-gray-800 {
+        color: #ffffff !important; /* 21:1 contrast on #000000 */
+      }
+      html.dark .text-gray-700,
+      html.dark .text-gray-600 {
+        color: #e2e8f0 !important; /* 15.5:1 contrast on #000000 */
+      }
+      html.dark .text-gray-500,
+      html.dark .text-gray-400 {
+        color: #cbd5e1 !important; /* 12.8:1 contrast on #000000 */
+      }
+      html.dark .text-brand-dark {
+        color: #fca5a5 !important; /* 11.2:1 contrast on #000000 */
+      }
+      html.dark a.text-brand,
+      html.dark span.text-brand,
+      html.dark p.text-brand {
+        color: #f87171 !important; /* 8.3:1 contrast on #000000 */
+      }
+
+      /* 5. Crisp Borders & Section Dividers */
+      html.dark .border,
+      html.dark .border-t,
+      html.dark .border-b,
+      html.dark .border-l,
+      html.dark .border-r,
+      html.dark .border-gray-100 {
+        border-color: #1e1e24 !important;
+      }
+      html.dark .border-gray-200 {
+        border-color: #27272e !important;
+      }
+      html.dark .border-gray-300 {
+        border-color: #3b3b44 !important;
+      }
+      html.dark .border-white {
+        border-color: #18181c !important;
+      }
+
+      /* 6. Shadows with Deep Ambient Contrast */
+      html.dark .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.7) !important; }
+      html.dark .shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.7), 0 1px 2px -1px rgba(0, 0, 0, 0.7) !important; }
+      html.dark .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.7), 0 2px 4px -2px rgba(0, 0, 0, 0.7) !important; }
+      html.dark .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -4px rgba(0, 0, 0, 0.7) !important; }
+      html.dark .shadow-xl, html.dark .shadow-2xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 8px 10px -6px rgba(0, 0, 0, 0.8) !important; }
+
+      /* 7. Components: Header, Footer, Inputs & Mobile Menu */
+      html.dark header, 
+      html.dark header.bg-white {
+        background-color: #000000 !important;
+        border-bottom: 1px solid #1c1c20 !important;
+      }
+      html.dark footer {
+        background-color: #050507 !important;
+        border-top: 4px solid #dc2626 !important;
+      }
+      html.dark footer .border-t {
+        border-color: #1f1f24 !important;
+      }
+      html.dark footer, html.dark footer p, html.dark footer span, html.dark footer .text-gray-400, html.dark footer .text-gray-500 {
+        color: #d1d5db !important;
+      }
+      html.dark #mobile-menu {
+        background-color: #08080a !important;
+        border-left: 4px solid #dc2626 !important;
+      }
+      html.dark input, 
+      html.dark textarea, 
+      html.dark select {
+        background-color: #101013 !important;
+        color: #f9fafb !important;
+        border-color: #3b3b44 !important;
+      }
+      html.dark input::placeholder, 
+      html.dark textarea::placeholder {
+        color: #9ca3af !important;
+      }
+      html.dark input:focus, 
+      html.dark textarea:focus, 
+      html.dark select:focus {
+        border-color: #ef4444 !important;
+        box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25) !important;
+      }
+      
+      /* Buttons in Dark Theme */
+      html.dark a.border-brand,
+      html.dark button.border-brand {
+        color: #f87171 !important;
+        border-color: #ef4444 !important;
+      }
+      html.dark a.border-brand:hover,
+      html.dark button.border-brand:hover {
+        background-color: #dc2626 !important;
+        color: #ffffff !important;
+      }
+
+      /* Theme / RTL Toggles */
       #navThemeToggle, #navRtlToggle, #mobileThemeToggle, #mobileRtlToggle {
         background-color: #fee2e2 !important;
         border-color: #dc2626 !important;
@@ -612,9 +1008,14 @@
         color: #ffffff !important;
       }
       html.dark #navThemeToggle, html.dark #navRtlToggle, html.dark #mobileThemeToggle, html.dark #mobileRtlToggle {
-        background-color: #1f2937 !important;
-        border-color: #4b5563 !important;
+        background-color: #141417 !important;
+        border-color: #2e2e36 !important;
         color: #f87171 !important;
+      }
+      html.dark #navThemeToggle:hover, html.dark #navRtlToggle:hover, html.dark #mobileThemeToggle:hover, html.dark #mobileRtlToggle:hover {
+        background-color: #dc2626 !important;
+        border-color: #dc2626 !important;
+        color: #ffffff !important;
       }
     </style>
     <script>

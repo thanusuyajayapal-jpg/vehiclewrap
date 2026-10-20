@@ -89,7 +89,7 @@
                         </div>
                     </div>
 
-                    <!-- Standard Links with exact file names & redirects -->
+                    <!-- Standard Links -->
                     <a href="about.html" class="hover:text-brand transition-colors">About</a>
                     <a href="service.html" class="hover:text-brand transition-colors">Service</a>
                     <a href="gallery.html" class="hover:text-brand transition-colors">Gallery</a>
@@ -100,27 +100,26 @@
 
                 <!-- Actions / Login -->
                 <div class="hidden xl:flex items-center gap-4">
-                    <!-- Toggles -->
-                    <button onclick="toggleDarkMode()" class="w-10 h-10 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" id="navThemeToggle" title="Toggle Dark Mode">
+                    <button onclick="toggleDarkMode()" class="w-10 h-10 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" id="navThemeToggle" title="Toggle Dark Mode" aria-label="Toggle dark mode">
                         <i class="fas fa-moon text-lg theme-toggle-icon"></i>
                     </button>
-                    <button onclick="toggleRTL()" class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none font-bold text-sm shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" id="navRtlToggle" title="Toggle RTL">
+                    <button onclick="toggleRTL()" class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none font-bold text-sm shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" id="navRtlToggle" title="Toggle RTL" aria-label="Toggle right-to-left layout">
                         RTL
                     </button>
-                    <a href="signin.html" class="border-2 border-brand text-brand hover:bg-brand hover:text-white px-6 py-2 rounded-full font-bold transition-all text-lg shadow-sm">
+                    <a href="index.html" class="border-2 border-brand text-brand hover:bg-brand hover:text-white px-5 py-2.5 rounded-xl font-bold transition-all text-base shadow-sm inline-flex items-center justify-center">
                         Book Now
                     </a>
                 </div>
 
                 <!-- Hamburger Button (Mobile) -->
-                <button id="mobile-menu-btn" class="xl:hidden flex items-center justify-center w-12 h-12 rounded-md border-2 border-gray-200 text-gray-600 hover:text-brand hover:border-brand transition-colors">
+                <button id="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" class="xl:hidden flex items-center justify-center w-12 h-12 rounded-md border-2 border-gray-200 text-gray-600 hover:text-brand hover:border-brand transition-colors">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- ================= MOBILE MENU (Hidden by default) ================= -->
+    <!-- ================= MOBILE MENU ================= -->
     <div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden transition-opacity"></div>
     <div id="mobile-menu" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-2xl z-[70] transform translate-x-full transition-transform duration-300 overflow-y-auto border-l-4 border-brand">
         <div class="p-6">
@@ -134,7 +133,7 @@
                     </div>
                     <span class="font-black text-lg tracking-tight text-gray-900 dark:text-white">VELOCITY<span class="text-brand">CRAFT</span></span>
                 </a>
-                <button id="close-menu-btn" class="text-gray-500 hover:text-red-500 text-3xl">
+                <button id="close-menu-btn" aria-label="Close navigation menu" class="text-gray-500 hover:text-red-500 text-3xl">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
@@ -150,17 +149,17 @@
                 <li><a href="contact.html" class="block p-3 border rounded-lg hover:bg-brand-light hover:border-brand">Contact</a></li>
                 
                 <li class="pt-4 mt-4 border-t">
-                    <a href="signin.html" class="block w-full text-center bg-brand text-white p-3 rounded-lg hover:bg-brand-dark shadow-md">
+                    <a href="index.html" class="block w-full text-center bg-brand text-white p-3 rounded-xl hover:bg-brand-dark shadow-md font-bold transition-colors">
                         Book Now
                     </a>
                 </li>
 
                 <!-- Mobile Toggles -->
                 <li class="pt-4 flex justify-center gap-6">
-                    <button onclick="toggleDarkMode()" id="mobileThemeToggle" class="w-12 h-12 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" title="Toggle Dark Mode">
+                    <button onclick="toggleDarkMode()" id="mobileThemeToggle" class="w-12 h-12 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" title="Toggle Dark Mode" aria-label="Toggle dark mode">
                         <i class="fas fa-moon text-xl theme-toggle-icon"></i>
                     </button>
-                    <button onclick="toggleRTL()" id="mobileRtlToggle" class="rtl-toggle-btn w-12 h-12 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none font-bold text-base shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" title="Toggle RTL">
+                    <button onclick="toggleRTL()" id="mobileRtlToggle" class="rtl-toggle-btn w-12 h-12 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none font-bold text-base shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" title="Toggle RTL" aria-label="Toggle right-to-left layout">
                         RTL
                     </button>
                 </li>
@@ -194,10 +193,10 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
-                    <a href="service.html" class="w-full sm:w-auto bg-brand hover:bg-brand-light hover:text-brand-dark text-white px-10 py-4 rounded-full font-bold text-lg shadow-[0_0_25px_rgba(220,38,38,0.5)] hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                    <a href="service.html" class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-white px-8 py-3.5 rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-red-600/30 hover:shadow-red-600/50 transition-all inline-flex items-center justify-center gap-2">
                         <i class="fas fa-car"></i> Explore Services
                     </a>
-                    <a href="contact.html" class="w-full sm:w-auto bg-transparent border-2 border-white/40 hover:border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
+                    <a href="contact.html" class="w-full sm:w-auto bg-transparent border-2 border-white/60 hover:border-white text-white px-8 py-3.5 rounded-xl font-bold text-base sm:text-lg hover:bg-white/10 transition-all inline-flex items-center justify-center gap-2 backdrop-blur-sm">
                         <i class="fas fa-calendar-check"></i> Book Consultation
                     </a>
                 </div>
@@ -207,27 +206,60 @@
         <!-- ================= SECTION 1: CORE FEATURES ================= -->
         <section class="relative py-16 lg:py-24 z-20 bg-white border-b border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-                    <div class="bg-gray-50 rounded-3xl p-8 shadow-sm border border-gray-100 group">
-                        <div class="w-16 h-16 bg-brand-light group-hover:bg-brand text-brand group-hover:text-white transition-colors duration-300 rounded-2xl flex items-center justify-center text-2xl mb-6">
-                            <i class="fas fa-paint-brush"></i>
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-brand font-semibold tracking-widest uppercase text-sm mb-3">Our Core Expertise</span>
+                    <h3 class="text-4xl font-semibold text-gray-900">Advanced Styling & Protection Solutions</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-sm border border-gray-100 group flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="image/car wrap (1).jpg" alt="Custom Color Shifts Application" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-3 left-4 text-white font-bold text-sm flex items-center gap-2">
+                                <i class="fas fa-paint-brush text-brand-light"></i> Color Change Wraps
+                            </div>
                         </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Custom Color Shifts</h3>
-                        <p class="text-gray-600 leading-relaxed">Choose from hundreds of gloss, matte, satin, and iridescent metallic films tailored to your style.</p>
+                        <div class="p-8 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Custom Color Shifts</h3>
+                                <p class="text-gray-600 leading-relaxed">Choose from hundreds of gloss, matte, satin, and iridescent metallic films tailored to your distinct style.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 rounded-3xl p-8 shadow-sm border border-gray-100 group">
-                        <div class="w-16 h-16 bg-brand-light group-hover:bg-brand text-brand group-hover:text-white transition-colors duration-300 rounded-2xl flex items-center justify-center text-2xl mb-6">
-                            <i class="fas fa-shield-alt"></i>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-sm border border-gray-100 group flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="image/car wrap (2).jpg" alt="Self-Healing PPF Application" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-3 left-4 text-white font-bold text-sm flex items-center gap-2">
+                                <i class="fas fa-shield-alt text-brand-light"></i> Paint Armor
+                            </div>
                         </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Self-Healing PPF</h3>
-                        <p class="text-gray-600 leading-relaxed">Protect your factory paint from rock chips and road debris with ultra-clear armor films that heal with heat.</p>
+                        <div class="p-8 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Self-Healing PPF</h3>
+                                <p class="text-gray-600 leading-relaxed">Protect your factory paint from rock chips and road debris with ultra-clear armor films that heal with ambient heat.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 rounded-3xl p-8 shadow-sm border border-gray-100 group">
-                        <div class="w-16 h-16 bg-brand-light group-hover:bg-brand text-brand group-hover:text-white transition-colors duration-300 rounded-2xl flex items-center justify-center text-2xl mb-6">
-                            <i class="fas fa-tools"></i>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-sm border border-gray-100 group flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="image/car wrap (3).jpg" alt="Expert Installation Studio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-3 left-4 text-white font-bold text-sm flex items-center gap-2">
+                                <i class="fas fa-tools text-brand-light"></i> Precision Fit
+                            </div>
                         </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Expert Application</h3>
-                        <p class="text-gray-600 leading-relaxed">Meticulous bumper-off wrapping and edge sealing performed by certified master installers.</p>
+                        <div class="p-8 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Expert Application</h3>
+                                <p class="text-gray-600 leading-relaxed">Meticulous bumper-off wrapping and edge sealing performed by certified master installers in dust-free bays.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -239,26 +271,51 @@
                 <h2 class="text-brand font-semibold tracking-widest uppercase text-sm mb-3">Our Workflow</h2>
                 <h3 class="text-4xl font-semibold text-gray-900 mb-16">How We Transform Your Vehicle</h3>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                        <div class="text-brand font-bold text-3xl mb-4">01</div>
-                        <h4 class="text-xl font-semibold mb-2">Consultation</h4>
-                        <p class="text-gray-600">Discuss finish options, design goals, and get a precise price estimate.</p>
+                    
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col text-left">
+                        <div class="h-40 overflow-hidden relative">
+                            <img src="image/car wrap (4).jpg" alt="Consultation phase" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 bg-brand text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">01</div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <h4 class="text-xl font-semibold mb-2 text-gray-900">Consultation</h4>
+                            <p class="text-gray-600 text-sm">Discuss finish options, design goals, and get a precise price estimate.</p>
+                        </div>
                     </div>
-                    <div class="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                        <div class="text-brand font-bold text-3xl mb-4">02</div>
-                        <h4 class="text-xl font-semibold mb-2">Deep Clean & Prep</h4>
-                        <p class="text-gray-600">Complete clay-bar decontamination and surface wash for optimal adhesion.</p>
+
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col text-left">
+                        <div class="h-40 overflow-hidden relative">
+                            <img src="image/car wrap (5).jpg" alt="Deep clean and decontamination" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 bg-brand text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">02</div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <h4 class="text-xl font-semibold mb-2 text-gray-900">Deep Clean & Prep</h4>
+                            <p class="text-gray-600 text-sm">Complete clay-bar decontamination and surface wash for optimal adhesion.</p>
+                        </div>
                     </div>
-                    <div class="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                        <div class="text-brand font-bold text-3xl mb-4">03</div>
-                        <h4 class="text-xl font-semibold mb-2">Precision Wrap</h4>
-                        <p class="text-gray-600">Skilled installation with tucked edges and seamless panel alignments.</p>
+
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col text-left">
+                        <div class="h-40 overflow-hidden relative">
+                            <img src="image/car wrap (6).jpg" alt="Precision wrap installation" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 bg-brand text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">03</div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <h4 class="text-xl font-semibold mb-2 text-gray-900">Precision Wrap</h4>
+                            <p class="text-gray-600 text-sm">Skilled installation with tucked edges and seamless panel alignments.</p>
+                        </div>
                     </div>
-                    <div class="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                        <div class="text-brand font-bold text-3xl mb-4">04</div>
-                        <h4 class="text-xl font-semibold mb-2">Quality Check</h4>
-                        <p class="text-gray-600">Post-heating, inspection, and delivery with warranty documentation.</p>
+
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col text-left">
+                        <div class="h-40 overflow-hidden relative">
+                            <img src="image/car wrap (7).jpg" alt="Final quality check" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 bg-brand text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">04</div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <h4 class="text-xl font-semibold mb-2 text-gray-900">Quality Check</h4>
+                            <p class="text-gray-600 text-sm">Post-heating, inspection, and delivery with warranty documentation.</p>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -274,39 +331,47 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     
                     <!-- Feature 1 -->
-                    <div class="p-8 border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition bg-gray-50/50 text-left">
-                        <div class="w-12 h-12 rounded-xl bg-brand-light text-brand flex items-center justify-center text-xl mb-6">
-                            <i class="fas fa-medal"></i>
+                    <div class="border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition bg-gray-50/50 text-left overflow-hidden flex flex-col">
+                        <div class="h-36 overflow-hidden">
+                            <img src="image/car wrap (8).jpg" alt="Certified Installers" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">Certified Installers</h3>
-                        <p class="text-gray-600 text-sm">Factory-trained experts with years of hands-on experience handling high-end luxury and exotic cars.</p>
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-lg font-bold mb-2 text-gray-900">Certified Installers</h3>
+                            <p class="text-gray-600 text-sm">Factory-trained experts with years of hands-on experience handling high-end luxury cars.</p>
+                        </div>
                     </div>
 
                     <!-- Feature 2 -->
-                    <div class="p-8 border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition bg-gray-50/50 text-left">
-                        <div class="w-12 h-12 rounded-xl bg-brand-light text-brand flex items-center justify-center text-xl mb-6">
-                            <i class="fas fa-shield-alt"></i>
+                    <div class="border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition bg-gray-50/50 text-left overflow-hidden flex flex-col">
+                        <div class="h-36 overflow-hidden">
+                            <img src="image/car wrap (9).jpg" alt="Premium Films Only" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">Premium Films Only</h3>
-                        <p class="text-gray-600 text-sm">We use top-tier self-healing PPF and premium cast wrapping films backed by comprehensive manufacturer warranties.</p>
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-lg font-bold mb-2 text-gray-900">Premium Films Only</h3>
+                            <p class="text-gray-600 text-sm">We use top-tier self-healing PPF and premium cast wrapping films backed by warranties.</p>
+                        </div>
                     </div>
 
                     <!-- Feature 3 -->
-                    <div class="p-8 border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition bg-gray-50/50 text-left">
-                        <div class="w-12 h-12 rounded-xl bg-brand-light text-brand flex items-center justify-center text-xl mb-6">
-                            <i class="fas fa-wind"></i>
+                    <div class="border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition bg-gray-50/50 text-left overflow-hidden flex flex-col">
+                        <div class="h-36 overflow-hidden">
+                            <img src="image/car wrap (10).jpg" alt="Dust-Free Bay" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">Dust-Free Bay</h3>
-                        <p class="text-gray-600 text-sm">Climate-controlled, dust-filtered application bays ensuring zero bubbles, debris, or imperfections.</p>
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-lg font-bold mb-2 text-gray-900">Dust-Free Bay</h3>
+                            <p class="text-gray-600 text-sm">Climate-controlled application bays ensuring zero bubbles, debris, or imperfections.</p>
+                        </div>
                     </div>
 
                     <!-- Feature 4 -->
-                    <div class="p-8 border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition bg-gray-50/50 text-left">
-                        <div class="w-12 h-12 rounded-xl bg-brand-light text-brand flex items-center justify-center text-xl mb-6">
-                            <i class="fas fa-handshake"></i>
+                    <div class="border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition bg-gray-50/50 text-left overflow-hidden flex flex-col">
+                        <div class="h-36 overflow-hidden">
+                            <img src="image/car wrap (11).jpg" alt="Lifetime Support" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">Lifetime Support</h3>
-                        <p class="text-gray-600 text-sm">Dedicated post-installation care, free maintenance checks, and guaranteed craftsmanship satisfaction.</p>
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-lg font-bold mb-2 text-gray-900">Lifetime Support</h3>
+                            <p class="text-gray-600 text-sm">Dedicated post-installation care, free maintenance checks, and guaranteed satisfaction.</p>
+                        </div>
                     </div>
 
                 </div>
@@ -344,45 +409,46 @@
             </div>
         </section>
 
-       <section class="py-24 bg-white border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-brand font-semibold tracking-widest uppercase text-sm mb-3">Feedback</h2>
-        <h3 class="text-4xl font-semibold text-gray-900 mb-16">Trusted By Car Enthusiasts</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <!-- Testimonial 1 -->
-            <div class="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100 text-left flex flex-col justify-between">
-                <p class="text-gray-600 italic mb-6">"VelocityCraft wrapped my Porsche in satin dark grey and the lines look completely like factory paint. Absolute perfection!"</p>
-                <div class="flex items-center gap-4">
-                    <img src="image/author (1).jpg" alt="Marcus Vance" class="w-12 h-12 rounded-full object-cover">
-                    <div>
-                        <h4 class="font-bold text-gray-900">Marcus Vance</h4>
-                        <span class="text-sm text-gray-400">Porsche 911 Owner</span>
+        <!-- ================= TESTIMONIALS ================= -->
+        <section class="py-24 bg-white border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-brand font-semibold tracking-widest uppercase text-sm mb-3">Feedback</h2>
+                <h3 class="text-4xl font-semibold text-gray-900 mb-16">Trusted By Car Enthusiasts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100 text-left flex flex-col justify-between">
+                        <p class="text-gray-600 italic mb-6">"VelocityCraft wrapped my Porsche in satin dark grey and the lines look completely like factory paint. Absolute perfection!"</p>
+                        <div class="flex items-center gap-4">
+                            <img src="image/author (1).jpg" alt="Marcus Vance" class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-bold text-gray-900">Marcus Vance</h4>
+                                <span class="text-sm text-gray-400">Porsche 911 Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100 text-left flex flex-col justify-between">
+                        <p class="text-gray-600 italic mb-6">"The self-healing PPF saved my front bumper from multiple freeway rocks already. Worth every single penny."</p>
+                        <div class="flex items-center gap-4">
+                            <img src="image/author (4).jpg" alt="Elena Rostova" class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-bold text-gray-900">Elena Rostova</h4>
+                                <span class="text-sm text-gray-400">BMW M4 Owner</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Testimonial 2 -->
-            <div class="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100 text-left flex flex-col justify-between">
-                <p class="text-gray-600 italic mb-6">"The self-healing PPF saved my front bumper from multiple freeway rocks already. Worth every single penny."</p>
-                <div class="flex items-center gap-4">
-                    <img src="image/author (4).jpg" alt="Elena Rostova" class="w-12 h-12 rounded-full object-cover">
-                    <div>
-                        <h4 class="font-bold text-gray-900">Elena Rostova</h4>
-                        <span class="text-sm text-gray-400">BMW M4 Owner</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-        <!-- ================= SECTION 5: CALL TO ACTION ================= -->
+        <!-- ================= CALL TO ACTION ================= -->
         <section class="py-24 bg-gray-900 text-white text-center relative overflow-hidden">
             <div class="max-w-4xl mx-auto px-4 relative z-10">
                 <h2 class="text-4xl md:text-5xl font-semibold mb-6">Ready to Give Your Car a New Look?</h2>
                 <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">Get in touch with our studio team today to book your consultation or secure your slot for custom wrap installation.</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="contact.html" class="bg-brand hover:bg-red-700 text-white px-10 py-4 rounded-full font-bold text-lg shadow transition-all">Contact Us Now</a>
-                    <a href="pricing.html" class="border-2 border-gray-700 hover:border-brand text-white px-10 py-4 rounded-full font-bold text-lg transition-all">View Pricing Plans</a>
+                    <a href="contact.html" class="bg-brand hover:bg-brand-dark text-white px-8 py-3.5 rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-red-600/30 transition-all inline-flex items-center justify-center gap-2">Contact Us Now <i class="fas fa-arrow-right text-sm"></i></a>
+                    <a href="pricing.html" class="border-2 border-white/60 hover:border-white hover:bg-white/10 text-white px-8 py-3.5 rounded-xl font-bold text-base sm:text-lg transition-all inline-flex items-center justify-center gap-2 backdrop-blur-sm">View Pricing Plans <i class="fas fa-tags text-sm"></i></a>
                 </div>
             </div>
         </section>
@@ -438,9 +504,9 @@
                         The ultimate destination for premium vehicle wraps, paint protection films, and professional custom styling modifications.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="X (Twitter)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors text-white"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors text-white"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
@@ -479,8 +545,8 @@
                     <h4 class="text-lg font-medium mb-4 border-b-2 border-brand pb-2 inline-block">Newsletter</h4>
                     <p class="text-gray-400 text-sm mb-4">Subscribe for new wrap releases, car show updates, and modding discounts.</p>
                     <form class="flex flex-col gap-3">
-                        <input type="email" placeholder="Enter your email address" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-brand transition-colors" required>
-                        <button type="button" class="w-full bg-brand text-white font-bold py-3 rounded-lg hover:bg-brand-dark transition-colors flex justify-center items-center gap-2">
+                        <input type="email" placeholder="Enter your email address" aria-label="Enter your email address" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-brand transition-colors" required>
+                        <button type="button" aria-label="Subscribe to newsletter" class="w-full bg-brand text-white font-bold py-3 rounded-xl hover:bg-brand-dark transition-all flex justify-center items-center gap-2 shadow-sm">
                             <span>Subscribe</span> <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
@@ -507,21 +573,18 @@
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileOverlay = document.getElementById('mobile-overlay');
 
-            // Open Mobile Menu
             const openMenu = () => {
                 mobileMenu.classList.remove('translate-x-full');
                 mobileOverlay.classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
+                document.body.style.overflow = 'hidden';
             };
 
-            // Close Mobile Menu
             const closeMenu = () => {
                 mobileMenu.classList.add('translate-x-full');
                 mobileOverlay.classList.add('hidden');
-                document.body.style.overflow = ''; // Restore scrolling
+                document.body.style.overflow = '';
             };
 
-            // Event Listeners
             mobileMenuBtn.addEventListener('click', openMenu);
             closeMenuBtn.addEventListener('click', closeMenu);
             mobileOverlay.addEventListener('click', closeMenu);
@@ -529,54 +592,297 @@
     </script>
 
     <!-- Global Toggles Script & Styles -->
+    <!-- Global Accessibility & Theme Styles -->
     <style>
+      /* ==========================================================================
+         1. WCAG 2.1 AA ACCESSIBILITY & CONTRAST (LIGHT MODE)
+         ========================================================================== */
+      :root {
+        color-scheme: light dark;
+      }
+      
+      body {
+        color: #1f2937;
+      }
+
+      /* Upgrade low-contrast gray text on light backgrounds to meet WCAG AA (>= 4.5:1) */
+      .text-gray-400 {
+        color: #4b5563 !important; /* 7.0:1 contrast on white */
+      }
+      .text-gray-500 {
+        color: #4b5563 !important; /* 7.0:1 contrast on white */
+      }
+      .text-gray-600 {
+        color: #374151 !important; /* 9.5:1 contrast on white */
+      }
+      .text-gray-700 {
+        color: #1f2937 !important; /* 12.6:1 contrast on white */
+      }
+
+      /* Ensure light mode brand badges meet WCAG AA */
+      .bg-brand-light {
+        background-color: #fee2e2 !important;
+        color: #991b1b !important; /* 7.1:1 on #fee2e2 */
+      }
+      .bg-brand-light .text-brand,
+      .bg-brand-light .text-brand-dark,
+      .bg-brand-light span,
+      .bg-brand-light a {
+        color: #991b1b !important;
+      }
+
+      /* Form inputs high-contrast boundaries & placeholders in Light Mode */
+      input, textarea, select {
+        border-color: #94a3b8 !important; /* 3:1 UI boundary contrast */
+        color: #111827 !important;
+      }
+      input::placeholder, textarea::placeholder {
+        color: #64748b !important; /* 4.6:1 contrast on white */
+      }
+      
+      /* Dark Footer contrast in Light Mode (Footer has dark background) */
+      footer, 
+      footer p, 
+      footer span, 
+      footer .text-gray-400 {
+        color: #d1d5db !important; /* 9.6:1 contrast on dark footer */
+      }
+      footer .text-gray-500 {
+        color: #cbd5e1 !important; /* 10.5:1 contrast on dark footer */
+      }
+      footer a.text-gray-400,
+      footer a {
+        color: #d1d5db !important;
+      }
+      footer a:hover,
+      footer a.text-gray-400:hover {
+        color: #ffffff !important;
+      }
+      footer .border-gray-800 {
+        border-color: #374151 !important;
+      }
+
+      /* ==========================================================================
+         2. KEYBOARD ACCESSIBILITY & FOCUS INDICATORS (WCAG 2.4.7)
+         ========================================================================== */
+      :focus-visible {
+        outline: 2px solid #dc2626 !important;
+        outline-offset: 3px !important;
+      }
+      html.dark :focus-visible {
+        outline: 2px solid #f87171 !important;
+        outline-offset: 3px !important;
+      }
+
+      /* ==========================================================================
+         3. REDUCED MOTION SUPPORT (WCAG 2.3.3)
+         ========================================================================== */
+      @media (prefers-reduced-motion: reduce) {
+        *, ::before, ::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* ==========================================================================
+         4. DARK THEME CONTRAST SYSTEM (WCAG AAA PURE BLACK & DARK GREY)
+         ========================================================================== */
       html.dark { color-scheme: dark; }
-      html.dark body { background-color: #111827 !important; color: #e5e7eb !important; }
       
-      /* Backgrounds */
-      html.dark .bg-white, html.dark .bg-gray-50 { background-color: #1f2937 !important; }
-      html.dark .bg-gray-100, html.dark .bg-gray-200 { background-color: #374151 !important; }
-      html.dark .bg-brand-light { background-color: rgba(220, 38, 38, 0.15) !important; border-color: rgba(220, 38, 38, 0.3) !important; }
-      html.dark .hover\:bg-brand-light:hover { background-color: rgba(220, 38, 38, 0.25) !important; }
-
-      /* Texts */
-      html.dark .text-gray-900, html.dark .text-gray-800, html.dark .text-gray-700 { color: #f3f4f6 !important; }
-      html.dark .text-gray-600 { color: #d1d5db !important; }
-      html.dark .text-gray-500, html.dark .text-gray-400 { color: #9ca3af !important; }
-      html.dark .text-brand-dark { color: #f87171 !important; }
-
-      /* Borders */
-      html.dark .border-gray-100 { border-color: #374151 !important; }
-      html.dark .border-gray-200 { border-color: #4b5563 !important; }
-      html.dark .border-gray-300 { border-color: #6b7280 !important; }
-      html.dark .border-white { border-color: #1f2937 !important; }
-
-      /* Shadows */
-      html.dark .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5) !important; }
-      html.dark .shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.5) !important; }
-      html.dark .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.5) !important; }
-      html.dark .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.5) !important; }
-      html.dark .shadow-xl, html.dark .shadow-2xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important; }
-
-      /* Specific Components */
-      html.dark header, html.dark header.bg-white { background-color: #111827 !important; border-bottom: 1px solid #374151 !important; }
-      html.dark footer { background-color: #111827 !important; border-top: 1px solid #374151 !important; }
-      html.dark input, html.dark textarea, html.dark select { background-color: #374151 !important; color: #f3f4f6 !important; border-color: #4b5563 !important; }
+      /* Primary Background: Pitch Black */
+      html.dark body,
+      html.dark main {
+        background-color: #000000 !important;
+        color: #f3f4f6 !important; /* 17.5:1 on pure black */
+      }
       
-      /* Toggle button light mode - explicit red styling */
+      /* Primary Sections */
+      html.dark .bg-white {
+        background-color: #000000 !important;
+      }
+
+      /* Alternate Sections: Distinct Dark Grey for Strong Visual Separation */
+      html.dark .bg-gray-50 {
+        background-color: #0f0f12 !important;
+      }
+      html.dark .bg-gray-100 {
+        background-color: #16161a !important;
+      }
+      html.dark .bg-gray-200 {
+        background-color: #1f1f24 !important;
+      }
+
+      /* Elevated Cards & Containers inside Sections */
+      html.dark .bg-gray-50 .bg-white,
+      html.dark section.bg-gray-50 .bg-white,
+      html.dark .bg-gray-100 .bg-white {
+        background-color: #17171b !important;
+        border-color: #27272e !important;
+      }
+      html.dark .bg-white .bg-gray-50,
+      html.dark section.bg-white .bg-gray-50,
+      html.dark .bg-gray-50\/50 {
+        background-color: #121215 !important;
+        border-color: #222228 !important;
+      }
+      
+      /* Dropdown Menus in Dark Theme */
+      html.dark nav .bg-white,
+      html.dark .group:hover > div.bg-white {
+        background-color: #141417 !important;
+        border-color: #26262c !important;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 8px 10px -6px rgba(0, 0, 0, 0.8) !important;
+      }
+
+      /* Highlighted Sections & Callouts: Subtle Crimson / Primary Brand Tint */
+      html.dark .bg-brand-light,
+      html.dark section.bg-brand-light,
+      html.dark .highlight-section,
+      html.dark .bg-red-50,
+      html.dark .bg-red-100 {
+        background: linear-gradient(180deg, #130607 0%, #19080a 50%, #130607 100%) !important;
+        border-color: rgba(220, 38, 38, 0.35) !important;
+        color: #fca5a5 !important; /* 11.2:1 contrast */
+      }
+      html.dark .hover\:bg-brand-light:hover {
+        background-color: rgba(220, 38, 38, 0.22) !important;
+      }
+      html.dark section.bg-brand-light .text-gray-700,
+      html.dark section.bg-brand-light .text-gray-600,
+      html.dark .bg-brand-light span,
+      html.dark .bg-brand-light a {
+        color: #fca5a5 !important;
+      }
+      html.dark .bg-brand\/10,
+      html.dark .bg-brand\/20 {
+        background-color: rgba(220, 38, 38, 0.12) !important;
+        border-color: rgba(220, 38, 38, 0.3) !important;
+      }
+
+      /* High-Contrast Typography & Readability in Dark Theme */
+      html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6,
+      html.dark .text-gray-900,
+      html.dark .text-gray-800 {
+        color: #ffffff !important; /* 21:1 contrast */
+      }
+      html.dark .text-gray-700,
+      html.dark .text-gray-600 {
+        color: #e2e8f0 !important; /* 15.5:1 contrast */
+      }
+      html.dark .text-gray-500,
+      html.dark .text-gray-400 {
+        color: #cbd5e1 !important; /* 12.8:1 contrast */
+      }
+      html.dark .text-brand-dark {
+        color: #fca5a5 !important; /* 11.2:1 contrast */
+      }
+      html.dark a.text-brand,
+      html.dark span.text-brand,
+      html.dark p.text-brand {
+        color: #f87171 !important; /* 8.3:1 contrast on black */
+      }
+
+      /* Crisp Borders & Section Dividers in Dark Theme */
+      html.dark .border,
+      html.dark .border-t,
+      html.dark .border-b,
+      html.dark .border-l,
+      html.dark .border-r,
+      html.dark .border-gray-100 {
+        border-color: #1e1e24 !important;
+      }
+      html.dark .border-gray-200 {
+        border-color: #27272e !important;
+      }
+      html.dark .border-gray-300 {
+        border-color: #3b3b44 !important;
+      }
+      html.dark .border-white {
+        border-color: #18181c !important;
+      }
+
+      /* Shadows with Deep Ambient Contrast */
+      html.dark .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.7) !important; }
+      html.dark .shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.7), 0 1px 2px -1px rgba(0, 0, 0, 0.7) !important; }
+      html.dark .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.7), 0 2px 4px -2px rgba(0, 0, 0, 0.7) !important; }
+      html.dark .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -4px rgba(0, 0, 0, 0.7) !important; }
+      html.dark .shadow-xl, html.dark .shadow-2xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 8px 10px -6px rgba(0, 0, 0, 0.8) !important; }
+
+      /* Components: Header, Footer, Inputs & Mobile Menu */
+      html.dark header, 
+      html.dark header.bg-white {
+        background-color: #000000 !important;
+        border-bottom: 1px solid #1c1c20 !important;
+      }
+      html.dark footer {
+        background-color: #050507 !important;
+        border-top: 4px solid #dc2626 !important;
+      }
+      html.dark footer .border-t {
+        border-color: #1f1f24 !important;
+      }
+      html.dark footer, 
+      html.dark footer p, 
+      html.dark footer span, 
+      html.dark footer .text-gray-400,
+      html.dark footer .text-gray-500 {
+        color: #d1d5db !important;
+      }
+      html.dark #mobile-menu {
+        background-color: #08080a !important;
+        border-left: 4px solid #dc2626 !important;
+      }
+      html.dark input, 
+      html.dark textarea, 
+      html.dark select {
+        background-color: #101013 !important;
+        color: #f9fafb !important;
+        border-color: #3b3b44 !important;
+      }
+      html.dark input::placeholder, 
+      html.dark textarea::placeholder {
+        color: #9ca3af !important; /* 7.7:1 contrast */
+      }
+      html.dark input:focus, 
+      html.dark textarea:focus, 
+      html.dark select:focus {
+        border-color: #ef4444 !important;
+        box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25) !important;
+      }
+      
+      /* Buttons in Dark Theme */
+      html.dark a.border-brand,
+      html.dark button.border-brand {
+        color: #f87171 !important;
+        border-color: #ef4444 !important;
+      }
+      html.dark a.border-brand:hover,
+      html.dark button.border-brand:hover {
+        background-color: #dc2626 !important;
+        color: #ffffff !important;
+      }
+
+      /* Theme / RTL Toggles */
       #navThemeToggle, #navRtlToggle, #mobileThemeToggle, #mobileRtlToggle {
         background-color: #fee2e2 !important;
         border-color: #dc2626 !important;
-        color: #991b1b !important;
+        color: #991b1b !important; /* 7.1:1 contrast */
       }
       #navThemeToggle:hover, #navRtlToggle:hover, #mobileThemeToggle:hover, #mobileRtlToggle:hover {
         background-color: #dc2626 !important;
         color: #ffffff !important;
       }
       html.dark #navThemeToggle, html.dark #navRtlToggle, html.dark #mobileThemeToggle, html.dark #mobileRtlToggle {
-        background-color: #1f2937 !important;
-        border-color: #4b5563 !important;
-        color: #f87171 !important;
+        background-color: #141417 !important;
+        border-color: #2e2e36 !important;
+        color: #f87171 !important; /* 8.3:1 contrast */
+      }
+      html.dark #navThemeToggle:hover, html.dark #navRtlToggle:hover, html.dark #mobileThemeToggle:hover, html.dark #mobileRtlToggle:hover {
+        background-color: #dc2626 !important;
+        border-color: #dc2626 !important;
+        color: #ffffff !important;
       }
     </style>
     <script>

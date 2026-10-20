@@ -101,19 +101,19 @@
                 <!-- Actions / Login -->
                 <div class="hidden xl:flex items-center gap-4">
                     <!-- Toggles -->
-                    <button onclick="toggleDarkMode()" class="w-10 h-10 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" id="navThemeToggle" title="Toggle Dark Mode">
+                    <button onclick="toggleDarkMode()" class="w-10 h-10 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" id="navThemeToggle" title="Toggle Dark Mode" aria-label="Toggle dark mode">
                         <i class="fas fa-moon text-lg theme-toggle-icon"></i>
                     </button>
-                    <button onclick="toggleRTL()" class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none font-bold text-sm shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" id="navRtlToggle" title="Toggle RTL">
+                    <button onclick="toggleRTL()" class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none font-bold text-sm shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" id="navRtlToggle" title="Toggle RTL" aria-label="Toggle right-to-left layout">
                         RTL
                     </button>
-                    <a href="signin.html" class="border-2 border-brand text-brand hover:bg-brand hover:text-white px-6 py-2 rounded-full font-bold transition-all text-lg shadow-sm">
+                    <a href="index.html" class="border-2 border-brand text-brand hover:bg-brand hover:text-white px-5 py-2.5 rounded-xl font-bold transition-all text-base shadow-sm inline-flex items-center justify-center">
                         Book Now
                     </a>
                 </div>
 
                 <!-- Hamburger Button (Mobile) -->
-                <button id="mobile-menu-btn" class="xl:hidden flex items-center justify-center w-12 h-12 rounded-md border-2 border-gray-200 text-gray-600 hover:text-brand hover:border-brand transition-colors">
+                <button id="mobile-menu-btn" class="xl:hidden flex items-center justify-center w-12 h-12 rounded-md border-2 border-gray-200 text-gray-600 hover:text-brand hover:border-brand transition-colors" aria-label="Open navigation menu">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -134,7 +134,7 @@
                     </div>
                     <span class="font-black text-lg tracking-tight text-gray-900 dark:text-white">VELOCITY<span class="text-brand">CRAFT</span></span>
                 </a>
-                <button id="close-menu-btn" class="text-gray-500 hover:text-red-500 text-3xl">
+                <button id="close-menu-btn" class="text-gray-500 hover:text-red-500 text-3xl" aria-label="Close navigation menu">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
@@ -150,17 +150,17 @@
                 <li><a href="contact.html" class="block p-3 border rounded-lg hover:bg-brand-light hover:border-brand">Contact</a></li>
                 
                 <li class="pt-4 mt-4 border-t">
-                    <a href="signin.html" class="block w-full text-center bg-brand text-white p-3 rounded-lg hover:bg-brand-dark shadow-md">
+                    <a href="index.html" class="block w-full text-center bg-brand text-white p-3 rounded-xl hover:bg-brand-dark shadow-md font-bold transition-colors">
                         Book Now
                     </a>
                 </li>
 
                 <!-- Mobile Toggles -->
                 <li class="pt-4 flex justify-center gap-6">
-                    <button onclick="toggleDarkMode()" id="mobileThemeToggle" class="w-12 h-12 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" title="Toggle Dark Mode">
+                    <button onclick="toggleDarkMode()" id="mobileThemeToggle" class="w-12 h-12 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" title="Toggle Dark Mode" aria-label="Toggle dark mode">
                         <i class="fas fa-moon text-xl theme-toggle-icon"></i>
                     </button>
-                    <button onclick="toggleRTL()" id="mobileRtlToggle" class="rtl-toggle-btn w-12 h-12 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none font-bold text-base shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" title="Toggle RTL">
+                    <button onclick="toggleRTL()" id="mobileRtlToggle" class="rtl-toggle-btn w-12 h-12 rounded-full flex items-center justify-center border-2 border-red-500 bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all focus:outline-none font-bold text-base shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-red-400" title="Toggle RTL" aria-label="Toggle right-to-left layout">
                         RTL
                     </button>
                 </li>
@@ -196,10 +196,10 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
-                    <a href="contact.html" class="w-full sm:w-auto bg-brand hover:bg-brand-light hover:text-brand-dark text-white px-10 py-4 rounded-full font-bold text-lg shadow-[0_0_25px_rgba(220,38,38,0.5)] hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                    <a href="contact.html" class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-white px-8 py-3.5 rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-red-600/30 hover:shadow-red-600/50 transition-all inline-flex items-center justify-center gap-2">
                         <i class="fas fa-headset"></i> Contact Support
                     </a>
-                    <a href="service.html" class="w-full sm:w-auto bg-transparent border-2 border-white/40 hover:border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
+                    <a href="service.html" class="w-full sm:w-auto bg-transparent border-2 border-white/60 hover:border-white text-white px-8 py-3.5 rounded-xl font-bold text-base sm:text-lg hover:bg-white/10 transition-all inline-flex items-center justify-center gap-2 backdrop-blur-sm">
                         <i class="fas fa-tools"></i> Explore Services
                     </a>
                 </div>
@@ -207,78 +207,106 @@
         </section>
 
         <!-- ================= FAQ SECTION 1: VINYL WRAPS & INSTALLATION ================= -->
-        <section class="py-16 bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
+        <section class="py-20 bg-white dark:bg-black transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-brand font-bold uppercase tracking-wider text-sm">Category 01</span>
-                    <h2 class="text-3xl font-extbold text-gray-900 mt-2">Vinyl Wraps & Installation FAQ</h2>
-                    <p class="text-gray-600 mt-2">Click any question below to view detailed answers.</p>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-2">Vinyl Wraps &amp; Installation FAQ</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Answers regarding wrap durability, factory paint safety, care procedures, and turnaround times.</p>
                 </div>
 
-                <div class="space-y-4">
-                    <!-- Q1 -->
-                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-                        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 bg-gray-50 hover:bg-brand-light hover:text-brand-dark transition-colors">
-                            <span>How long does a full body vehicle vinyl wrap last?</span>
-                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                        </button>
-                        <div class="hidden p-5 text-gray-600 bg-white border-t border-gray-100 text-sm leading-relaxed">
-                            High-quality cast vinyl wraps typically last between 5 to 7 years depending on climate exposure, garage parking, and proper maintenance routines.
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Left: FAQ Accordions (7 cols) -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <!-- Q1 -->
+                        <div class="border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm">
+                            <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 dark:text-white bg-gray-50 dark:bg-zinc-900 hover:bg-brand-light dark:hover:bg-red-950/40 hover:text-brand-dark dark:hover:text-red-300 transition-colors">
+                                <span>How long does a full body vehicle vinyl wrap last?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300 text-brand"></i>
+                            </button>
+                            <div class="hidden p-5 text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 text-sm leading-relaxed">
+                                High-quality cast vinyl wraps typically last between 5 to 7 years depending on climate exposure, garage parking, and proper maintenance routines.
+                            </div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm">
+                            <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 dark:text-white bg-gray-50 dark:bg-zinc-900 hover:bg-brand-light dark:hover:bg-red-950/40 hover:text-brand-dark dark:hover:text-red-300 transition-colors">
+                                <span>Will a vinyl wrap damage my original factory paint?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300 text-brand"></i>
+                            </button>
+                            <div class="hidden p-5 text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 text-sm leading-relaxed">
+                                No! In fact, a professional vinyl wrap acts as an armor layer, protecting your factory paint from rock chips, minor scratches, and UV fading.
+                            </div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm">
+                            <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 dark:text-white bg-gray-50 dark:bg-zinc-900 hover:bg-brand-light dark:hover:bg-red-950/40 hover:text-brand-dark dark:hover:text-red-300 transition-colors">
+                                <span>How should I wash and care for my wrapped vehicle?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300 text-brand"></i>
+                            </button>
+                            <div class="hidden p-5 text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 text-sm leading-relaxed">
+                                We recommend hand washing with a pH-neutral automotive soap. Avoid automated brush car washes and keep high-pressure power washers at least 12 inches away from edges.
+                            </div>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm">
+                            <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 dark:text-white bg-gray-50 dark:bg-zinc-900 hover:bg-brand-light dark:hover:bg-red-950/40 hover:text-brand-dark dark:hover:text-red-300 transition-colors">
+                                <span>How long does the complete wrapping process take?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300 text-brand"></i>
+                            </button>
+                            <div class="hidden p-5 text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 text-sm leading-relaxed">
+                                A standard full-body color change wrap takes between 3 to 5 business days, which includes deep cleaning, disassembly, precision wrapping, and post-heating.
+                            </div>
+                        </div>
+
+                        <!-- Q5 -->
+                        <div class="border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm">
+                            <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 dark:text-white bg-gray-50 dark:bg-zinc-900 hover:bg-brand-light dark:hover:bg-red-950/40 hover:text-brand-dark dark:hover:text-red-300 transition-colors">
+                                <span>Can leased vehicles be wrapped safely?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300 text-brand"></i>
+                            </button>
+                            <div class="hidden p-5 text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 text-sm leading-relaxed">
+                                Yes, many of our clients wrap their leased cars. Since the wrap can be cleanly removed by professionals before lease return without leaving residue, it preserves the factory paint condition.
+                            </div>
+                        </div>
+
+                        <!-- Q6 -->
+                        <div class="border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm">
+                            <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 dark:text-white bg-gray-50 dark:bg-zinc-900 hover:bg-brand-light dark:hover:bg-red-950/40 hover:text-brand-dark dark:hover:text-red-300 transition-colors">
+                                <span>What happens if my wrap gets scratched or damaged?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300 text-brand"></i>
+                            </button>
+                            <div class="hidden p-5 text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 text-sm leading-relaxed">
+                                Unlike paint, individual panels on a wrapped car can be easily patched or re-wrapped without needing to redo the entire vehicle, saving you both time and money.
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Q2 -->
-                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-                        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 bg-gray-50 hover:bg-brand-light hover:text-brand-dark transition-colors">
-                            <span>Will a vinyl wrap damage my original factory paint?</span>
-                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                        </button>
-                        <div class="hidden p-5 text-gray-600 bg-white border-t border-gray-100 text-sm leading-relaxed">
-                            No! In fact, a professional vinyl wrap acts as an armor layer, protecting your factory paint from rock chips, minor scratches, and UV fading.
+                    <!-- Right: Visual Media Showcase Card (5 cols) -->
+                    <div class="lg:col-span-5 bg-gray-50 dark:bg-zinc-900/90 rounded-2xl border border-gray-200 dark:border-zinc-800 overflow-hidden shadow-xl sticky top-24">
+                        <div class="h-60 relative overflow-hidden group">
+                            <img src="image/car wrap (8).jpg" alt="VelocityCraft Wrap Installation Studio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                            <span class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                                <i class="fas fa-certificate mr-1"></i> Certified Master Bay
+                            </span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <h4 class="font-bold text-lg">Artisan Installation Standards</h4>
+                                <p class="text-xs text-gray-300">Seamless tucked corners with zero blade-to-body contact.</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Q3 -->
-                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-                        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 bg-gray-50 hover:bg-brand-light hover:text-brand-dark transition-colors">
-                            <span>How should I wash and care for my wrapped vehicle?</span>
-                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                        </button>
-                        <div class="hidden p-5 text-gray-600 bg-white border-t border-gray-100 text-sm leading-relaxed">
-                            We recommend hand washing with a pH-neutral automotive soap. Avoid automated brush car washes and keep high-pressure power washers at least 12 inches away from edges.
-                        </div>
-                    </div>
-
-                    <!-- Q4 -->
-                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-                        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 bg-gray-50 hover:bg-brand-light hover:text-brand-dark transition-colors">
-                            <span>How long does the complete wrapping process take?</span>
-                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                        </button>
-                        <div class="hidden p-5 text-gray-600 bg-white border-t border-gray-100 text-sm leading-relaxed">
-                            A standard full-body color change wrap takes between 3 to 5 business days, which includes deep cleaning, disassembly, precision wrapping, and post-heating.
-                        </div>
-                    </div>
-
-                    <!-- Q5 -->
-                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-                        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 bg-gray-50 hover:bg-brand-light hover:text-brand-dark transition-colors">
-                            <span>Can leased vehicles be wrapped safely?</span>
-                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                        </button>
-                        <div class="hidden p-5 text-gray-600 bg-white border-t border-gray-100 text-sm leading-relaxed">
-                            Yes, many of our clients wrap their leased cars. Since the wrap can be cleanly removed by professionals before lease return without leaving residue, it preserves the factory paint condition.
-                        </div>
-                    </div>
-
-                    <!-- Q6 -->
-                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-                        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 bg-gray-50 hover:bg-brand-light hover:text-brand-dark transition-colors">
-                            <span>What happens if my wrap gets scratched or damaged?</span>
-                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                        </button>
-                        <div class="hidden p-5 text-gray-600 bg-white border-t border-gray-100 text-sm leading-relaxed">
-                            Unlike paint, individual panels on a wrapped car can be easily patched or re-wrapped without needing to redo the entire vehicle, saving you both time and money.
+                        <div class="p-6">
+                            <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-300 mb-6">
+                                <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand text-base"></i> Climate-controlled dust-filtered bays</li>
+                                <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand text-base"></i> Disassembly of lights &amp; badges for flawless tucks</li>
+                                <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand text-base"></i> Infrared post-heating lock eliminates memory pull-back</li>
+                            </ul>
+                            <a href="gallery.html" class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 rounded-xl transition-all shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2 text-sm sm:text-base">
+                                View Installation Gallery <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -286,78 +314,106 @@
         </section>
 
         <!-- ================= FAQ SECTION 2: PPF, WARRANTIES & BOOKING ================= -->
-        <section class="py-16 bg-gray-50 border-t border-gray-200">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
+        <section class="py-20 bg-gray-50 dark:bg-black border-t border-gray-200 dark:border-zinc-800 transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-brand font-bold uppercase tracking-wider text-sm">Category 02</span>
-                    <h2 class="text-3xl font-extbold text-gray-900 mt-2">PPF, Warranties & Booking FAQ</h2>
-                    <p class="text-gray-600 mt-2">Click any question below to view detailed answers.</p>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-2">PPF, Warranties &amp; Booking FAQ</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Understand self-healing film benefits, warranty terms, and reserve your installation bay.</p>
                 </div>
 
-                <div class="space-y-4">
-                    <!-- Q1 -->
-                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm bg-white">
-                        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 bg-gray-50 hover:bg-brand-light hover:text-brand-dark transition-colors">
-                            <span>What is the difference between Vinyl Wraps and PPF?</span>
-                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                        </button>
-                        <div class="hidden p-5 text-gray-600 bg-white border-t border-gray-100 text-sm leading-relaxed">
-                            Vinyl wraps are primarily used for color changes and styling aesthetics, whereas Paint Protection Film (PPF) is a thick, transparent, self-healing urethane film designed specifically to stop rock chips and scratches.
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Left: Visual Media Showcase Card (5 cols) -->
+                    <div class="lg:col-span-5 bg-white dark:bg-zinc-900/90 rounded-2xl border border-gray-200 dark:border-zinc-800 overflow-hidden shadow-xl sticky top-24 order-2 lg:order-1">
+                        <div class="h-60 relative overflow-hidden group">
+                            <img src="image/car wrap (16).jpg" alt="Paint Protection Film Inspection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                            <span class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                                <i class="fas fa-shield-alt mr-1"></i> 10-Year Warranty
+                            </span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <h4 class="font-bold text-lg">Self-Healing Defense Shield</h4>
+                                <p class="text-xs text-gray-300">Hydrophobic top-coat repels road debris, bugs &amp; gravel.</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-300 mb-6">
+                                <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand text-base"></i> 8.5 mil ultra-thick optical clarity film</li>
+                                <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand text-base"></i> VIN-specific precision laser plotter patterns</li>
+                                <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand text-base"></i> Non-yellowing &amp; anti-cracking manufacturer guarantee</li>
+                            </ul>
+                            <a href="pricing.html" class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 rounded-xl transition-all shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2 text-sm sm:text-base">
+                                Compare Protection Plans <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Q2 -->
-                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm bg-white">
-                        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 bg-gray-50 hover:bg-brand-light hover:text-brand-dark transition-colors">
-                            <span>What is covered under your workmanship warranty?</span>
-                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                        </button>
-                        <div class="hidden p-5 text-gray-600 bg-white border-t border-gray-100 text-sm leading-relaxed">
-                            Our warranty covers premature lifting, bubbling, peeling, and excessive edge shrinking resulting from installation errors.
+                    <!-- Right: FAQ Accordions (7 cols) -->
+                    <div class="lg:col-span-7 space-y-4 order-1 lg:order-2">
+                        <!-- Q1 -->
+                        <div class="border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm bg-white dark:bg-zinc-900">
+                            <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 dark:text-white bg-gray-50 dark:bg-zinc-900 hover:bg-brand-light dark:hover:bg-red-950/40 hover:text-brand-dark dark:hover:text-red-300 transition-colors">
+                                <span>What is the difference between Vinyl Wraps and PPF?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300 text-brand"></i>
+                            </button>
+                            <div class="hidden p-5 text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 text-sm leading-relaxed">
+                                Vinyl wraps are primarily used for color changes and styling aesthetics, whereas Paint Protection Film (PPF) is a thick, transparent, self-healing urethane film designed specifically to stop rock chips and scratches.
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Q3 -->
-                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm bg-white">
-                        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 bg-gray-50 hover:bg-brand-light hover:text-brand-dark transition-colors">
-                            <span>How far in advance do I need to book my appointment?</span>
-                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                        </button>
-                        <div class="hidden p-5 text-gray-600 bg-white border-t border-gray-100 text-sm leading-relaxed">
-                            We recommend booking at least 1 to 2 weeks in advance to secure your preferred slot and allow us to order any custom color films you request.
+                        <!-- Q2 -->
+                        <div class="border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm bg-white dark:bg-zinc-900">
+                            <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 dark:text-white bg-gray-50 dark:bg-zinc-900 hover:bg-brand-light dark:hover:bg-red-950/40 hover:text-brand-dark dark:hover:text-red-300 transition-colors">
+                                <span>What is covered under your workmanship warranty?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300 text-brand"></i>
+                            </button>
+                            <div class="hidden p-5 text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 text-sm leading-relaxed">
+                                Our warranty covers premature lifting, bubbling, peeling, and excessive edge shrinking resulting from installation errors.
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Q4 -->
-                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm bg-white">
-                        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 bg-gray-50 hover:bg-brand-light hover:text-brand-dark transition-colors">
-                            <span>Do you require a deposit when booking?</span>
-                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                        </button>
-                        <div class="hidden p-5 text-gray-600 bg-white border-t border-gray-100 text-sm leading-relaxed">
-                            Yes, a refundable 20% deposit is required to reserve your installation bay and lock in your specialized film roll order.
+                        <!-- Q3 -->
+                        <div class="border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm bg-white dark:bg-zinc-900">
+                            <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 dark:text-white bg-gray-50 dark:bg-zinc-900 hover:bg-brand-light dark:hover:bg-red-950/40 hover:text-brand-dark dark:hover:text-red-300 transition-colors">
+                                <span>How far in advance do I need to book my appointment?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300 text-brand"></i>
+                            </button>
+                            <div class="hidden p-5 text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 text-sm leading-relaxed">
+                                We recommend booking at least 1 to 2 weeks in advance to secure your preferred slot and allow us to order any custom color films you request.
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Q5 -->
-                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm bg-white">
-                        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 bg-gray-50 hover:bg-brand-light hover:text-brand-dark transition-colors">
-                            <span>Can ceramic coating be applied over vinyl or PPF?</span>
-                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                        </button>
-                        <div class="hidden p-5 text-gray-600 bg-white border-t border-gray-100 text-sm leading-relaxed">
-                            Absolutely! Applying a specialized nano-ceramic coating over your wrap or PPF adds extra hydrophobic protection, making it much easier to repel dirt, mud, and water spots.
+                        <!-- Q4 -->
+                        <div class="border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm bg-white dark:bg-zinc-900">
+                            <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 dark:text-white bg-gray-50 dark:bg-zinc-900 hover:bg-brand-light dark:hover:bg-red-950/40 hover:text-brand-dark dark:hover:text-red-300 transition-colors">
+                                <span>Do you require a deposit when booking?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300 text-brand"></i>
+                            </button>
+                            <div class="hidden p-5 text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 text-sm leading-relaxed">
+                                Yes, a refundable 20% deposit is required to reserve your installation bay and lock in your specialized film roll order.
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Q6 -->
-                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm bg-white">
-                        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 bg-gray-50 hover:bg-brand-light hover:text-brand-dark transition-colors">
-                            <span>What payment methods do you accept?</span>
-                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                        </button>
-                        <div class="hidden p-5 text-gray-600 bg-white border-t border-gray-100 text-sm leading-relaxed">
-                            We accept all major credit cards, bank wire transfers, cash, and offer 0% interest financing installment plans through our verified financial partners.
+                        <!-- Q5 -->
+                        <div class="border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm bg-white dark:bg-zinc-900">
+                            <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 dark:text-white bg-gray-50 dark:bg-zinc-900 hover:bg-brand-light dark:hover:bg-red-950/40 hover:text-brand-dark dark:hover:text-red-300 transition-colors">
+                                <span>Can ceramic coating be applied over vinyl or PPF?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300 text-brand"></i>
+                            </button>
+                            <div class="hidden p-5 text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 text-sm leading-relaxed">
+                                Absolutely! Applying a specialized nano-ceramic coating over your wrap or PPF adds extra hydrophobic protection, making it much easier to repel dirt, mud, and water spots.
+                            </div>
+                        </div>
+
+                        <!-- Q6 -->
+                        <div class="border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm bg-white dark:bg-zinc-900">
+                            <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 dark:text-white bg-gray-50 dark:bg-zinc-900 hover:bg-brand-light dark:hover:bg-red-950/40 hover:text-brand-dark dark:hover:text-red-300 transition-colors">
+                                <span>What payment methods do you accept?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300 text-brand"></i>
+                            </button>
+                            <div class="hidden p-5 text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 text-sm leading-relaxed">
+                                We accept all major credit cards, bank wire transfers, cash, and offer 0% interest financing installment plans through our verified financial partners.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -429,8 +485,8 @@
                 <h2 class="text-3xl sm:text-4xl font-extbold mb-4">Still Have Unanswered Questions?</h2>
                 <p class="text-lg text-brand-light mb-8 max-w-2xl mx-auto">Get in touch with our support team or try out our interactive price calculator to plan your next car mod.</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="contact.html" class="bg-white text-brand hover:bg-gray-100 font-bold px-8 py-4 rounded-full shadow-lg transition-all">Contact Us Today</a>
-                    <a href="calculator.html" class="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold px-8 py-4 rounded-full transition-all">Launch Calculator</a>
+                    <a href="contact.html" class="bg-white text-brand hover:bg-brand-light font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all inline-flex items-center justify-center gap-2">Contact Us Today <i class="fas fa-arrow-right text-sm"></i></a>
+                    <a href="calculator.html" class="bg-transparent border-2 border-white/80 hover:border-white hover:bg-white/10 text-white font-bold px-8 py-3.5 rounded-xl transition-all inline-flex items-center justify-center gap-2 backdrop-blur-sm">Launch Calculator <i class="fas fa-calculator text-sm"></i></a>
                 </div>
             </div>
         </section>
@@ -486,9 +542,9 @@
                         The ultimate destination for premium vehicle wraps, paint protection films, and professional custom styling modifications.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition-colors" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
@@ -527,8 +583,8 @@
                     <h4 class="text-lg font-medium mb-4 border-b-2 border-brand pb-2 inline-block">Newsletter</h4>
                     <p class="text-gray-400 text-sm mb-4">Subscribe for new wrap releases, car show updates, and modding discounts.</p>
                     <form class="flex flex-col gap-3">
-                        <input type="email" placeholder="Enter your email address" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-brand transition-colors" required>
-                        <button type="button" class="w-full bg-brand text-white font-bold py-3 rounded-lg hover:bg-brand-dark transition-colors flex justify-center items-center gap-2">
+                        <input type="email" placeholder="Enter your email address" aria-label="Newsletter email address" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-brand transition-colors" required>
+                        <button type="button" aria-label="Subscribe to newsletter" class="w-full bg-brand text-white font-bold py-3 rounded-xl hover:bg-brand-dark transition-all flex justify-center items-center gap-2 shadow-sm">
                             <span>Subscribe</span> <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
@@ -590,42 +646,262 @@
         }
     </script>
 
-    <!-- Global Toggles Script & Styles -->
+    <!-- Global Accessibility & Theme Styles -->
     <style>
+      :root {
+        color-scheme: light dark;
+      }
+
+      /* Base Typography & High-Contrast Overrides for Light Mode */
+      body {
+        color: #1f2937;
+      }
+      
+      /* Light mode: ensure muted texts meet WCAG AA (>= 4.5:1 on white / light grey) */
+      .text-gray-400 {
+        color: #4b5563 !important; /* 7.0:1 on white, replaces #9ca3af (2.85:1) */
+      }
+      .text-gray-500 {
+        color: #4b5563 !important; /* 7.0:1 on white */
+      }
+      .text-gray-600 {
+        color: #374151 !important; /* 9.5:1 on white */
+      }
+      .text-gray-700 {
+        color: #1f2937 !important; /* 13.8:1 on white */
+      }
+
+      /* Light mode badges: guarantee readable text on light red */
+      .bg-brand-light {
+        background-color: #fee2e2 !important;
+        color: #991b1b !important;
+      }
+      .bg-brand-light .text-brand,
+      .bg-brand-light .text-brand-dark,
+      .bg-brand-light span,
+      .bg-brand-light a {
+        color: #991b1b !important;
+      }
+
+      /* Accessible Form Inputs (Light Mode) */
+      input, textarea, select {
+        border-color: #94a3b8 !important; /* 3:1 boundary contrast against white */
+        color: #111827 !important;
+      }
+      input::placeholder, textarea::placeholder {
+        color: #64748b !important; /* 4.6:1 contrast against white */
+      }
+
+      /* Accessible Light-Mode Footer (Dark grey background #111827) */
+      footer, footer p, footer span, footer .text-gray-400 {
+        color: #d1d5db !important; /* 9.6:1 on #111827 */
+      }
+      footer .text-gray-500 {
+        color: #cbd5e1 !important; /* 10.5:1 on #111827 */
+      }
+      footer a.text-gray-400, footer a {
+        color: #d1d5db !important;
+      }
+      footer a:hover, footer a.text-gray-400:hover {
+        color: #ffffff !important;
+      }
+      footer .border-gray-800 {
+        border-color: #374151 !important;
+      }
+
+      /* Focus indicator for keyboard accessibility */
+      :focus-visible {
+        outline: 2px solid #dc2626 !important;
+        outline-offset: 3px !important;
+      }
+      html.dark :focus-visible {
+        outline: 2px solid #f87171 !important;
+        outline-offset: 3px !important;
+      }
+
+      /* Accessibility: Reduced Motion Support */
+      @media (prefers-reduced-motion: reduce) {
+        *, ::before, ::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* ================= DARK THEME PALETTE & CONTRAST ================= */
       html.dark { color-scheme: dark; }
-      html.dark body { background-color: #111827 !important; color: #e5e7eb !important; }
       
-      /* Backgrounds */
-      html.dark .bg-white, html.dark .bg-gray-50 { background-color: #1f2937 !important; }
-      html.dark .bg-gray-100, html.dark .bg-gray-200 { background-color: #374151 !important; }
-      html.dark .bg-brand-light { background-color: rgba(220, 38, 38, 0.15) !important; border-color: rgba(220, 38, 38, 0.3) !important; }
-      html.dark .hover\:bg-brand-light:hover { background-color: rgba(220, 38, 38, 0.25) !important; }
-
-      /* Texts */
-      html.dark .text-gray-900, html.dark .text-gray-800, html.dark .text-gray-700 { color: #f3f4f6 !important; }
-      html.dark .text-gray-600 { color: #d1d5db !important; }
-      html.dark .text-gray-500, html.dark .text-gray-400 { color: #9ca3af !important; }
-      html.dark .text-brand-dark { color: #f87171 !important; }
-
-      /* Borders */
-      html.dark .border-gray-100 { border-color: #374151 !important; }
-      html.dark .border-gray-200 { border-color: #4b5563 !important; }
-      html.dark .border-gray-300 { border-color: #6b7280 !important; }
-      html.dark .border-white { border-color: #1f2937 !important; }
-
-      /* Shadows */
-      html.dark .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5) !important; }
-      html.dark .shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.5) !important; }
-      html.dark .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.5) !important; }
-      html.dark .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.5) !important; }
-      html.dark .shadow-xl, html.dark .shadow-2xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important; }
-
-      /* Specific Components */
-      html.dark header, html.dark header.bg-white { background-color: #111827 !important; border-bottom: 1px solid #374151 !important; }
-      html.dark footer { background-color: #111827 !important; border-top: 1px solid #374151 !important; }
-      html.dark input, html.dark textarea, html.dark select { background-color: #374151 !important; color: #f3f4f6 !important; border-color: #4b5563 !important; }
+      /* 1. Primary Background: Pitch Black */
+      html.dark body,
+      html.dark main {
+        background-color: #000000 !important;
+        color: #f3f4f6 !important;
+      }
       
-      /* Toggle button light mode - explicit red styling */
+      /* Primary Sections (Light bg-white mapped to Black) */
+      html.dark .bg-white {
+        background-color: #000000 !important;
+      }
+
+      /* 2. Alternate Sections: Distinct Dark Grey for Strong Visual Separation */
+      html.dark .bg-gray-50 {
+        background-color: #0f0f12 !important;
+      }
+      html.dark .bg-gray-100 {
+        background-color: #16161a !important;
+      }
+      html.dark .bg-gray-200 {
+        background-color: #1f1f24 !important;
+      }
+
+      /* Elevated Cards & Containers inside Sections */
+      html.dark .bg-gray-50 .bg-white,
+      html.dark section.bg-gray-50 .bg-white,
+      html.dark .bg-gray-100 .bg-white {
+        background-color: #17171b !important;
+        border-color: #27272e !important;
+      }
+      html.dark .bg-white .bg-gray-50,
+      html.dark section.bg-white .bg-gray-50,
+      html.dark .bg-gray-50\/50 {
+        background-color: #121215 !important;
+        border-color: #222228 !important;
+      }
+      
+      /* Dropdown Menus in Dark Theme */
+      html.dark nav .bg-white,
+      html.dark .group:hover > div.bg-white {
+        background-color: #141417 !important;
+        border-color: #26262c !important;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 8px 10px -6px rgba(0, 0, 0, 0.8) !important;
+      }
+
+      /* 3. Highlighted Sections & Callouts: Subtle Crimson / Primary Brand Tint */
+      html.dark .bg-brand-light,
+      html.dark section.bg-brand-light,
+      html.dark .highlight-section,
+      html.dark .bg-red-50,
+      html.dark .bg-red-100 {
+        background: linear-gradient(180deg, #130607 0%, #19080a 50%, #130607 100%) !important;
+        border-color: rgba(220, 38, 38, 0.35) !important;
+        color: #fca5a5 !important;
+      }
+      html.dark .hover\:bg-brand-light:hover {
+        background-color: rgba(220, 38, 38, 0.22) !important;
+      }
+      html.dark section.bg-brand-light .text-gray-700,
+      html.dark section.bg-brand-light .text-gray-600,
+      html.dark .bg-brand-light span,
+      html.dark .bg-brand-light a {
+        color: #fca5a5 !important;
+      }
+      html.dark .bg-brand\/10,
+      html.dark .bg-brand\/20 {
+        background-color: rgba(220, 38, 38, 0.12) !important;
+        border-color: rgba(220, 38, 38, 0.3) !important;
+      }
+
+      /* 4. High-Contrast Typography & Readability (Dark Theme) */
+      html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6,
+      html.dark .text-gray-900,
+      html.dark .text-gray-800 {
+        color: #ffffff !important; /* 21:1 contrast on #000000 */
+      }
+      html.dark .text-gray-700,
+      html.dark .text-gray-600 {
+        color: #e2e8f0 !important; /* 15.5:1 contrast on #000000 */
+      }
+      html.dark .text-gray-500,
+      html.dark .text-gray-400 {
+        color: #cbd5e1 !important; /* 12.8:1 contrast on #000000 */
+      }
+      html.dark .text-brand-dark {
+        color: #fca5a5 !important; /* 11.2:1 contrast on #000000 */
+      }
+      html.dark a.text-brand,
+      html.dark span.text-brand,
+      html.dark p.text-brand {
+        color: #f87171 !important; /* 8.3:1 contrast on #000000 */
+      }
+
+      /* 5. Crisp Borders & Section Dividers */
+      html.dark .border,
+      html.dark .border-t,
+      html.dark .border-b,
+      html.dark .border-l,
+      html.dark .border-r,
+      html.dark .border-gray-100 {
+        border-color: #1e1e24 !important;
+      }
+      html.dark .border-gray-200 {
+        border-color: #27272e !important;
+      }
+      html.dark .border-gray-300 {
+        border-color: #3b3b44 !important;
+      }
+      html.dark .border-white {
+        border-color: #18181c !important;
+      }
+
+      /* 6. Shadows with Deep Ambient Contrast */
+      html.dark .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.7) !important; }
+      html.dark .shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.7), 0 1px 2px -1px rgba(0, 0, 0, 0.7) !important; }
+      html.dark .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.7), 0 2px 4px -2px rgba(0, 0, 0, 0.7) !important; }
+      html.dark .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -4px rgba(0, 0, 0, 0.7) !important; }
+      html.dark .shadow-xl, html.dark .shadow-2xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 8px 10px -6px rgba(0, 0, 0, 0.8) !important; }
+
+      /* 7. Components: Header, Footer, Inputs & Mobile Menu */
+      html.dark header, 
+      html.dark header.bg-white {
+        background-color: #000000 !important;
+        border-bottom: 1px solid #1c1c20 !important;
+      }
+      html.dark footer {
+        background-color: #050507 !important;
+        border-top: 4px solid #dc2626 !important;
+      }
+      html.dark footer .border-t {
+        border-color: #1f1f24 !important;
+      }
+      html.dark footer, html.dark footer p, html.dark footer span, html.dark footer .text-gray-400, html.dark footer .text-gray-500 {
+        color: #d1d5db !important;
+      }
+      html.dark #mobile-menu {
+        background-color: #08080a !important;
+        border-left: 4px solid #dc2626 !important;
+      }
+      html.dark input, 
+      html.dark textarea, 
+      html.dark select {
+        background-color: #101013 !important;
+        color: #f9fafb !important;
+        border-color: #3b3b44 !important;
+      }
+      html.dark input::placeholder, 
+      html.dark textarea::placeholder {
+        color: #9ca3af !important;
+      }
+      html.dark input:focus, 
+      html.dark textarea:focus, 
+      html.dark select:focus {
+        border-color: #ef4444 !important;
+        box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25) !important;
+      }
+      
+      /* Buttons in Dark Theme */
+      html.dark a.border-brand,
+      html.dark button.border-brand {
+        color: #f87171 !important;
+        border-color: #ef4444 !important;
+      }
+      html.dark a.border-brand:hover,
+      html.dark button.border-brand:hover {
+        background-color: #dc2626 !important;
+        color: #ffffff !important;
+      }
+
+      /* Theme / RTL Toggles */
       #navThemeToggle, #navRtlToggle, #mobileThemeToggle, #mobileRtlToggle {
         background-color: #fee2e2 !important;
         border-color: #dc2626 !important;
@@ -636,9 +912,14 @@
         color: #ffffff !important;
       }
       html.dark #navThemeToggle, html.dark #navRtlToggle, html.dark #mobileThemeToggle, html.dark #mobileRtlToggle {
-        background-color: #1f2937 !important;
-        border-color: #4b5563 !important;
+        background-color: #141417 !important;
+        border-color: #2e2e36 !important;
         color: #f87171 !important;
+      }
+      html.dark #navThemeToggle:hover, html.dark #navRtlToggle:hover, html.dark #mobileThemeToggle:hover, html.dark #mobileRtlToggle:hover {
+        background-color: #dc2626 !important;
+        border-color: #dc2626 !important;
+        color: #ffffff !important;
       }
     </style>
     <script>
