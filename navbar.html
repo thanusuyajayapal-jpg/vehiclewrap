@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - VelocityCraft Studio</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%23dc2626' d='M112 272c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48-21.5-48-48-48zm336 0c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48-21.5-48-48-48zm171.2-59.8L510.9 97c-9.1-13-24.2-20.9-40.1-21H237.5c-18.4 0-35.3 10.3-43.1 27.2L162.7 172 32 185.3c-18.3 1.8-32 17.2-32 35.7v131c0 17.7 14.3 32 32 32h19.2c10.8 32 40.7 56 76.8 56s66-24 76.8-56h230.4c10.8 32 40.7 56 76.8 56s66-24 76.8-56H608c17.7 0 32-14.3 32-32V256c0-19.1-8.5-37.2-23.2-48.4zM470.8 124l74.9 83H320V124h150.8zm-201.2 0v83H177.3l23-49.8c3.2-6.8 10-11.2 17.6-11.2h51.7z'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'%3E%3Crect width='48' height='48' rx='12' fill='%23090d16'/%3E%3Cpath d='M5 29C6.5 29 9 28.5 12 26.5L18 19C19.8 16.8 22.5 15.5 25.5 15.5H29C32 15.5 34.8 17 36.2 19.5L39.5 25C40.8 27.2 40 29 37.5 29H5Z' fill='%23334155'/%3E%3Ccircle cx='11.5' cy='29' r='3.5' fill='%23dc2626'/%3E%3Ccircle cx='34.5' cy='29' r='3.5' fill='%23dc2626'/%3E%3Cpath d='M6 29C11 28.5 17 25 22 19.5C27 14 33 10.5 40 9C41.8 8.6 42.8 10.5 41.5 11.8C35.5 17.5 28.5 24 20.5 30C15 34 9 35.5 5 35.5C4 35.5 3.5 34.5 4 33.5L6 29Z' fill='%23dc2626'/%3E%3Cpath d='M16 25C22 19.5 28 15 35 11.5C38 10 40.5 9.2 41.5 9.5' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round'/%3E%3Ccircle cx='40.5' cy='9.5' r='1.5' fill='%23ffffff'/%3E%3C/svg%3E">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for Icons -->
@@ -36,9 +36,43 @@
             <div class="flex justify-between items-center h-16">
                 
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-brand">
-                    <i class="fas fa-car-side"></i>
-                    <span>VelocityCraft</span>
+                <a href="index.html" class="flex items-center gap-3 group focus:outline-none py-1" aria-label="VelocityCraft Studio Home">
+                    <div class="relative w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-zinc-900 via-zinc-950 to-black p-1.5 shadow-md shadow-black/15 border border-zinc-800 group-hover:border-red-500/60 group-hover:shadow-red-500/20 group-hover:scale-105 transition-all duration-300">
+                        <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="vcWrapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ff4d4f" />
+                                    <stop offset="50%" stop-color="#dc2626" />
+                                    <stop offset="100%" stop-color="#991b1b" />
+                                </linearGradient>
+                                <linearGradient id="vcGloss" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+                                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                                </linearGradient>
+                                <linearGradient id="vcCarbon" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#475569" />
+                                    <stop offset="100%" stop-color="#1e293b" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M5 29C6.5 29 9 28.5 12 26.5L18 19C19.8 16.8 22.5 15.5 25.5 15.5H29C32 15.5 34.8 17 36.2 19.5L39.5 25C40.8 27.2 40 29 37.5 29H5Z" fill="url(#vcCarbon)" />
+                            <path d="M19 19.5H28C29.5 19.5 30.8 20.3 31.5 21.5L33.5 25H16L19 19.5Z" fill="#090d16" />
+                            <circle cx="11.5" cy="29" r="3.5" fill="#090d16" stroke="#ef4444" stroke-width="1.2" />
+                            <circle cx="11.5" cy="29" r="1.5" fill="#e2e8f0" />
+                            <circle cx="34.5" cy="29" r="3.5" fill="#090d16" stroke="#ef4444" stroke-width="1.2" />
+                            <circle cx="34.5" cy="29" r="1.5" fill="#e2e8f0" />
+                            <path d="M6 29C11 28.5 17 25 22 19.5C27 14 33 10.5 40 9C41.8 8.6 42.8 10.5 41.5 11.8C35.5 17.5 28.5 24 20.5 30C15 34 9 35.5 5 35.5C4 35.5 3.5 34.5 4 33.5L6 29Z" fill="url(#vcWrapGrad)" />
+                            <path d="M16 25C22 19.5 28 15 35 11.5C38 10 40.5 9.2 41.5 9.5C40.5 11.5 37 14 32.5 18C26.5 23.5 19.5 29 13.5 33" stroke="url(#vcGloss)" stroke-width="1.2" stroke-linecap="round" />
+                            <circle cx="40.5" cy="9.5" r="1.5" fill="#ffffff" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl sm:text-2xl font-black tracking-tight leading-none text-gray-900 dark:text-white flex items-center group-hover:text-brand transition-colors">
+                            VELOCITY<span class="text-brand ml-1">CRAFT</span>
+                        </span>
+                        <span class="text-[9px] tracking-[0.24em] uppercase font-bold text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors mt-0.5">
+                            Wrap &amp; Custom Studio
+                        </span>
+                    </div>
                 </a>
 
                 <!-- Desktop Navigation -->
@@ -90,7 +124,16 @@
     <div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden transition-opacity"></div>
     <div id="mobile-menu" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-2xl z-[70] transform translate-x-full transition-transform duration-300 overflow-y-auto border-l-4 border-brand">
         <div class="p-6">
-            <div class="flex justify-end mb-6">
+            <div class="flex justify-between items-center mb-6">
+                <a href="index.html" class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-zinc-900 p-1 flex items-center justify-center border border-zinc-800">
+                        <svg class="w-full h-full" viewBox="0 0 48 48" fill="none">
+                            <path d="M5 29C6.5 29 9 28.5 12 26.5L18 19C19.8 16.8 22.5 15.5 25.5 15.5H29C32 15.5 34.8 17 36.2 19.5L39.5 25C40.8 27.2 40 29 37.5 29H5Z" fill="#334155" />
+                            <path d="M6 29C11 28.5 17 25 22 19.5C27 14 33 10.5 40 9C41.8 8.6 42.8 10.5 41.5 11.8C35.5 17.5 28.5 24 20.5 30C15 34 9 35.5 5 35.5C4 35.5 3.5 34.5 4 33.5L6 29Z" fill="#dc2626" />
+                        </svg>
+                    </div>
+                    <span class="font-black text-lg tracking-tight text-gray-900 dark:text-white">VELOCITY<span class="text-brand">CRAFT</span></span>
+                </a>
                 <button id="close-menu-btn" class="text-gray-500 hover:text-red-500 text-3xl">
                     <i class="fas fa-times"></i>
                 </button>
@@ -172,9 +215,43 @@
                 
                 <!-- Brand Info -->
                 <div>
-                    <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-brand mb-4">
-                        <i class="fas fa-car-side"></i>
-                        <span>VelocityCraft</span>
+                    <a href="index.html" class="inline-flex items-center gap-3 group focus:outline-none mb-4" aria-label="VelocityCraft Studio Home">
+                        <div class="relative w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-zinc-900 via-zinc-950 to-black p-1.5 shadow-md shadow-black/40 border border-zinc-700/80 group-hover:border-red-500/80 group-hover:shadow-red-500/25 group-hover:scale-105 transition-all duration-300">
+                            <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="vcWrapGradF" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#ff4d4f" />
+                                        <stop offset="50%" stop-color="#dc2626" />
+                                        <stop offset="100%" stop-color="#991b1b" />
+                                    </linearGradient>
+                                    <linearGradient id="vcGlossF" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+                                        <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                                    </linearGradient>
+                                    <linearGradient id="vcCarbonF" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#475569" />
+                                        <stop offset="100%" stop-color="#1e293b" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M5 29C6.5 29 9 28.5 12 26.5L18 19C19.8 16.8 22.5 15.5 25.5 15.5H29C32 15.5 34.8 17 36.2 19.5L39.5 25C40.8 27.2 40 29 37.5 29H5Z" fill="url(#vcCarbonF)" />
+                                <path d="M19 19.5H28C29.5 19.5 30.8 20.3 31.5 21.5L33.5 25H16L19 19.5Z" fill="#090d16" />
+                                <circle cx="11.5" cy="29" r="3.5" fill="#090d16" stroke="#ef4444" stroke-width="1.2" />
+                                <circle cx="11.5" cy="29" r="1.5" fill="#e2e8f0" />
+                                <circle cx="34.5" cy="29" r="3.5" fill="#090d16" stroke="#ef4444" stroke-width="1.2" />
+                                <circle cx="34.5" cy="29" r="1.5" fill="#e2e8f0" />
+                                <path d="M6 29C11 28.5 17 25 22 19.5C27 14 33 10.5 40 9C41.8 8.6 42.8 10.5 41.5 11.8C35.5 17.5 28.5 24 20.5 30C15 34 9 35.5 5 35.5C4 35.5 3.5 34.5 4 33.5L6 29Z" fill="url(#vcWrapGradF)" />
+                                <path d="M16 25C22 19.5 28 15 35 11.5C38 10 40.5 9.2 41.5 9.5C40.5 11.5 37 14 32.5 18C26.5 23.5 19.5 29 13.5 33" stroke="url(#vcGlossF)" stroke-width="1.2" stroke-linecap="round" />
+                                <circle cx="40.5" cy="9.5" r="1.5" fill="#ffffff" />
+                            </svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xl sm:text-2xl font-black tracking-tight leading-none text-white flex items-center group-hover:text-brand transition-colors">
+                                VELOCITY<span class="text-brand ml-1">CRAFT</span>
+                            </span>
+                            <span class="text-[9px] tracking-[0.24em] uppercase font-bold text-gray-400 group-hover:text-gray-200 transition-colors mt-0.5">
+                                Wrap &amp; Custom Studio
+                            </span>
+                        </div>
                     </a>
                     <p class="text-gray-400 text-base leading-relaxed mb-6">
                         The ultimate destination for premium vehicle wraps, paint protection films, and professional custom styling modifications.
