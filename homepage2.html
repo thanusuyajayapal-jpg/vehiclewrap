@@ -14,6 +14,7 @@
     <!-- Custom configuration for automotive branding colors (Electric Red & Carbon Dark) -->
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -36,8 +37,8 @@
             <div class="flex justify-between items-center h-16">
                 
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center gap-3 group focus:outline-none py-1" aria-label="VelocityCraft Studio Home">
-                    <div class="relative w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-zinc-900 via-zinc-950 to-black p-1.5 shadow-md shadow-black/15 border border-zinc-800 group-hover:border-red-500/60 group-hover:shadow-red-500/20 group-hover:scale-105 transition-all duration-300">
+                <a href="index.html" class="flex items-center gap-3 focus:outline-none py-1" aria-label="VelocityCraft Studio Home">
+                    <div class="relative w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-zinc-900 via-zinc-950 to-black p-1.5 shadow-md shadow-black/15 border border-zinc-800">
                         <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <linearGradient id="vcWrapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -66,10 +67,10 @@
                         </svg>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-xl sm:text-2xl font-black tracking-tight leading-none text-gray-900 dark:text-white flex items-center group-hover:text-brand transition-colors">
+                        <span class="text-xl sm:text-2xl font-black tracking-tight leading-none text-gray-900 flex items-center">
                             VELOCITY<span class="text-brand ml-1">CRAFT</span>
                         </span>
-                        <span class="text-[9px] tracking-[0.24em] uppercase font-bold text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors mt-0.5">
+                        <span class="text-[9px] tracking-[0.24em] uppercase font-bold text-gray-500 mt-0.5">
                             Wrap &amp; Custom Studio
                         </span>
                     </div>
@@ -132,7 +133,7 @@
                             <path d="M6 29C11 28.5 17 25 22 19.5C27 14 33 10.5 40 9C41.8 8.6 42.8 10.5 41.5 11.8C35.5 17.5 28.5 24 20.5 30C15 34 9 35.5 5 35.5L6 29Z" fill="#dc2626" />
                         </svg>
                     </div>
-                    <span class="font-black text-lg tracking-tight text-gray-900 dark:text-white">VELOCITY<span class="text-brand">CRAFT</span></span>
+                    <span class="font-black text-lg tracking-tight text-gray-900">VELOCITY<span class="text-brand">CRAFT</span></span>
                 </a>
                 <button id="close-menu-btn" aria-label="Close navigation menu" class="text-gray-500 hover:text-red-500 text-3xl">
                     <i class="fas fa-times"></i>
@@ -171,262 +172,1123 @@
     <!-- ================= MAIN CONTENT ================= -->
     <main class="flex-grow">
         
-        <!-- ================= HERO BANNER ================= -->
-        <section class="relative bg-gray-900 text-white py-20 lg:py-32 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    
-                    <div class="space-y-6 text-center lg:text-left">
-                        <span class="inline-flex items-center gap-2 py-1 px-4 rounded-full bg-brand/20 border border-brand/40 text-brand-light text-xs font-bold tracking-widest uppercase">
-                            <i class="fas fa-bolt text-brand"></i> Next-Gen Vehicle Customization
+        <!-- ================= SECTION 1: THE PERFORMANCE AERO & BESPOKE COCKPIT HERO ================= -->
+        <section class="relative bg-gradient-to-b from-gray-950 via-zinc-900 to-gray-950 text-white min-h-[calc(100vh_-_4rem)] flex flex-col justify-center py-6 lg:py-8 overflow-hidden border-b border-zinc-800" style="min-height: calc(100vh - 4rem); min-height: calc(100dvh - 4rem);">
+            <!-- Background Glow & Grid Accents -->
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(220,38,38,0.22),rgba(255,255,255,0))] pointer-events-none"></div>
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-brand/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full my-auto">
+                <!-- Live Studio Telemetry Ribbon -->
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-5 lg:mb-6 pb-2.5 border-b border-zinc-800/80 text-xs">
+                    <div class="flex items-center gap-3">
+                        <span class="flex h-2.5 w-2.5 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
                         </span>
+                        <span class="font-mono text-zinc-300 font-semibold tracking-wider uppercase">Live Studio Status: <span class="text-green-400 font-bold">Bay 01-04 Active</span></span>
+                    </div>
+                    <div class="flex items-center gap-5 font-mono text-zinc-400 text-[11px] sm:text-xs">
+                        <span class="hidden md:inline"><i class="fas fa-temperature-low text-brand mr-1.5"></i> Cleanroom: 21°C</span>
+                        <span class="hidden md:inline"><i class="fas fa-tint text-brand mr-1.5"></i> Humidity: 42%</span>
+                        <span><i class="fas fa-certificate text-brand mr-1.5"></i> ISO Class 7 Certified</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-center">
+                    <!-- Left Hero Column -->
+                    <div class="lg:col-span-7 space-y-3.5 sm:space-y-4 lg:space-y-4 xl:space-y-5 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 py-1 px-3.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-bold tracking-widest uppercase backdrop-blur-md">
+                            <i class="fas fa-microchip text-brand"></i> Next-Gen Automotive Film Lab
+                        </div>
                         
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-                            Precision Engineering <br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-light via-brand to-red-500">Meets Bold Design</span>
+                        <h1 class="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-black tracking-tight leading-[1.1] text-white">
+                            Aero-Spec Vinyl &amp; <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-amber-300">
+                                Ultra-Hybrid Shielding
+                            </span>
                         </h1>
                         
-                        <p class="text-lg text-gray-300 max-w-xl mx-auto lg:mx-0">
-                            Experience automotive transformation at its finest. We engineer high-end vinyl wraps, ceramic coatings, and performance detailing tailored for true enthusiasts.
+                        <p class="text-xs sm:text-sm lg:text-base text-zinc-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                            VelocityCraft Studio 2.0 fuses aerospace polyurethane chemistry with bespoke motorsport design. Protect factory paint, reverse color profiles instantly, and command the boulevard with zero blade-to-paint contact.
                         </p>
                         
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                            <a href="service.html" class="bg-brand hover:bg-brand-dark text-white px-8 py-3.5 rounded-xl font-bold transition-all shadow-lg shadow-brand/30 inline-flex items-center justify-center gap-2">
-                                Explore Services <i class="fas fa-arrow-right"></i>
+                        <!-- Quick Spec Micro-badges -->
+                        <div class="grid grid-cols-3 gap-2.5 sm:gap-3 py-1 max-w-md mx-auto lg:mx-0">
+                            <div class="p-2 sm:p-2.5 lg:p-3 rounded-xl bg-zinc-900/80 border border-zinc-800 text-center">
+                                <div class="text-sm sm:text-base lg:text-lg font-black text-white">8.5 Mils</div>
+                                <div class="text-[9px] sm:text-[10px] uppercase font-bold text-zinc-400 tracking-wider">TPU Armor Depth</div>
+                            </div>
+                            <div class="p-2 sm:p-2.5 lg:p-3 rounded-xl bg-zinc-900/80 border border-zinc-800 text-center">
+                                <div class="text-sm sm:text-base lg:text-lg font-black text-brand">100%</div>
+                                <div class="text-[9px] sm:text-[10px] uppercase font-bold text-zinc-400 tracking-wider">Blade-Free Cut</div>
+                            </div>
+                            <div class="p-2 sm:p-2.5 lg:p-3 rounded-xl bg-zinc-900/80 border border-zinc-800 text-center">
+                                <div class="text-sm sm:text-base lg:text-lg font-black text-white">12 Yrs</div>
+                                <div class="text-[9px] sm:text-[10px] uppercase font-bold text-zinc-400 tracking-wider">Warranty Shield</div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Action Row -->
+                        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-1">
+                            <a href="#configurator-section" class="bg-gradient-to-r from-red-600 to-brand hover:from-red-500 hover:to-red-700 text-white px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl font-bold transition-all shadow-xl shadow-red-600/30 hover:shadow-red-600/50 inline-flex items-center justify-center gap-2 text-sm sm:text-base">
+                                <i class="fas fa-sliders-h"></i> Launch Build Configurator
                             </a>
-                            <a href="contact.html" class="border-2 border-white/60 hover:border-white hover:bg-white/10 text-white px-8 py-3.5 rounded-xl font-bold transition-all inline-flex items-center justify-center gap-2 backdrop-blur-sm">
-                                Get a Quote
+                            <a href="service.html" class="border border-zinc-700 hover:border-zinc-500 bg-zinc-900/60 hover:bg-zinc-800 text-zinc-200 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl font-bold transition-all inline-flex items-center justify-center gap-2 backdrop-blur-sm text-sm sm:text-base">
+                                <i class="fas fa-layer-group"></i> Material Specs
                             </a>
                         </div>
                     </div>
 
-                    <div class="relative">
-                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-800 group">
+                    <!-- Right Hero Visual Column -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 bg-zinc-900 group">
                             <img src="image/car wrap (20).jpg" 
-                                 alt="Sports car studio showcase" 
-                                 class="w-full h-[400px] sm:h-[450px] object-cover object-center group-hover:scale-105 transition-transform duration-500" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-80"></div>
-                            <div class="absolute bottom-6 left-6 right-6 p-4 bg-gray-900/80 backdrop-blur-md rounded-xl border border-gray-700/50 flex justify-between items-center">
-                                <div>
-                                    <p class="text-xs text-brand-light font-bold uppercase tracking-wider">Featured Project</p>
-                                    <h4 class="text-lg font-bold text-white">Matte Carbon GT Wrap</h4>
+                                 alt="High-spec supercar wrap transformation" 
+                                 class="w-full h-[280px] sm:h-[340px] lg:h-[350px] xl:h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/30 to-transparent"></div>
+                            
+                            <!-- Floating Telemetry Overlay Tag -->
+                            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/75 backdrop-blur-md border border-zinc-700 text-[11px] font-mono text-zinc-300 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Spec: Satin Obsidian GT
+                            </div>
+
+                            <!-- Bottom Glass Panel -->
+                            <div class="absolute bottom-3 left-3 right-3 p-3 sm:p-3.5 lg:p-4 bg-zinc-950/90 backdrop-blur-md rounded-xl border border-zinc-800/80">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-red-400">Featured Commission</span>
+                                    <span class="text-[10px] sm:text-xs font-mono text-zinc-400">Build #VC-982</span>
                                 </div>
-                                <span class="w-10 h-10 rounded-full bg-brand text-white flex items-center justify-center shadow-md">
-                                    <i class="fas fa-arrow-right"></i>
+                                <h3 class="text-sm sm:text-base lg:text-lg font-bold text-white mb-0.5">Porsche 911 GT3 RS Track Shield</h3>
+                                <p class="text-[11px] sm:text-xs text-zinc-400 leading-relaxed mb-2">Self-healing gloss PPF over factory paint with bespoke satin acid green aero wing and mirror accents.</p>
+                                <div class="flex items-center justify-between text-[11px] font-semibold text-zinc-300 pt-1.5 border-t border-zinc-800">
+                                    <span><i class="fas fa-clock text-brand mr-1"></i> 38 Bay Hours</span>
+                                    <span><i class="fas fa-shield-virus text-brand mr-1"></i> 10-Yr Hydrophobic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 2: ADVANCED FILM ENGINEERING & MATERIAL SCIENCE MATRIX ================= -->
+        <section class="py-24 bg-white dark:bg-zinc-950 border-b border-gray-100 dark:border-zinc-800 transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="inline-block px-3 py-1 bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
+                        Material Science &amp; Specifications
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
+                        Engineered Film Tier Matrix
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 mt-4 text-base sm:text-lg">
+                        We deploy proprietary multi-ply polymer films engineered to withstand track velocity, gravel blast, and harsh ultraviolet exposure. Compare our signature formulas below.
+                    </p>
+                </div>
+
+                <!-- 3-Tier Technical Engineering Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Tier 1: OpticShield Pro (Ultra-Clear TPU PPF) -->
+                    <div class="bg-gray-50 dark:bg-zinc-900 rounded-2xl border border-gray-200 dark:border-zinc-800 p-8 flex flex-col justify-between hover:border-brand transition-all hover:shadow-xl group">
+                        <div>
+                            <div class="flex justify-between items-center mb-6">
+                                <span class="w-12 h-12 rounded-xl bg-red-500/10 text-red-600 flex items-center justify-center text-xl font-bold">
+                                    <i class="fas fa-shield-alt"></i>
+                                </span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-gray-200 dark:bg-zinc-800 text-gray-700 dark:text-zinc-300">
+                                    MIL-STD 810G
                                 </span>
                             </div>
+                            <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-2">OpticShield TPU</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                Optically invisible self-healing aliphatic thermoplastic polyurethane with elastomeric polymer topcoat that eliminates swirl marks under solar heat.
+                            </p>
+                            
+                            <!-- Telemetry Specs Table -->
+                            <div class="space-y-3 pt-4 border-t border-gray-200 dark:border-zinc-800 text-xs font-mono">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Total Thickness</span>
+                                    <span class="font-bold text-gray-900 dark:text-white">8.5 Mils (215 µm)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Self-Healing Activation</span>
+                                    <span class="font-bold text-brand">55°C (131°F)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Elongation at Break</span>
+                                    <span class="font-bold text-gray-900 dark:text-white">380% Tensile</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Hydrophobic Angle</span>
+                                    <span class="font-bold text-gray-900 dark:text-white">114° Beading</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Warranty Window</span>
+                                    <span class="font-bold text-green-600 dark:text-green-400">12 Years Anti-Yellow</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="absolute -inset-1 bg-gradient-to-r from-brand to-red-600 rounded-2xl blur-xl opacity-30 -z-10"></div>
+
+                        <div class="mt-8 pt-4">
+                            <a href="service.html" class="block w-full text-center py-3 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold text-xs uppercase tracking-wider hover:bg-brand dark:hover:bg-brand dark:hover:text-white transition-all shadow-sm">
+                                View Technical Whitepaper
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tier 2: ChromaShift GT (Dual-Layer Cast Vinyl) -->
+                    <div class="bg-gray-50 dark:bg-zinc-900 rounded-2xl border-2 border-brand p-8 flex flex-col justify-between shadow-lg relative transform lg:-translate-y-2 group">
+                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 bg-brand text-white text-[11px] font-black uppercase tracking-widest rounded-full shadow-md">
+                            Most Requested by Drivers
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-6 mt-2">
+                                <span class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center text-xl font-bold shadow-md shadow-red-500/20">
+                                    <i class="fas fa-palette"></i>
+                                </span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-red-100 dark:bg-red-950/80 text-brand">
+                                    CAST FORMULA
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-2">ChromaShift GT</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                Ultra-conformable premium cast vinyl with micro air-release grid channels and directional mica pigments that refract sunlight into multi-hued gradients.
+                            </p>
+                            
+                            <!-- Telemetry Specs Table -->
+                            <div class="space-y-3 pt-4 border-t border-gray-200 dark:border-zinc-800 text-xs font-mono">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Total Thickness</span>
+                                    <span class="font-bold text-gray-900 dark:text-white">4.2 Mils (105 µm)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Available Color Range</span>
+                                    <span class="font-bold text-brand">340+ Custom Shades</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Removability Period</span>
+                                    <span class="font-bold text-gray-900 dark:text-white">Clean Zero-Residue 5Y</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">UV Ray Blocking</span>
+                                    <span class="font-bold text-gray-900 dark:text-white">99.4% Spectrum Cut</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Warranty Window</span>
+                                    <span class="font-bold text-green-600 dark:text-green-400">7 Years Finish Bond</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-4">
+                            <a href="gallery.html" class="block w-full text-center py-3 rounded-xl bg-brand hover:bg-brand-dark text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md shadow-brand/20">
+                                Explore Color Spectrum
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tier 3: StealthGuard Pro (Matte Ceramic PPF) -->
+                    <div class="bg-gray-50 dark:bg-zinc-900 rounded-2xl border border-gray-200 dark:border-zinc-800 p-8 flex flex-col justify-between hover:border-brand transition-all hover:shadow-xl group">
+                        <div>
+                            <div class="flex justify-between items-center mb-6">
+                                <span class="w-12 h-12 rounded-xl bg-red-500/10 text-red-600 flex items-center justify-center text-xl font-bold">
+                                    <i class="fas fa-gem"></i>
+                                </span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-gray-200 dark:bg-zinc-800 text-gray-700 dark:text-zinc-300">
+                                    HYBRID MATTE
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-2">StealthGuard Pro</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                Transforms any gloss paint into a silky satin finish while offering full 8.0 mil rock-strike ballistic protection and integrated nano-ceramic hydrophobic topcoat.
+                            </p>
+                            
+                            <!-- Telemetry Specs Table -->
+                            <div class="space-y-3 pt-4 border-t border-gray-200 dark:border-zinc-800 text-xs font-mono">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Total Thickness</span>
+                                    <span class="font-bold text-gray-900 dark:text-white">8.0 Mils (200 µm)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Sheen Finish Index</span>
+                                    <span class="font-bold text-brand">20% Satin Sheen</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Ceramic Infusion</span>
+                                    <span class="font-bold text-gray-900 dark:text-white">Si02 Molecular Bond</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Stain Resistance</span>
+                                    <span class="font-bold text-gray-900 dark:text-white">Bug &amp; Tar Proof</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500 dark:text-zinc-400">Warranty Window</span>
+                                    <span class="font-bold text-green-600 dark:text-green-400">10 Years Factory Armor</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-4">
+                            <a href="pricing.html" class="block w-full text-center py-3 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold text-xs uppercase tracking-wider hover:bg-brand dark:hover:bg-brand dark:hover:text-white transition-all shadow-sm">
+                                View Package Pricing
+                            </a>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <!-- ================= SECTION 1: CORE FEATURES GRID ================= -->
-        <section class="py-20 bg-white dark:bg-black border-b border-gray-200 dark:border-zinc-800 transition-colors">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <span class="text-brand font-bold uppercase tracking-wider text-sm">VelocityCraft Standards</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-2 mb-4">Why Elite Drivers Choose Us</h2>
-                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-16 text-base sm:text-lg">We combine artisan precision with aerospace-grade films to keep your ride looking absolutely pristine.</p>
+        <!-- ================= SECTION 3: INTERACTIVE FINISH VISUALIZER & COLOR LABORATORY ================= -->
+        <section class="py-24 bg-gray-950 text-white relative overflow-hidden border-b border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+                    <div>
+                        <span class="inline-block px-3 py-1 bg-red-950/80 text-red-400 border border-red-500/30 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
+                            Finish Studio Lab
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white">
+                            Interactive Finish Spectrum
+                        </h2>
+                        <p class="text-zinc-400 mt-2 max-w-xl text-base">
+                            Select a finish tier to inspect optical reflectivity, surface texture, and real studio application photographs.
+                        </p>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap gap-2 p-1.5 bg-zinc-900 rounded-xl border border-zinc-800">
+                        <button onclick="switchFinish('satin')" id="btn-satin" class="finish-tab-btn active px-4 py-2 rounded-lg text-xs font-bold transition-all bg-brand text-white shadow-md">
+                            Satin Metallic
+                        </button>
+                        <button onclick="switchFinish('gloss')" id="btn-gloss" class="finish-tab-btn px-4 py-2 rounded-lg text-xs font-bold text-zinc-400 hover:text-white transition-all">
+                            Liquid Candy Gloss
+                        </button>
+                        <button onclick="switchFinish('carbon')" id="btn-carbon" class="finish-tab-btn px-4 py-2 rounded-lg text-xs font-bold text-zinc-400 hover:text-white transition-all">
+                            Forged Carbon 3D
+                        </button>
+                        <button onclick="switchFinish('chameleon')" id="btn-chameleon" class="finish-tab-btn px-4 py-2 rounded-lg text-xs font-bold text-zinc-400 hover:text-white transition-all">
+                            Iridescent Flip
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Showcase Main Panel -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-zinc-900/90 rounded-3xl border border-zinc-800 p-6 sm:p-10">
+                    <!-- Image Display -->
+                    <div class="lg:col-span-7 overflow-hidden rounded-2xl relative border border-zinc-800 group">
+                        <img id="finish-preview-img" 
+                             src="image/car wrap (15).jpg" 
+                             alt="Satin Metallic Finish Sample" 
+                             class="w-full h-[360px] sm:h-[420px] object-cover transition-all duration-500 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-xs">
+                            <span id="finish-badge" class="px-3 py-1 rounded-md bg-brand text-white font-mono font-bold">Ref: Satin Titanium Silver</span>
+                            <span class="text-zinc-300 font-mono"><i class="fas fa-camera text-brand mr-1"></i> Studio Bay Capture</span>
+                        </div>
+                    </div>
+
+                    <!-- Technical Metrics for Active Finish -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <span id="finish-category" class="text-xs font-mono uppercase text-brand font-bold tracking-wider">Series 01: Satin Frosted Texture</span>
+                            <h3 id="finish-title" class="text-2xl sm:text-3xl font-black text-white mt-1">Satin Frosted Metallic</h3>
+                            <p id="finish-desc" class="text-zinc-300 text-sm leading-relaxed mt-3">
+                                Creates a soft, light-diffusing velvet sheen across sharp vehicle bodylines. Accentuates fender creases, hood vents, and muscular haunches without harsh glare.
+                            </p>
+                        </div>
+
+                        <!-- Progress Spec Bars -->
+                        <div class="space-y-4 pt-4 border-t border-zinc-800 text-xs">
+                            <div>
+                                <div class="flex justify-between font-mono mb-1.5">
+                                    <span class="text-zinc-400">Light Diffusion Quotient</span>
+                                    <span id="finish-spec-diff" class="text-white font-bold">88% Frosted</span>
+                                </div>
+                                <div class="w-full bg-zinc-800 h-2 rounded-full overflow-hidden">
+                                    <div id="finish-bar-diff" class="bg-red-500 h-full rounded-full transition-all duration-500" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between font-mono mb-1.5">
+                                    <span class="text-zinc-400">Scratch &amp; Swirl Resistance</span>
+                                    <span id="finish-spec-scratch" class="text-white font-bold">94% High</span>
+                                </div>
+                                <div class="w-full bg-zinc-800 h-2 rounded-full overflow-hidden">
+                                    <div id="finish-bar-scratch" class="bg-red-500 h-full rounded-full transition-all duration-500" style="width: 94%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between font-mono mb-1.5">
+                                    <span class="text-zinc-400">Surface Cleanability</span>
+                                    <span id="finish-spec-clean" class="text-white font-bold">Easy / Nanocoated</span>
+                                </div>
+                                <div class="w-full bg-zinc-800 h-2 rounded-full overflow-hidden">
+                                    <div id="finish-bar-clean" class="bg-red-500 h-full rounded-full transition-all duration-500" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Row -->
+                        <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                            <a href="contact.html" class="flex-1 text-center py-3 rounded-xl bg-brand hover:bg-brand-dark text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-brand/20">
+                                Request Physical Swatch Kit
+                            </a>
+                            <a href="gallery.html" class="px-5 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-xs uppercase tracking-wider transition-all text-center">
+                                View Gallery
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 4: AEROSPACE CLEANROOM INSTALLATION STANDARDS ================= -->
+        <section class="py-24 bg-white dark:bg-black border-b border-gray-100 dark:border-zinc-800 transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="inline-block px-3 py-1 bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
+                        Cleanroom Engineering
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
+                        The 4-Stage Sterile Application Protocol
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 mt-4 text-base sm:text-lg">
+                        Standard wrap shops apply vinyl in open dusty garages. At VelocityCraft, every car enters a medical-grade positive pressure cleanroom ensuring zero bubble entrapment.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Step 01 -->
+                    <div class="bg-gray-50 dark:bg-zinc-900 rounded-2xl overflow-hidden border border-gray-200 dark:border-zinc-800 group hover:shadow-xl transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="h-44 overflow-hidden relative">
+                                <img src="image/car wrap (19).jpg" alt="Chemical decontamination stage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <span class="absolute top-3 left-3 w-8 h-8 rounded-lg bg-brand text-white font-black text-xs flex items-center justify-center shadow">
+                                    01
+                                </span>
+                                <span class="absolute bottom-2.5 left-3 text-[11px] font-mono text-zinc-300 font-bold uppercase">Decon &amp; Strip</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-black text-gray-900 dark:text-white mb-2">Micro-Decontamination</h3>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    Iron fallout dissolution, clay bar decontamination, and 99% pure isopropyl alcohol strip to eliminate all synthetic waxes, road oils, and microscopic grit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2 text-[11px] font-mono font-semibold text-brand flex items-center gap-1.5">
+                            <i class="fas fa-check-circle"></i> Pure Paint Surface
+                        </div>
+                    </div>
+
+                    <!-- Step 02 -->
+                    <div class="bg-gray-50 dark:bg-zinc-900 rounded-2xl overflow-hidden border border-gray-200 dark:border-zinc-800 group hover:shadow-xl transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="h-44 overflow-hidden relative">
+                                <img src="image/car wrap (24).jpg" alt="CAD Laser Pattern Plotting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <span class="absolute top-3 left-3 w-8 h-8 rounded-lg bg-brand text-white font-black text-xs flex items-center justify-center shadow">
+                                    02
+                                </span>
+                                <span class="absolute bottom-2.5 left-3 text-[11px] font-mono text-zinc-300 font-bold uppercase">CAD Precision</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-black text-gray-900 dark:text-white mb-2">3D Laser Templating</h3>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    CAD software precuts film panels with 15mm extension for seamless edge rolling. Zero razor knives ever touch your clear coat during panel installation.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2 text-[11px] font-mono font-semibold text-brand flex items-center gap-1.5">
+                            <i class="fas fa-check-circle"></i> 100% Blade-Free
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="bg-gray-50 dark:bg-zinc-900 rounded-2xl overflow-hidden border border-gray-200 dark:border-zinc-800 group hover:shadow-xl transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="h-44 overflow-hidden relative">
+                                <img src="image/car wrap (25).jpg" alt="Positive Pressure Cleanroom Bay" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <span class="absolute top-3 left-3 w-8 h-8 rounded-lg bg-brand text-white font-black text-xs flex items-center justify-center shadow">
+                                    03
+                                </span>
+                                <span class="absolute bottom-2.5 left-3 text-[11px] font-mono text-zinc-300 font-bold uppercase">Cleanroom Bay</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-black text-gray-900 dark:text-white mb-2">ISO 7 Cleanroom Wrap</h3>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    Air shower interlocks, anti-static ionizer blowers, and 5000K daylight-balanced LED surgical illumination guarantee zero lint, dust, or air pockets.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2 text-[11px] font-mono font-semibold text-brand flex items-center gap-1.5">
+                            <i class="fas fa-check-circle"></i> 0.3 Micron Filtered
+                        </div>
+                    </div>
+
+                    <!-- Step 04 -->
+                    <div class="bg-gray-50 dark:bg-zinc-900 rounded-2xl overflow-hidden border border-gray-200 dark:border-zinc-800 group hover:shadow-xl transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="h-44 overflow-hidden relative">
+                                <img src="image/car wrap (26).jpg" alt="Infrared Post-Heating Inspection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <span class="absolute top-3 left-3 w-8 h-8 rounded-lg bg-brand text-white font-black text-xs flex items-center justify-center shadow">
+                                    04
+                                </span>
+                                <span class="absolute bottom-2.5 left-3 text-[11px] font-mono text-zinc-300 font-bold uppercase">Thermal Lock</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-black text-gray-900 dark:text-white mb-2">IR Thermal Memory Lock</h3>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    All edges and deep recesses are heated to 95°C using calibrated infrared pyrometers. This kills vinyl memory recoil, preventing premature lifting forever.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2 text-[11px] font-mono font-semibold text-brand flex items-center gap-1.5">
+                            <i class="fas fa-check-circle"></i> 95°C Edge Stabilization
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 5: SUPERCAR TRANSFORMATION DOSSIERS & BUILD LOGS ================= -->
+        <section class="py-24 bg-gray-50 dark:bg-zinc-950 border-b border-gray-200 dark:border-zinc-800 transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Header -->
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+                    <div>
+                        <span class="inline-block px-3 py-1 bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
+                            Verified Case Studies
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
+                            Supercar Transformation Dossiers
+                        </h2>
+                        <p class="text-gray-600 dark:text-gray-400 mt-2 max-w-xl text-base">
+                            Real technical logs from our recent studio commissions. Inspect vehicle baseline, hours invested, materials applied, and customer outcomes.
+                        </p>
+                    </div>
+                    <a href="gallery.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-white font-bold text-xs uppercase tracking-wider hover:border-brand transition-all shadow-sm">
+                        <span>Browse Full 180+ Build Archive</span>
+                        <i class="fas fa-arrow-right text-brand"></i>
+                    </a>
+                </div>
+
+                <!-- 3 Case Dossiers -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Dossier 01 -->
+                    <div class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-gray-200 dark:border-zinc-800 shadow-md hover:shadow-2xl transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="h-64 overflow-hidden relative">
+                                <img src="image/car wrap (21).jpg" alt="Porsche 911 GT3 RS Track Shield Wrap" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand text-white font-mono text-[11px] font-bold shadow">
+                                    DOSSIER #01
+                                </span>
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <span class="text-xs font-mono font-bold text-red-400 uppercase tracking-widest">Porsche 992 GT3 RS</span>
+                                    <h3 class="text-xl font-black text-white">Full Stealth Track Armor</h3>
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="grid grid-cols-3 gap-2 py-3 border-y border-gray-100 dark:border-zinc-800 text-center font-mono text-xs">
+                                    <div>
+                                        <div class="font-bold text-gray-900 dark:text-white">42 Hrs</div>
+                                        <div class="text-[10px] text-gray-500 dark:text-zinc-400">Bay Time</div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-brand">16 Pcs</div>
+                                        <div class="text-[10px] text-gray-500 dark:text-zinc-400">Tucked Panels</div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-gray-900 dark:text-white">100%</div>
+                                        <div class="text-[10px] text-gray-500 dark:text-zinc-400">Edge Coverage</div>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    Complete conversion of factory Carrara White into Stealth Satin PPF, with custom carbon-weave wing endplates and ceramic caliper protection. Tested at 170+ mph with zero lift.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <a href="contact.html" class="w-full block text-center py-2.5 rounded-xl bg-gray-100 dark:bg-zinc-800 hover:bg-brand hover:text-white dark:hover:bg-brand text-gray-800 dark:text-zinc-200 text-xs font-bold uppercase tracking-wider transition-all">
+                                Request Similar Package
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Dossier 02 -->
+                    <div class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-gray-200 dark:border-zinc-800 shadow-md hover:shadow-2xl transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="h-64 overflow-hidden relative">
+                                <img src="image/car wrap (22).jpg" alt="BMW M4 Competition Frozen Grey Wrap" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand text-white font-mono text-[11px] font-bold shadow">
+                                    DOSSIER #02
+                                </span>
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <span class="text-xs font-mono font-bold text-red-400 uppercase tracking-widest">BMW M4 Competition G82</span>
+                                    <h3 class="text-xl font-black text-white">Satin Dark Knight Shift</h3>
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="grid grid-cols-3 gap-2 py-3 border-y border-gray-100 dark:border-zinc-800 text-center font-mono text-xs">
+                                    <div>
+                                        <div class="font-bold text-gray-900 dark:text-white">36 Hrs</div>
+                                        <div class="text-[10px] text-gray-500 dark:text-zinc-400">Bay Time</div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-brand">3M 2080</div>
+                                        <div class="text-[10px] text-gray-500 dark:text-zinc-400">Cast Vinyl</div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-gray-900 dark:text-white">7-Yr</div>
+                                        <div class="text-[10px] text-gray-500 dark:text-zinc-400">Warranty</div>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    Full color change wrap from Isle of Man Green to Satin Metallic Deep Charcoal. Integrated high-gloss carbon roof overlay, laser grille trim, and hydrophobic glass sealant.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <a href="contact.html" class="w-full block text-center py-2.5 rounded-xl bg-gray-100 dark:bg-zinc-800 hover:bg-brand hover:text-white dark:hover:bg-brand text-gray-800 dark:text-zinc-200 text-xs font-bold uppercase tracking-wider transition-all">
+                                Request Similar Package
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Dossier 03 -->
+                    <div class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-gray-200 dark:border-zinc-800 shadow-md hover:shadow-2xl transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="h-64 overflow-hidden relative">
+                                <img src="image/car wrap (23).jpg" alt="Audi R8 V10 Stealth Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand text-white font-mono text-[11px] font-bold shadow">
+                                    DOSSIER #03
+                                </span>
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <span class="text-xs font-mono font-bold text-red-400 uppercase tracking-widest">Audi R8 V10 Performance</span>
+                                    <h3 class="text-xl font-black text-white">HyperGloss Candy Crimson</h3>
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="grid grid-cols-3 gap-2 py-3 border-y border-gray-100 dark:border-zinc-800 text-center font-mono text-xs">
+                                    <div>
+                                        <div class="font-bold text-gray-900 dark:text-white">48 Hrs</div>
+                                        <div class="text-[10px] text-gray-500 dark:text-zinc-400">Bay Time</div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-brand">Inozetek</div>
+                                        <div class="text-[10px] text-gray-500 dark:text-zinc-400">SuperGloss</div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-gray-900 dark:text-white">9H Duo</div>
+                                        <div class="text-[10px] text-gray-500 dark:text-zinc-400">Ceramic Top</div>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    Mirror-paint finish with zero orange peel effect. Wrapped around all door jambs and engine bay perimeters for complete color disguise. Topped with twin-layer ceramic quartz.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <a href="contact.html" class="w-full block text-center py-2.5 rounded-xl bg-gray-100 dark:bg-zinc-800 hover:bg-brand hover:text-white dark:hover:bg-brand text-gray-800 dark:text-zinc-200 text-xs font-bold uppercase tracking-wider transition-all">
+                                Request Similar Package
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 6: INTERACTIVE BUILD-YOUR-SPEC CONFIGURATOR & VIP RESERVATION ================= -->
+        <section id="configurator-section" class="py-24 bg-gradient-to-br from-gray-950 via-zinc-900 to-black text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="inline-block px-3 py-1 bg-red-950/80 text-red-400 border border-red-500/30 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
+                        Interactive Spec Studio
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white">
+                        Build Your Custom Transformation
+                    </h2>
+                    <p class="text-zinc-400 mt-3 text-base sm:text-lg">
+                        Configure your vehicle class, primary wrap package, and custom performance styling add-ons to calculate estimated turnaround time and reserve an exclusive bay slot.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Left: Interactive Configuration Controls (8 cols) -->
+                    <div class="lg:col-span-8 space-y-8 bg-zinc-900/80 border border-zinc-800 rounded-3xl p-6 sm:p-10 backdrop-blur-md">
+                        
+                        <!-- Step 1: Vehicle Segment -->
+                        <div>
+                            <label class="block text-xs font-mono font-bold text-red-400 uppercase tracking-widest mb-3">
+                                01. Select Vehicle Classification
+                            </label>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                <button type="button" onclick="selectConfigVehicle(this, 'Supercar', 1.3)" class="cfg-veh-btn active p-4 rounded-xl border border-brand bg-red-950/40 text-left transition-all">
+                                    <i class="fas fa-car-side text-brand text-lg mb-2 block"></i>
+                                    <div class="font-bold text-sm text-white">Supercar</div>
+                                    <div class="text-[10px] text-zinc-400">GT3, R8, Huracan</div>
+                                </button>
+                                <button type="button" onclick="selectConfigVehicle(this, 'Sports Coupe', 1.0)" class="cfg-veh-btn p-4 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-700 text-left transition-all">
+                                    <i class="fas fa-tachometer-alt text-zinc-400 text-lg mb-2 block"></i>
+                                    <div class="font-bold text-sm text-white">Sports Coupe</div>
+                                    <div class="text-[10px] text-zinc-400">M4, 911, C63, Supra</div>
+                                </button>
+                                <button type="button" onclick="selectConfigVehicle(this, 'Luxury SUV', 1.25)" class="cfg-veh-btn p-4 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-700 text-left transition-all">
+                                    <i class="fas fa-truck-monster text-zinc-400 text-lg mb-2 block"></i>
+                                    <div class="font-bold text-sm text-white">Performance SUV</div>
+                                    <div class="text-[10px] text-zinc-400">Urus, G63, X5M, RSQ8</div>
+                                </button>
+                                <button type="button" onclick="selectConfigVehicle(this, 'EV Platform', 1.1)" class="cfg-veh-btn p-4 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-700 text-left transition-all">
+                                    <i class="fas fa-bolt text-zinc-400 text-lg mb-2 block"></i>
+                                    <div class="font-bold text-sm text-white">EV / Modern</div>
+                                    <div class="text-[10px] text-zinc-400">Taycan, Plaid, e-tron</div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Primary Wrap System -->
+                        <div>
+                            <label class="block text-xs font-mono font-bold text-red-400 uppercase tracking-widest mb-3">
+                                02. Choose Primary Surface Treatment
+                            </label>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <button type="button" onclick="selectConfigPackage(this, 'Stealth Matte PPF', 4200, '4 Days', '10-Yr Ceramic Armor')" class="cfg-pkg-btn active p-4 rounded-xl border border-brand bg-red-950/40 text-left transition-all">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <span class="font-bold text-sm text-white">Stealth Matte PPF</span>
+                                        <span class="text-xs font-mono font-bold text-brand">$4,200</span>
+                                    </div>
+                                    <p class="text-[11px] text-zinc-400 leading-relaxed">Full self-healing satin protection with ceramic hydrophobic glaze.</p>
+                                </button>
+                                <button type="button" onclick="selectConfigPackage(this, 'Full Color Change Wrap', 3100, '3 Days', '7-Yr Cast Warranty')" class="cfg-pkg-btn p-4 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-700 text-left transition-all">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <span class="font-bold text-sm text-white">Full Color Shift</span>
+                                        <span class="text-xs font-mono font-bold text-brand">$3,100</span>
+                                    </div>
+                                    <p class="text-[11px] text-zinc-400 leading-relaxed">Over 340+ gloss, satin, chrome or pearlescent cast vinyls.</p>
+                                </button>
+                                <button type="button" onclick="selectConfigPackage(this, 'Track Pack PPF', 2400, '2 Days', '10-Yr High-Impact')" class="cfg-pkg-btn p-4 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-700 text-left transition-all">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <span class="font-bold text-sm text-white">Track Pack PPF</span>
+                                        <span class="text-xs font-mono font-bold text-brand">$2,400</span>
+                                    </div>
+                                    <p class="text-[11px] text-zinc-400 leading-relaxed">Bumper, full hood, fenders, mirrors &amp; rocker panels shielded.</p>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Bespoke Performance Add-Ons -->
+                        <div>
+                            <label class="block text-xs font-mono font-bold text-red-400 uppercase tracking-widest mb-3">
+                                03. Performance Styling Add-Ons (Optional)
+                            </label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-center gap-3 p-3.5 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-700 cursor-pointer transition-all">
+                                    <input type="checkbox" onchange="toggleConfigAddon(this, 650, 'Ceramic Pro Hydro-Shield')" class="cfg-addon-check w-4 h-4 text-brand bg-zinc-900 border-zinc-700 rounded focus:ring-0">
+                                    <div class="text-xs">
+                                        <div class="font-bold text-white">Twin-Layer Ceramic Quartz (+ $650)</div>
+                                        <div class="text-zinc-400 text-[10px]">9H Hardness hydrophobic dirt-repelling topcoat</div>
+                                    </div>
+                                </label>
+                                <label class="flex items-center gap-3 p-3.5 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-700 cursor-pointer transition-all">
+                                    <input type="checkbox" onchange="toggleConfigAddon(this, 550, 'High-Temp Caliper Coating')" class="cfg-addon-check w-4 h-4 text-brand bg-zinc-900 border-zinc-700 rounded focus:ring-0">
+                                    <div class="text-xs">
+                                        <div class="font-bold text-white">Custom Caliper Paint (+ $550)</div>
+                                        <div class="text-zinc-400 text-[10px]">Heat-cure ceramic Brembo/Acid/Porsche red</div>
+                                    </div>
+                                </label>
+                                <label class="flex items-center gap-3 p-3.5 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-700 cursor-pointer transition-all">
+                                    <input type="checkbox" onchange="toggleConfigAddon(this, 400, 'Smoked Headlight & Taillight PPF')" class="cfg-addon-check w-4 h-4 text-brand bg-zinc-900 border-zinc-700 rounded focus:ring-0">
+                                    <div class="text-xs">
+                                        <div class="font-bold text-white">Smoked Headlight PPF (+ $400)</div>
+                                        <div class="text-zinc-400 text-[10px]">UV-cured 30% tint film protecting lenses</div>
+                                    </div>
+                                </label>
+                                <label class="flex items-center gap-3 p-3.5 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-700 cursor-pointer transition-all">
+                                    <input type="checkbox" onchange="toggleConfigAddon(this, 450, 'Blackout Chrome Delete Trim')" class="cfg-addon-check w-4 h-4 text-brand bg-zinc-900 border-zinc-700 rounded focus:ring-0">
+                                    <div class="text-xs">
+                                        <div class="font-bold text-white">Blackout Chrome Delete (+ $450)</div>
+                                        <div class="text-zinc-400 text-[10px]">High-gloss black window trim &amp; grille wrap</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Live Estimate & VIP Booking Card (4 cols) -->
+                    <div class="lg:col-span-4 bg-zinc-900 border-2 border-brand/60 rounded-3xl p-6 sm:p-8 sticky top-24 shadow-2xl shadow-brand/10">
+                        <div class="flex items-center justify-between pb-4 border-b border-zinc-800">
+                            <span class="text-xs font-mono uppercase tracking-widest text-zinc-400">Config Summary</span>
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold">
+                                Bay Slot Open
+                            </span>
+                        </div>
+
+                        <div class="py-6 space-y-4">
+                            <div>
+                                <div class="text-xs text-zinc-400">Target Vehicle:</div>
+                                <div id="cfg-disp-veh" class="text-sm font-bold text-white">Supercar</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-zinc-400">Treatment Package:</div>
+                                <div id="cfg-disp-pkg" class="text-sm font-bold text-brand">Stealth Matte PPF</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-zinc-400">Installed Add-ons:</div>
+                                <div id="cfg-disp-addons" class="text-xs text-zinc-300">None selected</div>
+                            </div>
+                            
+                            <div class="pt-4 border-t border-zinc-800 grid grid-cols-2 gap-3 text-xs font-mono">
+                                <div>
+                                    <span class="text-zinc-400 block text-[10px]">Cure &amp; Bay Time:</span>
+                                    <span id="cfg-disp-time" class="font-bold text-white">4 Days</span>
+                                </div>
+                                <div>
+                                    <span class="text-zinc-400 block text-[10px]">Warranty Tier:</span>
+                                    <span id="cfg-disp-warr" class="font-bold text-white">10-Yr Ceramic</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-6 border-t border-zinc-800">
+                                <span class="text-xs text-zinc-400 block mb-1">Estimated Commission Range:</span>
+                                <div class="flex items-baseline gap-2">
+                                    <span id="cfg-disp-price" class="text-3xl font-black text-white">$5,460</span>
+                                    <span class="text-xs text-zinc-400 font-mono">approx.</span>
+                                </div>
+                                <p class="text-[10px] text-zinc-500 mt-1">Final invoice confirmed after laser paint gauge inspection.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <a href="contact.html" class="w-full block text-center py-3.5 rounded-xl bg-gradient-to-r from-red-600 to-brand hover:from-red-500 hover:to-red-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-red-600/30">
+                                <i class="fas fa-calendar-check mr-1.5"></i> Lock In VIP Studio Slot
+                            </a>
+                            <a href="pricing.html" class="w-full block text-center py-2.5 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-600 text-zinc-300 font-bold text-xs uppercase tracking-wider transition-all">
+                                View Standard Pricing
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 7: VERIFIED TELEMETRY, STUDIO ASSURANCE & VIP CONCIERGE ================= -->
+        <section id="vip-concierge-section" class="py-24 bg-white dark:bg-black border-b border-gray-200 dark:border-zinc-800 transition-colors relative overflow-hidden">
+            <!-- Subtle Background Accents -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-red-600/5 dark:bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand/5 dark:bg-brand/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="inline-block px-3.5 py-1 bg-red-100 dark:bg-red-950/70 text-red-600 dark:text-red-400 text-xs font-bold tracking-widest uppercase rounded-full mb-3 border border-red-200 dark:border-red-500/30">
+                        <i class="fas fa-check-double mr-1 text-brand"></i> Track-Tested &amp; Client Endorsed
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
+                        Client Telemetry &amp; Studio Assurance
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 mt-4 text-base sm:text-lg leading-relaxed">
+                        Every commission undergoes our 120-point aerospace cleanroom audit before handover. Inspect unfiltered driver feedback and our signature lifetime protection guarantee.
+                    </p>
                     
-                    <!-- Card 1: Self-Healing PPF -->
-                    <div class="bg-gray-50 dark:bg-zinc-900/80 rounded-2xl border border-gray-200 dark:border-zinc-800 overflow-hidden shadow-lg hover:shadow-2xl transition-all group flex flex-col justify-between">
-                        <div>
-                            <div class="h-52 overflow-hidden relative">
-                                <img src="image/car wrap (14).jpg" alt="Self-Healing Paint Protection Film" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                <div class="absolute top-4 left-4 w-11 h-11 bg-brand text-white rounded-xl flex items-center justify-center shadow-lg">
-                                    <i class="fas fa-shield-alt text-lg"></i>
-                                </div>
-                                <span class="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-widest text-brand-light">Armor Tech</span>
+                    <!-- Aggregate Trust Score Banner -->
+                    <div class="mt-8 inline-flex flex-wrap items-center justify-center gap-6 sm:gap-10 py-3.5 px-6 rounded-2xl bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 shadow-sm text-xs font-mono">
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-amber-400 text-sm">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Self-Healing PPF</h3>
-                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
-                                    Aerospace polyurethane films that automatically heal swirl marks under sunlight, offering unyielding defense against road gravel, rock chips, and chemical stains.
-                                </p>
-                            </div>
+                            <span class="font-bold text-gray-900 dark:text-white text-sm">4.98 / 5.0</span>
+                            <span class="text-gray-500 dark:text-zinc-400">(420+ Builds)</span>
                         </div>
-                        <div class="px-6 pb-6">
-                            <a href="service.html" class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 rounded-xl transition-all shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2 text-sm sm:text-base">
-                                Explore PPF Tech <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
+                        <div class="hidden sm:block w-px h-5 bg-gray-300 dark:bg-zinc-700"></div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span class="font-bold text-emerald-600 dark:text-emerald-400">100% Blade-Free</span>
+                            <span class="text-gray-500 dark:text-zinc-400">Zero Paint Contact</span>
                         </div>
-                    </div>
-
-                    <!-- Card 2: Bespoke Color Wraps -->
-                    <div class="bg-gray-50 dark:bg-zinc-900/80 rounded-2xl border border-gray-200 dark:border-zinc-800 overflow-hidden shadow-lg hover:shadow-2xl transition-all group flex flex-col justify-between">
-                        <div>
-                            <div class="h-52 overflow-hidden relative">
-                                <img src="image/car wrap (3).jpg" alt="Bespoke Exotic Color Wraps" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                <div class="absolute top-4 left-4 w-11 h-11 bg-brand text-white rounded-xl flex items-center justify-center shadow-lg">
-                                    <i class="fas fa-palette text-lg"></i>
-                                </div>
-                                <span class="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-widest text-brand-light">Custom Finish</span>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Bespoke Color Wraps</h3>
-                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
-                                    Over 300+ ultra-saturated matte, satin, iridescent, and color-shifting films. Completely reversible protection that elevates resale value while redefining style.
-                                </p>
-                            </div>
+                        <div class="hidden md:block w-px h-5 bg-gray-300 dark:bg-zinc-700"></div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-shield-alt text-brand"></i>
+                            <span class="font-bold text-gray-900 dark:text-white">12-Yr Anti-Yellow</span>
+                            <span class="text-gray-500 dark:text-zinc-400">Transferable</span>
                         </div>
-                        <div class="px-6 pb-6">
-                            <a href="gallery.html" class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 rounded-xl transition-all shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2 text-sm sm:text-base">
-                                View Color Palette <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Certified Technicians -->
-                    <div class="bg-gray-50 dark:bg-zinc-900/80 rounded-2xl border border-gray-200 dark:border-zinc-800 overflow-hidden shadow-lg hover:shadow-2xl transition-all group flex flex-col justify-between">
-                        <div>
-                            <div class="h-52 overflow-hidden relative">
-                                <img src="image/car wrap (13).jpg" alt="Certified Master Technicians Installation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                <div class="absolute top-4 left-4 w-11 h-11 bg-brand text-white rounded-xl flex items-center justify-center shadow-lg">
-                                    <i class="fas fa-award text-lg"></i>
-                                </div>
-                                <span class="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-widest text-brand-light">Master Guild</span>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Certified Technicians</h3>
-                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
-                                    Factory-certified craftsmen with decades of combined supercar experience. Precision disassembled components and tucked edges with zero blade-to-paint contact.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="px-6 pb-6">
-                            <a href="about.html" class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 rounded-xl transition-all shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2 text-sm sm:text-base">
-                                Meet the Team <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= SECTION 2: LIVE METRICS STATS ================= -->
-        <section class="py-16 bg-brand-light text-brand-dark">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div>
-                        <div class="text-4xl font-extrabold text-brand mb-1">1,250+</div>
-                        <div class="text-sm uppercase tracking-wide font-semibold text-gray-700">Cars Wrapped</div>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-extrabold text-brand mb-1">100%</div>
-                        <div class="text-sm uppercase tracking-wide font-semibold text-gray-700">Precision Fit</div>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-extrabold text-brand mb-1">10 yrs</div>
-                        <div class="text-sm uppercase tracking-wide font-semibold text-gray-700">Warranty Coverage</div>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-extrabold text-brand mb-1">4.9★</div>
-                        <div class="text-sm uppercase tracking-wide font-semibold text-gray-700">Client Ratings</div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- ================= SECTION 3: WHY CHOOSE US ================= -->
-        <section class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-brand font-bold uppercase tracking-wider text-sm">The VelocityCraft Advantage</span>
-                    <h2 class="text-3xl font-bold mt-2 mb-4">Why Car Enthusiasts Choose Us</h2>
-                    <p class="text-gray-600">We treat every vehicle as a masterpiece, combining master craftsmanship with industry-leading materials.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Part 1: Three Verified Driver Telemetry Dossiers (Cards) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
                     
-                    <!-- Feature 1 -->
-                    <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-gray-50 text-left">
-                        <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-6">
-                            <i class="fas fa-medal"></i>
+                    <!-- Testimonial Card 1 -->
+                    <div class="bg-gray-50 dark:bg-zinc-900 rounded-3xl p-7 border border-gray-200 dark:border-zinc-800 shadow-md hover:border-brand dark:hover:border-brand transition-all flex flex-col justify-between group hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-5">
+                                <div class="flex items-center gap-1 text-amber-400 text-sm">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-red-100 dark:bg-red-950/80 text-brand border border-red-200 dark:border-red-900/60">
+                                    Track Verified #VC-742
+                                </span>
+                            </div>
+                            
+                            <p class="text-gray-700 dark:text-zinc-300 text-sm leading-relaxed italic mb-6">
+                                &ldquo;After 14 consecutive track days at Laguna Seca with race slick debris hitting the bumper at 140+ mph, my front fascia has zero stone chips. The self-healing TPU absorbs impacts effortlessly and heals back under the sun in minutes. VelocityCraft is the only studio I trust with my GT3 RS.&rdquo;
+                            </p>
+
+                            <!-- Telemetry Specs Box -->
+                            <div class="p-3 rounded-xl bg-white dark:bg-zinc-950 border border-gray-200 dark:border-zinc-800 text-[11px] font-mono space-y-1.5 mb-6">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-500 dark:text-zinc-400">Film Applied:</span>
+                                    <span class="font-bold text-gray-900 dark:text-white">OpticShield TPU 8.5 Mil</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-500 dark:text-zinc-400">Finish:</span>
+                                    <span class="font-bold text-brand">Stealth Satin Over OEM</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-500 dark:text-zinc-400">Odo Log:</span>
+                                    <span class="font-bold text-emerald-600 dark:text-emerald-400">12,400 Track &amp; Canyon Miles</span>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">Certified Installers</h3>
-                        <p class="text-gray-600 text-sm">Factory-trained experts with years of hands-on experience handling high-end luxury and exotic cars.</p>
+
+                        <!-- Driver Info -->
+                        <div class="flex items-center gap-4 pt-4 border-t border-gray-200 dark:border-zinc-800">
+                            <img src="image/author (4).jpg" alt="Elena Rostova - GT3 RS Driver" class="w-12 h-12 rounded-full object-cover border-2 border-brand shadow-sm">
+                            <div>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-sm">Elena Rostova</h4>
+                                <p class="text-xs text-gray-500 dark:text-zinc-400">Porsche 992 GT3 RS Track Pilot</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Feature 2 -->
-                    <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-gray-50 text-left">
-                        <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-6">
-                            <i class="fas fa-shield-alt"></i>
+                    <!-- Testimonial Card 2 -->
+                    <div class="bg-gray-50 dark:bg-zinc-900 rounded-3xl p-7 border-2 border-brand/80 dark:border-brand shadow-lg relative flex flex-col justify-between group hover:shadow-2xl transform lg:-translate-y-2">
+                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 bg-brand text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-md">
+                            Concours d'Elegance Featured
                         </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">Premium Films Only</h3>
-                        <p class="text-gray-600 text-sm">We use top-tier self-healing PPF and premium cast wrapping films backed by comprehensive manufacturer warranties.</p>
+                        <div>
+                            <div class="flex items-center justify-between mb-5 mt-2">
+                                <div class="flex items-center gap-1 text-amber-400 text-sm">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-red-100 dark:bg-red-950/80 text-brand border border-red-200 dark:border-red-900/60">
+                                    Build Dossier #VC-819
+                                </span>
+                            </div>
+                            
+                            <p class="text-gray-700 dark:text-zinc-300 text-sm leading-relaxed italic mb-6">
+                                &ldquo;The Liquid Candy Blood Red gloss cast wrap was mistaken by car show judges for a $45,000 factory paint-to-sample option. The seamless edge rolling around the inner door jambs and hood vents is surgical grade. Zero seams, zero blade marks, pure glass reflection.&rdquo;
+                            </p>
+
+                            <!-- Telemetry Specs Box -->
+                            <div class="p-3 rounded-xl bg-white dark:bg-zinc-950 border border-gray-200 dark:border-zinc-800 text-[11px] font-mono space-y-1.5 mb-6">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-500 dark:text-zinc-400">Film Applied:</span>
+                                    <span class="font-bold text-gray-900 dark:text-white">Inozetek SuperGloss Cast</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-500 dark:text-zinc-400">Jamb Coverage:</span>
+                                    <span class="font-bold text-brand">360° Hidden Recesses</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-500 dark:text-zinc-400">Ceramic Top:</span>
+                                    <span class="font-bold text-emerald-600 dark:text-emerald-400">Twin-Layer Quartz 9H</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Driver Info -->
+                        <div class="flex items-center gap-4 pt-4 border-t border-gray-200 dark:border-zinc-800">
+                            <img src="image/author (2).jpg" alt="Julian Chen - Supercar Collector" class="w-12 h-12 rounded-full object-cover border-2 border-brand shadow-sm">
+                            <div>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-sm">Julian Chen</h4>
+                                <p class="text-xs text-gray-500 dark:text-zinc-400">Ferrari 812 &amp; 720S Collector</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Feature 3 -->
-                    <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-gray-50 text-left">
-                        <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-6">
-                            <i class="fas fa-wind"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">Dust-Free Bay</h3>
-                        <p class="text-gray-600 text-sm">Climate-controlled, dust-filtered application bays ensuring zero bubbles, debris, or imperfections.</p>
-                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="bg-gray-50 dark:bg-zinc-900 rounded-3xl p-7 border border-gray-200 dark:border-zinc-800 shadow-md hover:border-brand dark:hover:border-brand transition-all flex flex-col justify-between group hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-5">
+                                <div class="flex items-center gap-1 text-amber-400 text-sm">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-red-100 dark:bg-red-950/80 text-brand border border-red-200 dark:border-red-900/60">
+                                    Fleet Commission #VC-904
+                                </span>
+                            </div>
+                            
+                            <p class="text-gray-700 dark:text-zinc-300 text-sm leading-relaxed italic mb-6">
+                                &ldquo;Their positive-pressure cleanroom is the real deal. In traditional shops you invariably spot dust nibs trapped under the vinyl. VelocityCraft delivered perfection. The enclosed hydraulic transporter pickup and 30-day post-installation curing inspection set the industry benchmark.&rdquo;
+                            </p>
 
-                    <!-- Feature 4 -->
-                    <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-gray-50 text-left">
-                        <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-6">
-                            <i class="fas fa-handshake"></i>
+                            <!-- Telemetry Specs Box -->
+                            <div class="p-3 rounded-xl bg-white dark:bg-zinc-950 border border-gray-200 dark:border-zinc-800 text-[11px] font-mono space-y-1.5 mb-6">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-500 dark:text-zinc-400">Film Applied:</span>
+                                    <span class="font-bold text-gray-900 dark:text-white">3M 2080 Satin Dark Knight</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-500 dark:text-zinc-400">Cleanroom Standard:</span>
+                                    <span class="font-bold text-brand">ISO Class 7 Medical Grade</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-500 dark:text-zinc-400">Delivery Mode:</span>
+                                    <span class="font-bold text-emerald-600 dark:text-emerald-400">Enclosed Transporter</span>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">Lifetime Support</h3>
-                        <p class="text-gray-600 text-sm">Dedicated post-installation care, free maintenance checks, and guaranteed craftsmanship satisfaction.</p>
+
+                        <!-- Driver Info -->
+                        <div class="flex items-center gap-4 pt-4 border-t border-gray-200 dark:border-zinc-800">
+                            <img src="image/author (1).jpg" alt="Marcus Vance - Motorsport Director" class="w-12 h-12 rounded-full object-cover border-2 border-brand shadow-sm">
+                            <div>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-sm">Marcus Vance</h4>
+                                <p class="text-xs text-gray-500 dark:text-zinc-400">BMW M4 Competition Owner</p>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-            </div>
-        </section>
-        
-        <!-- ================= SECTION 4: RECENT SHOWCASE GALLERY ================= -->
-        <section class="py-16 bg-gray-50 border-t">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-end mb-12">
-                    <div>
-                        <h2 class="text-3xl font-bold mb-2">Recent Transformations</h2>
-                        <p class="text-gray-600">Explore some of our latest masterworks straight from the bay.</p>
-                    </div>
-                    <a href="gallery.html" class="hidden sm:inline-flex items-center gap-2 font-bold text-brand hover:underline">View Full Gallery <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="relative overflow-hidden rounded-xl shadow group h-64">
-                        <img src="image/car wrap (21).jpg" alt="Car 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent flex items-end p-6">
-                            <span class="text-white font-bold text-lg">Satin Metallic Blue Porsche</span>
-                        </div>
-                    </div>
-                    <div class="relative overflow-hidden rounded-xl shadow group h-64">
-                        <img src="image/car wrap (22).jpg" alt="Car 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent flex items-end p-6">
-                            <span class="text-white font-bold text-lg">Aggressive BMW M4 Track Wrap</span>
-                        </div>
-                    </div>
-                    <div class="relative overflow-hidden rounded-xl shadow group h-64">
-                        <img src="image/car wrap (23).jpg" alt="Car 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent flex items-end p-6">
-                            <span class="text-white font-bold text-lg">Stealth PPF Finished Audi R8</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- ================= SECTION 5: CALL TO ACTION BANNER ================= -->
-        <section class="py-16 bg-gray-900 text-white text-center">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Ready to Give Your Vehicle a Stunning Makeover?</h2>
-                <p class="text-gray-300 mb-8 max-w-xl mx-auto">Get in touch with our design team today or use our instant price estimator to plan your custom package.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="contact.html" class="bg-brand hover:bg-brand-dark text-white px-8 py-3.5 rounded-xl font-bold transition-all shadow-lg shadow-red-600/30 inline-flex items-center justify-center gap-2">Book Consultation <i class="fas fa-arrow-right text-sm"></i></a>
-                    <a href="calculator.html" class="bg-transparent border-2 border-white/60 hover:border-white hover:bg-white/10 text-white px-8 py-3.5 rounded-xl font-bold transition-all inline-flex items-center justify-center gap-2 backdrop-blur-sm">Calculate Cost <i class="fas fa-calculator text-sm"></i></a>
+                <!-- Part 2: 4-Pillar White-Glove Guarantee Grid -->
+                <div class="mb-20">
+                    <div class="text-center max-w-2xl mx-auto mb-10">
+                        <span class="text-xs font-mono font-bold uppercase tracking-widest text-brand block mb-1">
+                            The VelocityCraft Standard
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white">
+                            The 4-Pillar Studio Warranty &amp; Delivery Shield
+                        </h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Pillar 1 -->
+                        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-brand transition-all flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-red-500/10 text-brand flex items-center justify-center text-xl font-bold mb-4">
+                                    <i class="fas fa-vector-square"></i>
+                                </div>
+                                <h4 class="text-base font-bold text-gray-900 dark:text-white mb-2">100% Blade-Free</h4>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    Precision CAD edge mapping and surgical knifeless tape ensure blades never make direct contact with your factory clear coat.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-gray-200 dark:border-zinc-800 text-[11px] font-mono text-brand font-bold">
+                                Zero Cut Guarantee
+                            </div>
+                        </div>
+
+                        <!-- Pillar 2 -->
+                        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-brand transition-all flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-red-500/10 text-brand flex items-center justify-center text-xl font-bold mb-4">
+                                    <i class="fas fa-shield-halved"></i>
+                                </div>
+                                <h4 class="text-base font-bold text-gray-900 dark:text-white mb-2">12-Year Warranty</h4>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    Fully transferable coverage against delamination, peeling, yellowing, bubbling, and UV resin breakdown across North America.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-gray-200 dark:border-zinc-800 text-[11px] font-mono text-brand font-bold">
+                                Comprehensive Bond
+                            </div>
+                        </div>
+
+                        <!-- Pillar 3 -->
+                        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-brand transition-all flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-red-500/10 text-brand flex items-center justify-center text-xl font-bold mb-4">
+                                    <i class="fas fa-truck-ramp-box"></i>
+                                </div>
+                                <h4 class="text-base font-bold text-gray-900 dark:text-white mb-2">Enclosed Transport</h4>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    Hydraulic liftgate, climate-controlled, zero-mileage enclosed transport to and from your home or hangar upon request.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-gray-200 dark:border-zinc-800 text-[11px] font-mono text-brand font-bold">
+                                VIP Door-to-Door
+                            </div>
+                        </div>
+
+                        <!-- Pillar 4 -->
+                        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-brand transition-all flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-red-500/10 text-brand flex items-center justify-center text-xl font-bold mb-4">
+                                    <i class="fas fa-microscope"></i>
+                                </div>
+                                <h4 class="text-base font-bold text-gray-900 dark:text-white mb-2">30-Day Curing Audit</h4>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    Complimentary 30-day thermal post-inspection, laser edge check, and full pH-balanced cleanroom detailing wash included.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-gray-200 dark:border-zinc-800 text-[11px] font-mono text-brand font-bold">
+                                Lifetime Relationship
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Part 3: High-Converting VIP Studio Consultation & Reservation Banner -->
+                <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-zinc-950 via-zinc-900 to-black border-2 border-brand/50 shadow-2xl p-8 sm:p-12 lg:p-16 text-white">
+                    <!-- Ambient Glow -->
+                    <div class="absolute -top-24 -right-24 w-80 h-80 bg-red-600/20 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-brand/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-mono font-bold uppercase">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Concierge Desk Online: 6 Bay Slots Open
+                            </div>
+                            <h3 class="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+                                Ready to Shield &amp; Transform <br>
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-amber-300">
+                                    Your Vehicle at Studio 2.0?
+                                </span>
+                            </h3>
+                            <p class="text-zinc-300 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                                Schedule a 1-on-1 private studio bay walk-through, obtain a digital paint gauge map, or request an aerospace physical swatch kit delivered to your residence.
+                            </p>
+                            
+                            <!-- Perks checklist -->
+                            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2 text-xs font-mono text-zinc-300">
+                                <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-brand"></i> Same-Day CAD Spec</span>
+                                <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-brand"></i> Paint Gauge Inspection</span>
+                                <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-brand"></i> Free Swatch Kit</span>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-5 flex flex-col gap-3.5 sm:gap-4 max-w-md mx-auto lg:mx-0 w-full">
+                            <a href="contact.html" class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-red-600 to-brand hover:from-red-500 hover:to-red-700 text-white font-bold text-center text-sm uppercase tracking-wider transition-all shadow-xl shadow-red-600/40 hover:shadow-red-600/60 inline-flex items-center justify-center gap-2">
+                                <i class="fas fa-calendar-check"></i> Schedule VIP Consultation
+                            </a>
+                            <a href="tel:8009883569" class="w-full py-3.5 px-6 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700 text-zinc-200 font-bold text-center text-sm transition-all inline-flex items-center justify-center gap-2">
+                                <i class="fas fa-phone-alt text-brand"  style="transform: rotate(90deg);"
+></i> Direct Line: (800) 988-FLOW
+                            </a>
+                            <a href="pricing.html" class="w-full py-2.5 px-6 rounded-xl bg-transparent hover:bg-zinc-900/40 text-zinc-400 hover:text-white font-mono text-xs text-center transition-colors inline-flex items-center justify-center gap-1">
+                                <span>Compare all studio packages</span> <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -884,6 +1746,168 @@
         btns.forEach(btn => {
             btn.innerText = newDir === "rtl" ? "LTR" : "RTL";
         });
+      }
+
+      // ================= SECTION 3: FINISH SELECTOR LABORATORY =================
+      const finishData = {
+        satin: {
+          category: "Series 01: Satin Frosted Texture",
+          title: "Satin Frosted Metallic",
+          desc: "Creates a soft, light-diffusing velvet sheen across sharp vehicle bodylines. Accentuates fender creases, hood vents, and muscular haunches without harsh glare.",
+          img: "image/car wrap (15).jpg",
+          badge: "Ref: Satin Titanium Silver",
+          diff: "88% Frosted",
+          diffW: "88%",
+          scratch: "94% High",
+          scratchW: "94%",
+          clean: "Easy / Nanocoated",
+          cleanW: "90%"
+        },
+        gloss: {
+          category: "Series 02: Deep Mirror Specular",
+          title: "Liquid Candy Gloss Flip",
+          desc: "Maximum depth and wet-look gloss that outperforms factory clear coats. Specially formulated with metallic crystal flakes suspended in clear acrylic resin.",
+          img: "image/car wrap (16).jpg",
+          badge: "Ref: Liquid Candy Blood Red",
+          diff: "12% Minimal",
+          diffW: "12%",
+          scratch: "90% Self-Healing",
+          scratchW: "90%",
+          clean: "Ultra Hydrophobic",
+          cleanW: "98%"
+        },
+        carbon: {
+          category: "Series 03: High-Modulus Composite",
+          title: "Forged Carbon 3D Weave",
+          desc: "True-to-touch structural composite patterns engineered for roofs, aero splitters, mirror caps, and interior consoles with zero distortion.",
+          img: "image/car wrap (17).jpg",
+          badge: "Ref: Marbled Forged Carbon",
+          diff: "40% Semi-Matte",
+          diffW: "40%",
+          scratch: "96% Armor Grade",
+          scratchW: "96%",
+          clean: "Textured Resistant",
+          cleanW: "85%"
+        },
+        chameleon: {
+          category: "Series 04: Multi-Angle Interference",
+          title: "Iridescent Sunset Chameleon",
+          desc: "Dramatic multi-layer interference pigments that roll through purple, copper, magenta, and gold as ambient light and viewing angles shift.",
+          img: "image/car wrap (18).jpg",
+          badge: "Ref: Mystic Solar Flare Flip",
+          diff: "25% Specular",
+          diffW: "25%",
+          scratch: "88% Standard",
+          scratchW: "88%",
+          clean: "Gloss Sealed",
+          cleanW: "92%"
+        }
+      };
+
+      function switchFinish(type) {
+        const item = finishData[type];
+        if (!item) return;
+
+        document.querySelectorAll('.finish-tab-btn').forEach(btn => {
+          btn.classList.remove('bg-brand', 'text-white', 'shadow-md');
+          btn.classList.add('text-zinc-400');
+        });
+        const activeBtn = document.getElementById('btn-' + type);
+        if (activeBtn) {
+          activeBtn.classList.remove('text-zinc-400');
+          activeBtn.classList.add('bg-brand', 'text-white', 'shadow-md');
+        }
+
+        const img = document.getElementById('finish-preview-img');
+        if (img) img.src = item.img;
+        const badge = document.getElementById('finish-badge');
+        if (badge) badge.innerText = item.badge;
+        const cat = document.getElementById('finish-category');
+        if (cat) cat.innerText = item.category;
+        const title = document.getElementById('finish-title');
+        if (title) title.innerText = item.title;
+        const desc = document.getElementById('finish-desc');
+        if (desc) desc.innerText = item.desc;
+
+        const specDiff = document.getElementById('finish-spec-diff');
+        if (specDiff) specDiff.innerText = item.diff;
+        const barDiff = document.getElementById('finish-bar-diff');
+        if (barDiff) barDiff.style.width = item.diffW;
+
+        const specScratch = document.getElementById('finish-spec-scratch');
+        if (specScratch) specScratch.innerText = item.scratch;
+        const barScratch = document.getElementById('finish-bar-scratch');
+        if (barScratch) barScratch.style.width = item.scratchW;
+
+        const specClean = document.getElementById('finish-spec-clean');
+        if (specClean) specClean.innerText = item.clean;
+        const barClean = document.getElementById('finish-bar-clean');
+        if (barClean) barClean.style.width = item.cleanW;
+      }
+
+      // ================= SECTION 6: LIVE BUILD CONFIGURATOR =================
+      let cfgVehicle = 'Supercar';
+      let cfgVehicleMultiplier = 1.3;
+      let cfgPackage = 'Stealth Matte PPF';
+      let cfgBasePrice = 4200;
+      let cfgDuration = '4 Days';
+      let cfgWarranty = '10-Yr Ceramic Armor';
+      let cfgAddonTotal = 0;
+      let cfgSelectedAddons = [];
+
+      function selectConfigVehicle(btn, name, mult) {
+        document.querySelectorAll('.cfg-veh-btn').forEach(b => {
+          b.classList.remove('border-brand', 'bg-red-950/40');
+          b.classList.add('border-zinc-800', 'bg-zinc-950');
+        });
+        btn.classList.remove('border-zinc-800', 'bg-zinc-950');
+        btn.classList.add('border-brand', 'bg-red-950/40');
+        cfgVehicle = name;
+        cfgVehicleMultiplier = mult;
+        renderConfigurator();
+      }
+
+      function selectConfigPackage(btn, name, price, duration, warranty) {
+        document.querySelectorAll('.cfg-pkg-btn').forEach(b => {
+          b.classList.remove('border-brand', 'bg-red-950/40');
+          b.classList.add('border-zinc-800', 'bg-zinc-950');
+        });
+        btn.classList.remove('border-zinc-800', 'bg-zinc-950');
+        btn.classList.add('border-brand', 'bg-red-950/40');
+        cfgPackage = name;
+        cfgBasePrice = price;
+        cfgDuration = duration;
+        cfgWarranty = warranty;
+        renderConfigurator();
+      }
+
+      function toggleConfigAddon(checkbox, cost, name) {
+        if (checkbox.checked) {
+          cfgAddonTotal += cost;
+          cfgSelectedAddons.push(name);
+        } else {
+          cfgAddonTotal -= cost;
+          cfgSelectedAddons = cfgSelectedAddons.filter(a => a !== name);
+        }
+        renderConfigurator();
+      }
+
+      function renderConfigurator() {
+        const total = Math.round((cfgBasePrice * cfgVehicleMultiplier) + cfgAddonTotal);
+        const dispVeh = document.getElementById('cfg-disp-veh');
+        if (dispVeh) dispVeh.innerText = cfgVehicle;
+        const dispPkg = document.getElementById('cfg-disp-pkg');
+        if (dispPkg) dispPkg.innerText = cfgPackage;
+        const dispAddons = document.getElementById('cfg-disp-addons');
+        if (dispAddons) {
+          dispAddons.innerText = cfgSelectedAddons.length > 0 ? cfgSelectedAddons.join(', ') : 'None selected';
+        }
+        const dispTime = document.getElementById('cfg-disp-time');
+        if (dispTime) dispTime.innerText = cfgDuration;
+        const dispWarr = document.getElementById('cfg-disp-warr');
+        if (dispWarr) dispWarr.innerText = cfgWarranty;
+        const dispPrice = document.getElementById('cfg-disp-price');
+        if (dispPrice) dispPrice.innerText = '$' + total.toLocaleString();
       }
     </script>
 </body>
